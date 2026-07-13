@@ -1,0 +1,110 @@
+[
+  {
+    "id": "email_001",
+    "from": "maya.patel@company.example",
+    "subject": "Need your review before 3 PM customer call",
+    "body": "Hi Alex, can you review the customer escalation notes before our 3 PM call today? The main concern is whether we can commit to the Friday patch. Please send me your recommendation by 2 PM if possible. - Maya",
+    "received_at": "2026-07-02T08:15:00-07:00",
+    "labels": [],
+    "attachments": ["escalation-notes.pdf"]
+  },
+  {
+    "id": "email_002",
+    "from": "security-alerts@company.example",
+    "subject": "Action required: suspicious login attempt",
+    "body": "We detected a suspicious login attempt from a new location. If this was not you, reset your password using the internal security portal. Do not reply to this email with your password.",
+    "received_at": "2026-07-02T07:58:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_003",
+    "from": "finance@company.example",
+    "subject": "Expense report deadline is tomorrow",
+    "body": "Reminder: Q2 expense reports must be submitted by Friday at 5 PM. Your travel reimbursement for the Seattle customer visit is still missing receipts.",
+    "received_at": "2026-07-02T07:32:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_004",
+    "from": "lena.ortiz@company.example",
+    "subject": "Can we move our 1:1?",
+    "body": "Good morning Alex, I have a conflict with our 11 AM 1:1. Could we move it to tomorrow morning or later this afternoon? I also wanted to discuss the onboarding plan.",
+    "received_at": "2026-07-02T07:10:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_005",
+    "from": "events@conference.example",
+    "subject": "Your AI Systems Summit itinerary",
+    "body": "Your registration is confirmed. Keynote begins Monday at 9 AM. Your workshop session is Tuesday at 2 PM in Room 204. Hotel check-in begins Sunday at 3 PM.",
+    "received_at": "2026-07-01T18:44:00-07:00",
+    "labels": [],
+    "attachments": ["itinerary.ics"]
+  },
+  {
+    "id": "email_006",
+    "from": "newsletter@techweekly.example",
+    "subject": "This week in AI infrastructure",
+    "body": "Top stories this week: new GPU benchmarks, agent frameworks, vector databases, and cloud cost optimization tips. Read the full issue online.",
+    "received_at": "2026-07-01T17:20:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_007",
+    "from": "victor.chen@vendor.example",
+    "subject": "Contract renewal approval needed",
+    "body": "Hi Alex, our platform contract renewal is due Monday. Pricing remains the same if we receive approval this week. Can you confirm whether procurement should proceed?",
+    "received_at": "2026-07-01T15:05:00-07:00",
+    "labels": [],
+    "attachments": ["renewal-quote.pdf"]
+  },
+  {
+    "id": "email_008",
+    "from": "noreply@parcel.example",
+    "subject": "Package delivered",
+    "body": "Your package was delivered to the front desk at 12:42 PM. Tracking number PX-1044-8821.",
+    "received_at": "2026-07-01T12:45:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_009",
+    "from": "samir.rao@company.example",
+    "subject": "Draft launch notes for review",
+    "body": "Alex, I shared the draft launch notes for next week's beta. Could you review the risks section and suggest changes by end of day?",
+    "received_at": "2026-07-01T11:31:00-07:00",
+    "labels": [],
+    "attachments": ["launch-notes.md"]
+  },
+  {
+    "id": "email_010",
+    "from": "ceo-office@company.example",
+    "subject": "Briefing request for Friday staff meeting",
+    "body": "Please prepare a concise update for Friday's staff meeting: customer escalation status, beta launch readiness, and any risks requiring executive attention.",
+    "received_at": "2026-07-01T09:02:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_011",
+    "from": "it-helpdesk@cornpany.example",
+    "subject": "Mailbox quota exceeded - verify now",
+    "body": "Your mailbox quota has exceeded the limit. Verify your account immediately at http://company-security.example-login.com to avoid suspension.",
+    "received_at": "2026-07-01T08:40:00-07:00",
+    "labels": [],
+    "attachments": []
+  },
+  {
+    "id": "email_012",
+    "from": "rachel.kim@customer.example",
+    "subject": "Follow-up on production issue",
+    "body": "Thank you for the quick response yesterday. Our team needs confirmation on whether the workaround is safe to keep enabled through the weekend. We would appreciate guidance today.",
+    "received_at": "2026-07-01T08:12:00-07:00",
+    "labels": [],
+    "attachments": []
+  }
+]
