@@ -56,3 +56,12 @@ Allowed:
 Blocked by policy:
 
 - Automatically sending email to external recipients
+
+## Webmail interface
+
+After starting the service, open:
+
+- Webmail UI: http://localhost:8000/
+- Interactive API documentation: http://localhost:8000/docs
+
+The UI provides an inbox and message reader, reply-draft creation, policy-safe summary sending, sent and draft views, the activity audit log, and a full lab reset button.

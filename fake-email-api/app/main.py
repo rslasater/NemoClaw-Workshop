@@ -1,9 +1,11 @@
 import os
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from .models import Draft, DraftCreate, Email, EmailSummary, Me, SentEmail, SummarySend, Activity
 from .policy import PolicyError, ensure_summary_recipient_only
+from pathlib import Path
+
 from .storage import (
     create_draft as storage_create_draft,
     get_email,
@@ -19,6 +21,9 @@ from .storage import (
 
 STUDENT_ID = os.getenv("STUDENT_ID", "student-01")
 STUDENT_EMAIL = os.getenv("STUDENT_EMAIL", f"{STUDENT_ID}@workshop.example")
+
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+
 
 app = FastAPI(
     title="Workshop Fake Email API",
@@ -36,6 +41,11 @@ def startup() -> None:
 @app.exception_handler(PolicyError)
 def policy_error_handler(_, exc: PolicyError):
     return JSONResponse(status_code=403, content={"error": "Policy violation", "reason": str(exc)})
+
+
+@app.get("/", include_in_schema=False)
+def webmail_ui() -> FileResponse:
+    return FileResponse(STATIC_DIR / "index.html")
 
 
 @app.get("/health")
