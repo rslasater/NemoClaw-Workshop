@@ -61,9 +61,6 @@ atas-generate merge --allow-incomplete --output generated/preview-emails.json
 
 ```bash
 cp .env.example .env
-set -a
-source .env
-set +a
 atas-generate generate ATAS-001 --provider openai-compatible
 ```
 

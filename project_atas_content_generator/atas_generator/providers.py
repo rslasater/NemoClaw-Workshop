@@ -3,11 +3,28 @@ from __future__ import annotations
 import json
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Protocol
 
 
 class Provider(Protocol):
     def generate(self, system_prompt: str, user_prompt: str) -> str: ...
+
+
+def load_dotenv_if_present() -> None:
+    candidates = [
+        Path.cwd() / ".env",
+        Path(__file__).resolve().parents[1] / ".env",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
+        for raw_line in path.read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
 @dataclass
@@ -20,6 +37,7 @@ class OpenAICompatibleProvider:
 
     @classmethod
     def from_environment(cls) -> "OpenAICompatibleProvider":
+        load_dotenv_if_present()
         base_url = os.environ.get("ATAS_LLM_BASE_URL", "").rstrip("/")
         model = os.environ.get("ATAS_LLM_MODEL", "")
         if not base_url or not model:
