@@ -11,6 +11,7 @@ from .storage import (
     create_draft as storage_create_draft,
     get_attachment,
     get_email,
+    get_sent,
     get_sent_attachment,
     init_db,
     list_activity,
@@ -146,6 +147,14 @@ def send_blocked(payload: DraftCreate) -> SentEmail:
 @app.get("/sent", response_model=list[SentEmail])
 def sent() -> list[SentEmail]:
     return [SentEmail(**item) for item in list_sent(STUDENT_ID)]
+
+
+@app.get("/sent/{sent_id}", response_model=SentEmail)
+def sent_message(sent_id: str) -> SentEmail:
+    item = get_sent(sent_id, STUDENT_ID)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Sent message not found")
+    return SentEmail(**item)
 
 
 @app.get("/activity", response_model=list[Activity])

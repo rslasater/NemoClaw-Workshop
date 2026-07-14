@@ -434,30 +434,41 @@ def send_email(recipient: str, subject: str, body: str, actor: str) -> Dict[str,
     return {"id": sent_id, "to": recipient, "subject": subject, "body": body, "sent_at": sent_at}
 
 
+def row_to_sent(row: sqlite3.Row) -> Dict[str, Any]:
+    attachments = json.loads(row["attachments"])
+    metadata = json.loads(row["metadata"])
+    return {
+        "id": row["id"],
+        "sender": row["sender"],
+        "to": row["recipient"],
+        "subject": row["subject"],
+        "body": row["body"],
+        "sent_at": row["sent_at"],
+        "cc": json.loads(row["cc"]),
+        "attachments": [sent_attachment_with_url(row["id"], item) for item in attachments],
+        "has_attachments": len(attachments) > 0,
+        "attachment_count": len(attachments),
+        "conversation_id": metadata.get("conversation_id"),
+        "thread_index": metadata.get("thread_index"),
+        "classification": metadata.get("classification", "UNCLASSIFIED"),
+        "importance": metadata.get("importance", "normal"),
+    }
+
+
 def list_sent(actor: str) -> List[Dict[str, Any]]:
     with connect() as conn:
         rows = conn.execute("SELECT * FROM sent ORDER BY sent_at DESC").fetchall()
     log_activity(actor, "list_sent", "sent", {"count": len(rows)})
-    sent_messages = []
-    for row in rows:
-        attachments = json.loads(row["attachments"])
-        metadata = json.loads(row["metadata"])
-        sent_messages.append({
-            "id": row["id"],
-            "to": row["recipient"],
-            "subject": row["subject"],
-            "body": row["body"],
-            "sent_at": row["sent_at"],
-            "cc": json.loads(row["cc"]),
-            "attachments": [sent_attachment_with_url(row["id"], item) for item in attachments],
-            "has_attachments": len(attachments) > 0,
-            "attachment_count": len(attachments),
-            "conversation_id": metadata.get("conversation_id"),
-            "thread_index": metadata.get("thread_index"),
-            "classification": metadata.get("classification", "UNCLASSIFIED"),
-            "importance": metadata.get("importance", "normal"),
-        })
-    return sent_messages
+    return [row_to_sent(row) for row in rows]
+
+
+def get_sent(sent_id: str, actor: str) -> Optional[Dict[str, Any]]:
+    with connect() as conn:
+        row = conn.execute("SELECT * FROM sent WHERE id = ?", (sent_id,)).fetchone()
+    if not row:
+        return None
+    log_activity(actor, "read_sent", sent_id)
+    return row_to_sent(row)
 
 
 def log_activity(actor: str, action: str, target: str, details: Optional[Dict[str, Any]] = None) -> None:

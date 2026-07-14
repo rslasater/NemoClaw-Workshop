@@ -118,13 +118,25 @@
   </section>
 
   <section id="drafts" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Drafts</h2><button data-refresh="drafts">Refresh</button></div><div id="draftList" class="list"></div></div></section>
-  <section id="sent" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Sent</h2><button data-refresh="sent">Refresh</button></div><div id="sentList" class="list"></div></div></section>
+  <section id="sent" class="view">
+    <div class="mail-layout">
+      <div class="panel">
+        <div class="panel-head"><h2>Sent</h2><button data-refresh="sent">Refresh</button></div>
+        <div id="sentList" class="list"><div class="empty">Loading sent mail…</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2>Message</h2><span id="sentMessageState" class="muted"></span></div>
+        <div id="sentMessageDetail" class="empty">Select a sent message to read it.</div>
+      </div>
+    </div>
+  </section>
   <section id="activity" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Agent activity log</h2><button data-refresh="activity">Refresh</button></div><div class="list"><table class="activity"><thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Target</th><th>Details</th></tr></thead><tbody id="activityList"></tbody></table></div></div></section>
 </main>
 <div id="status" class="status"></div>
 <script>
   const $ = (id) => document.getElementById(id);
   let selectedEmailId = null;
+  let selectedSentId = null;
   let me = null;
 
   async function api(path, options = {}) {
@@ -151,6 +163,10 @@
     return chips.join('');
   }
 
+  function attachmentLinks(attachments=[]) {
+    return attachments.length ? `<div class="attachments">${attachments.map(a => `<a class="attachment-link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener"><span>${escapeHtml(a.filename)}</span><span class="muted">${escapeHtml(a.mime_type)}</span></a>`).join('')}</div>` : '';
+  }
+
   async function loadMe() {
     me = await api('/me'); $('identity').textContent = `${me.student_id} • ${me.email}`;
   }
@@ -175,7 +191,7 @@
       const email = await api(`/emails/${encodeURIComponent(id)}`);
       $('messageState').textContent = email.attachments?.length ? `${email.attachments.length} attachment(s)` : '';
       const ccLine = email.cc?.length ? `<br><strong>Cc:</strong> ${email.cc.map(escapeHtml).join('; ')}` : '';
-      const attachments = email.attachments?.length ? `<div class="attachments">${email.attachments.map(a => `<a class="attachment-link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener"><span>${escapeHtml(a.filename)}</span><span class="muted">${escapeHtml(a.mime_type)}</span></a>`).join('')}</div>` : '';
+      const attachments = attachmentLinks(email.attachments);
       $('messageDetail').className='message';
       $('messageDetail').innerHTML = `<h2>${escapeHtml(email.subject)}</h2><div class="meta"><strong>From:</strong> ${escapeHtml(email.sender)}<br><strong>To:</strong> ${escapeHtml(email.to)}${ccLine}<br>${escapeHtml(fmtDate(email.received_at))}</div>${attachments}<div class="body">${escapeHtml(email.body)}</div><p><button id="replyButton">Draft reply</button></p>`;
       $('replyButton').addEventListener('click', () => prepareReply(email));
@@ -196,7 +212,32 @@
   }
 
   async function loadDrafts() { try { renderMessages(await api('/drafts'),'draftList','No drafts yet.','created_at'); } catch(e){ notify(e.message,true); } }
-  async function loadSent() { try { renderMessages(await api('/sent'),'sentList','No summaries sent yet.','sent_at'); } catch(e){ notify(e.message,true); } }
+  async function loadSent() {
+    const list = $('sentList'); list.innerHTML='<div class="empty">Loading sent mail…</div>';
+    try {
+      const sent = await api('/sent');
+      list.innerHTML = sent.length ? sent.map(e => `
+        <button class="mail-row ${e.id === selectedSentId ? 'selected' : ''}" data-sent-id="${escapeHtml(e.id)}">
+          <div class="top"><span class="sender">${escapeHtml(e.to)}</span><time>${escapeHtml(fmtDate(e.sent_at))}</time></div>
+          <div class="subject">${escapeHtml(e.subject)}</div>
+          <div class="labels">${metaChips(e)}${e.has_attachments ? `<span class="chip">${e.attachment_count} attachment(s)</span>` : ''}</div>
+        </button>`).join('') : '<div class="empty">No sent messages.</div>';
+      list.querySelectorAll('[data-sent-id]').forEach(row => row.addEventListener('click', () => openSent(row.dataset.sentId)));
+    } catch (err) { list.innerHTML=`<div class="empty">${escapeHtml(err.message)}</div>`; }
+  }
+
+  async function openSent(id) {
+    selectedSentId = id; $('sentMessageDetail').className='empty'; $('sentMessageDetail').textContent='Loading message…';
+    try {
+      const email = await api(`/sent/${encodeURIComponent(id)}`);
+      $('sentMessageState').textContent = email.attachments?.length ? `${email.attachments.length} attachment(s)` : '';
+      const ccLine = email.cc?.length ? `<br><strong>Cc:</strong> ${email.cc.map(escapeHtml).join('; ')}` : '';
+      const fromLine = email.sender ? `<strong>From:</strong> ${escapeHtml(email.sender)}<br>` : '';
+      $('sentMessageDetail').className='message';
+      $('sentMessageDetail').innerHTML = `<h2>${escapeHtml(email.subject)}</h2><div class="meta">${fromLine}<strong>To:</strong> ${escapeHtml(email.to)}${ccLine}<br>${escapeHtml(fmtDate(email.sent_at))}</div>${attachmentLinks(email.attachments)}<div class="body">${escapeHtml(email.body)}</div>`;
+      await loadSent();
+    } catch (err) { notify(err.message, true); }
+  }
   async function loadActivity() {
     try { const rows=await api('/activity'); $('activityList').innerHTML = rows.length ? rows.slice().reverse().map(r => `<tr><td>${escapeHtml(fmtDate(r.timestamp))}</td><td>${escapeHtml(r.actor)}</td><td>${escapeHtml(r.action)}</td><td>${escapeHtml(r.target)}</td><td><code>${escapeHtml(JSON.stringify(r.details))}</code></td></tr>`).join('') : '<tr><td colspan="5" class="muted">No activity yet.</td></tr>'; } catch(e){ notify(e.message,true); }
   }
@@ -221,7 +262,7 @@
   });
   $('reset').addEventListener('click', async () => {
     if(!confirm('Reset the inbox, drafts, sent messages, and activity log?')) return;
-    try { await api('/reset',{method:'POST'}); selectedEmailId=null; $('messageDetail').className='empty'; $('messageDetail').textContent='Select a message to read it.'; notify('Lab reset.'); await loadInbox(); } catch(e){ notify(e.message,true); }
+    try { await api('/reset',{method:'POST'}); selectedEmailId=null; selectedSentId=null; $('messageDetail').className='empty'; $('messageDetail').textContent='Select a message to read it.'; $('sentMessageDetail').className='empty'; $('sentMessageDetail').textContent='Select a sent message to read it.'; notify('Lab reset.'); await loadInbox(); if(document.getElementById('sent').classList.contains('active')) await loadSent(); } catch(e){ notify(e.message,true); }
   });
 
   Promise.all([loadMe(),loadInbox()]).catch(e => notify(e.message,true));

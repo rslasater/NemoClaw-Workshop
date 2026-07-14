@@ -55,6 +55,7 @@ class SummarySend(BaseModel):
 
 class SentEmail(BaseModel):
     id: str
+    sender: str = ""
     to: str
     subject: str
     body: str
