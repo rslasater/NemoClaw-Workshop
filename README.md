@@ -50,6 +50,7 @@ curl -X POST http://localhost:8000/reset
 - `POST /send-summary`
 - `POST /send` intentionally demonstrates policy enforcement
 - `GET /sent`
+- `GET /sent/{sent_id}/attachments/{attachment_id}`
 - `GET /activity`
 - `POST /reset`
 

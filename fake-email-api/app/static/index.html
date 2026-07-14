@@ -118,7 +118,7 @@
   </section>
 
   <section id="drafts" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Drafts</h2><button data-refresh="drafts">Refresh</button></div><div id="draftList" class="list"></div></div></section>
-  <section id="sent" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Sent summaries</h2><button data-refresh="sent">Refresh</button></div><div id="sentList" class="list"></div></div></section>
+  <section id="sent" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Sent</h2><button data-refresh="sent">Refresh</button></div><div id="sentList" class="list"></div></div></section>
   <section id="activity" class="view"><div class="panel" style="height:100%"><div class="panel-head"><h2>Agent activity log</h2><button data-refresh="activity">Refresh</button></div><div class="list"><table class="activity"><thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Target</th><th>Details</th></tr></thead><tbody id="activityList"></tbody></table></div></div></section>
 </main>
 <div id="status" class="status"></div>
@@ -189,7 +189,10 @@
   }
 
   function renderMessages(items, target, emptyText, dateKey) {
-    $(target).innerHTML = items.length ? items.map(x => `<div class="item"><div class="item-title">${escapeHtml(x.subject)}</div><div class="item-meta">To: ${escapeHtml(x.to)} • ${escapeHtml(fmtDate(x[dateKey]))}</div><div class="item-body">${escapeHtml(x.body)}</div></div>`).join('') : `<div class="empty">${emptyText}</div>`;
+    $(target).innerHTML = items.length ? items.map(x => {
+      const attachments = x.attachments?.length ? `<div class="attachments">${x.attachments.map(a => `<a class="attachment-link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener"><span>${escapeHtml(a.filename)}</span><span class="muted">${escapeHtml(a.mime_type)}</span></a>`).join('')}</div>` : '';
+      return `<div class="item"><div class="item-title">${escapeHtml(x.subject)}</div><div class="item-meta">To: ${escapeHtml(x.to)} • ${escapeHtml(fmtDate(x[dateKey]))}</div>${attachments}<div class="item-body">${escapeHtml(x.body)}</div></div>`;
+    }).join('') : `<div class="empty">${emptyText}</div>`;
   }
 
   async function loadDrafts() { try { renderMessages(await api('/drafts'),'draftList','No drafts yet.','created_at'); } catch(e){ notify(e.message,true); } }

@@ -59,6 +59,14 @@ class SentEmail(BaseModel):
     subject: str
     body: str
     sent_at: str
+    cc: List[str] = Field(default_factory=list)
+    attachments: List[Attachment] = Field(default_factory=list)
+    has_attachments: bool = False
+    attachment_count: int = 0
+    conversation_id: Optional[str] = None
+    thread_index: Optional[int] = None
+    classification: str = "UNCLASSIFIED"
+    importance: str = "normal"
 
 
 class Activity(BaseModel):

@@ -7,7 +7,7 @@ services:
       STUDENT_ID: ${STUDENT_ID:-student-01}
       STUDENT_EMAIL: ${STUDENT_EMAIL:-student-01@workshop.example}
       EMAIL_API_DB: /app/state/email_lab.sqlite
-      EMAIL_API_SEED_PATH: ${EMAIL_API_SEED_PATH:-/app/data/atas_seed_emails.json}
+      EMAIL_API_SEED_PATH: /app/data/atas_seed_emails.json
     volumes:
       - email_api_state:/app/state
 

@@ -4,9 +4,11 @@ from atas_generator.generator import export_api_seed, generate_thread, merge_mai
 from atas_generator.providers import MockProvider
 from atas_generator.scenario import Scenario
 
+SCENARIO_DIR = Path(__file__).resolve().parents[1] / "scenario"
+
 
 def test_mock_generation_and_partial_merge(tmp_path: Path):
-    scenario = Scenario.load(Path("scenario"))
+    scenario = Scenario.load(SCENARIO_DIR)
     messages = scenario.thread_messages("ATAS-001")
     generate_thread(scenario, "ATAS-001", MockProvider(messages), tmp_path)
     result = merge_mailbox(scenario, tmp_path, tmp_path / "emails.json", allow_incomplete=True)

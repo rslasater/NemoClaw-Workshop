@@ -11,6 +11,7 @@ from .storage import (
     create_draft as storage_create_draft,
     get_attachment,
     get_email,
+    get_sent_attachment,
     init_db,
     list_activity,
     list_drafts,
@@ -86,6 +87,17 @@ def email(email_id: str) -> Email:
 @app.get("/emails/{email_id}/attachments/{attachment_id}", include_in_schema=True)
 def attachment(email_id: str, attachment_id: str) -> FileResponse:
     item = get_attachment(email_id, attachment_id, STUDENT_ID)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Attachment not found")
+    path = attachment_file_path(item)
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Attachment file not found")
+    return FileResponse(path, media_type=item["mime_type"], filename=item["filename"])
+
+
+@app.get("/sent/{sent_id}/attachments/{attachment_id}", include_in_schema=True)
+def sent_attachment(sent_id: str, attachment_id: str) -> FileResponse:
+    item = get_sent_attachment(sent_id, attachment_id, STUDENT_ID)
     if item is None:
         raise HTTPException(status_code=404, detail="Attachment not found")
     path = attachment_file_path(item)

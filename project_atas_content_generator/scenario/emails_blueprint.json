@@ -3871,7 +3871,12 @@
         "email": "jeff.martinez@navy.example"
       }
     ],
-    "cc": [],
+    "cc": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
     "subject": "Slide 14",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",

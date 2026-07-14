@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -10,6 +11,7 @@ DB_PATH = os.getenv("EMAIL_API_DB", "/app/data/email_lab.sqlite")
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DEFAULT_SEED_PATH = DATA_DIR / "atas_seed_emails.json"
 FALLBACK_SEED_PATH = DATA_DIR / "seed_emails.json"
+DEFAULT_MAILBOX_OWNER_EMAIL = "james.maddox@jiaitf.example"
 
 
 def now_iso() -> str:
@@ -49,6 +51,29 @@ def format_people(people: Any) -> str:
     return format_person(people)
 
 
+def extract_email(value: Any) -> str:
+    text = format_person(value).strip()
+    match = re.search(r"<([^>]+)>", text)
+    return (match.group(1) if match else text).strip().lower()
+
+
+def mailbox_owner_emails(student_email: str) -> set[str]:
+    configured = os.getenv("MAILBOX_OWNER_EMAIL", DEFAULT_MAILBOX_OWNER_EMAIL)
+    return {email.strip().lower() for email in (student_email, configured) if email.strip()}
+
+
+def people_emails(people: Any) -> set[str]:
+    if not people:
+        return set()
+    if isinstance(people, list):
+        return {extract_email(person) for person in people if extract_email(person)}
+    text = format_person(people)
+    formatted = {match.strip().lower() for match in re.findall(r"<([^>]+)>", text)}
+    if formatted:
+        return formatted
+    return {part.strip().lower() for part in re.split(r"[;,]", text) if part.strip()}
+
+
 def normalize_attachment(attachment: Any) -> Dict[str, str]:
     if isinstance(attachment, str):
         filename = attachment
@@ -75,6 +100,16 @@ def attachment_with_url(email_id: str, attachment: Any) -> Dict[str, str]:
         "filename": normalized["filename"],
         "mime_type": normalized["mime_type"],
         "url": f"/emails/{email_id}/attachments/{normalized['id']}",
+    }
+
+
+def sent_attachment_with_url(sent_id: str, attachment: Any) -> Dict[str, str]:
+    normalized = normalize_attachment(attachment)
+    return {
+        "id": normalized["id"],
+        "filename": normalized["filename"],
+        "mime_type": normalized["mime_type"],
+        "url": f"/sent/{sent_id}/attachments/{normalized['id']}",
     }
 
 
@@ -116,10 +151,34 @@ def normalize_seed_email(email: Dict[str, Any], student_email: str) -> Dict[str,
     }
 
 
+def is_outgoing_seed_email(normalized: Dict[str, Any], owner_emails: set[str]) -> bool:
+    return extract_email(normalized["sender"]) in owner_emails
+
+
+def is_inbound_seed_email(normalized: Dict[str, Any], owner_emails: set[str]) -> bool:
+    metadata = normalized.get("metadata", {})
+    recipients = people_emails(normalized.get("recipient"))
+    recipients.update(people_emails(metadata.get("cc", [])))
+    return bool(recipients & owner_emails)
+
+
 def ensure_email_schema(conn: sqlite3.Connection) -> None:
     columns = {row["name"] for row in conn.execute("PRAGMA table_info(emails)").fetchall()}
     if "metadata" not in columns:
         conn.execute("ALTER TABLE emails ADD COLUMN metadata TEXT NOT NULL DEFAULT '{}'")
+
+
+def ensure_sent_schema(conn: sqlite3.Connection) -> None:
+    columns = {row["name"] for row in conn.execute("PRAGMA table_info(sent)").fetchall()}
+    additions = {
+        "sender": "TEXT NOT NULL DEFAULT ''",
+        "cc": "TEXT NOT NULL DEFAULT '[]'",
+        "attachments": "TEXT NOT NULL DEFAULT '[]'",
+        "metadata": "TEXT NOT NULL DEFAULT '{}'",
+    }
+    for column, definition in additions.items():
+        if column not in columns:
+            conn.execute(f"ALTER TABLE sent ADD COLUMN {column} {definition}")
 
 
 def init_db() -> None:
@@ -152,10 +211,14 @@ def init_db() -> None:
 
             CREATE TABLE IF NOT EXISTS sent (
                 id TEXT PRIMARY KEY,
+                sender TEXT NOT NULL DEFAULT '',
                 recipient TEXT NOT NULL,
                 subject TEXT NOT NULL,
                 body TEXT NOT NULL,
-                sent_at TEXT NOT NULL
+                sent_at TEXT NOT NULL,
+                cc TEXT NOT NULL DEFAULT '[]',
+                attachments TEXT NOT NULL DEFAULT '[]',
+                metadata TEXT NOT NULL DEFAULT '{}'
             );
 
             CREATE TABLE IF NOT EXISTS activity (
@@ -169,6 +232,7 @@ def init_db() -> None:
             """
         )
         ensure_email_schema(conn)
+        ensure_sent_schema(conn)
 
 
 def reset_db(student_email: str, actor: str) -> None:
@@ -187,30 +251,53 @@ def seed_emails(student_email: str) -> None:
         emails = json.load(f)
 
     with connect() as conn:
-        existing = conn.execute("SELECT COUNT(*) AS count FROM emails").fetchone()["count"]
+        existing_inbox = conn.execute("SELECT COUNT(*) AS count FROM emails").fetchone()["count"]
+        existing_sent = conn.execute("SELECT COUNT(*) AS count FROM sent").fetchone()["count"]
+        existing = existing_inbox + existing_sent
         if existing:
             return
+        owner_emails = mailbox_owner_emails(student_email)
         for email in emails:
             normalized = normalize_seed_email(email, student_email)
-            conn.execute(
-                """
-                INSERT INTO emails
-                (id, sender, recipient, subject, body, received_at, read, labels, attachments, metadata)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    normalized["id"],
-                    normalized["sender"],
-                    normalized["recipient"],
-                    normalized["subject"],
-                    normalized["body"],
-                    normalized["received_at"],
-                    normalized["read"],
-                    json.dumps(normalized["labels"]),
-                    json.dumps(normalized["attachments"]),
-                    json.dumps(normalized["metadata"]),
-                ),
-            )
+            if is_outgoing_seed_email(normalized, owner_emails):
+                conn.execute(
+                    """
+                    INSERT INTO sent
+                    (id, sender, recipient, subject, body, sent_at, cc, attachments, metadata)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        normalized["id"],
+                        normalized["sender"],
+                        normalized["recipient"],
+                        normalized["subject"],
+                        normalized["body"],
+                        normalized["received_at"],
+                        json.dumps(normalized["metadata"].get("cc", [])),
+                        json.dumps(normalized["attachments"]),
+                        json.dumps(normalized["metadata"]),
+                    ),
+                )
+            elif is_inbound_seed_email(normalized, owner_emails):
+                conn.execute(
+                    """
+                    INSERT INTO emails
+                    (id, sender, recipient, subject, body, received_at, read, labels, attachments, metadata)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        normalized["id"],
+                        normalized["sender"],
+                        normalized["recipient"],
+                        normalized["subject"],
+                        normalized["body"],
+                        normalized["received_at"],
+                        normalized["read"],
+                        json.dumps(normalized["labels"]),
+                        json.dumps(normalized["attachments"]),
+                        json.dumps(normalized["metadata"]),
+                    ),
+                )
 
 
 def row_to_email(row: sqlite3.Row, include_body: bool = False) -> Dict[str, Any]:
@@ -266,6 +353,20 @@ def get_attachment(email_id: str, attachment_id: str, actor: str) -> Optional[Di
         attachment = normalize_attachment(item)
         if attachment["id"] == attachment_id:
             log_activity(actor, "download_attachment", attachment_id, {"email_id": email_id})
+            return attachment
+    return None
+
+
+def get_sent_attachment(sent_id: str, attachment_id: str, actor: str) -> Optional[Dict[str, Any]]:
+    with connect() as conn:
+        row = conn.execute("SELECT attachments FROM sent WHERE id = ?", (sent_id,)).fetchone()
+    if not row:
+        return None
+
+    for item in json.loads(row["attachments"]):
+        attachment = normalize_attachment(item)
+        if attachment["id"] == attachment_id:
+            log_activity(actor, "download_sent_attachment", attachment_id, {"sent_id": sent_id})
             return attachment
     return None
 
@@ -337,10 +438,26 @@ def list_sent(actor: str) -> List[Dict[str, Any]]:
     with connect() as conn:
         rows = conn.execute("SELECT * FROM sent ORDER BY sent_at DESC").fetchall()
     log_activity(actor, "list_sent", "sent", {"count": len(rows)})
-    return [
-        {"id": r["id"], "to": r["recipient"], "subject": r["subject"], "body": r["body"], "sent_at": r["sent_at"]}
-        for r in rows
-    ]
+    sent_messages = []
+    for row in rows:
+        attachments = json.loads(row["attachments"])
+        metadata = json.loads(row["metadata"])
+        sent_messages.append({
+            "id": row["id"],
+            "to": row["recipient"],
+            "subject": row["subject"],
+            "body": row["body"],
+            "sent_at": row["sent_at"],
+            "cc": json.loads(row["cc"]),
+            "attachments": [sent_attachment_with_url(row["id"], item) for item in attachments],
+            "has_attachments": len(attachments) > 0,
+            "attachment_count": len(attachments),
+            "conversation_id": metadata.get("conversation_id"),
+            "thread_index": metadata.get("thread_index"),
+            "classification": metadata.get("classification", "UNCLASSIFIED"),
+            "importance": metadata.get("importance", "normal"),
+        })
+    return sent_messages
 
 
 def log_activity(actor: str, action: str, target: str, details: Optional[Dict[str, Any]] = None) -> None:

@@ -121,7 +121,12 @@ Author this thread using the following structured brief:
           "email": "jeff.martinez@navy.example"
         }
       ],
-      "cc": [],
+      "cc": [
+        {
+          "name": "LCDR James Maddox",
+          "email": "james.maddox@jiaitf.example"
+        }
+      ],
       "subject": "Slide 14",
       "classification": "UNCLASSIFIED",
       "importance": "critical",
