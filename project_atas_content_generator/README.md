@@ -86,6 +86,24 @@ atas-generate validate ATAS-003
 
 Keep the reviewed thread folder under version control. Regeneration only replaces that thread.
 
+## Generate remaining threads robustly
+
+For long generation runs, use the resumable script instead of a `set -e` shell loop:
+
+```bash
+bash scripts/generate_remaining.sh
+```
+
+The script validates existing thread outputs, skips valid ones, records failures in `generated/logs/failures.txt`, and continues to the next thread when generation or validation fails.
+
+Useful variants:
+
+```bash
+bash scripts/generate_remaining.sh --retries 1 --sleep 5
+bash scripts/generate_remaining.sh --force ATAS-003
+bash scripts/generate_remaining.sh ATAS-007 CONG-002 CONG-004
+```
+
 ## Build the final mailbox
 
 After all threads are generated and reviewed:
