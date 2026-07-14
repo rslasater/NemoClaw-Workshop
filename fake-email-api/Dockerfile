@@ -10,7 +10,7 @@ COPY data ./data
 
 ENV EMAIL_API_HOST=0.0.0.0
 ENV EMAIL_API_PORT=8000
-ENV EMAIL_API_DB=/app/data/email_lab.sqlite
+ENV EMAIL_API_DB=/app/state/email_lab.sqlite
 ENV STUDENT_ID=student-01
 ENV STUDENT_EMAIL=student-01@workshop.example
 

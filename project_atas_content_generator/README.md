@@ -37,7 +37,7 @@ project_atas_content_generator/
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e .
+pip install -r requirements.txt
 ```
 
 ## Inspect the plan
@@ -98,6 +98,12 @@ atas-generate merge --output generated/emails.json
 ```
 
 Copy `generated/emails.json` into the fake email API data directory and update the seed loader to use it.
+
+For a reviewed slice or API-ready seed file:
+
+```bash
+atas-generate export-api-seed --thread-id SEC-004 --output ../fake-email-api/data/atas_seed_emails.json
+```
 
 ## Safety and scenario constraints
 

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from atas_generator.generator import generate_thread, merge_mailbox
+from atas_generator.generator import export_api_seed, generate_thread, merge_mailbox
 from atas_generator.providers import MockProvider
 from atas_generator.scenario import Scenario
 
@@ -12,3 +12,7 @@ def test_mock_generation_and_partial_merge(tmp_path: Path):
     result = merge_mailbox(scenario, tmp_path, tmp_path / "emails.json", allow_incomplete=True)
     assert result["message_count"] == 4
     assert (tmp_path / "emails.json").exists()
+
+    api_seed = export_api_seed(scenario, tmp_path, tmp_path / "api-seed.json", allow_incomplete=True)
+    assert api_seed["message_count"] == 4
+    assert (tmp_path / "api-seed.json").exists()

@@ -1,8 +1,17 @@
-# Email Executive Assistant Lab
+# Project ATaS Email Executive Assistant Lab
 
-A local fake email provider for a 2-hour Agentic AI workshop with NemoClaw.
+A local fake email provider for the Project ATaS Agentic AI workshop with NemoClaw.
 
-Students build an email executive assistant that can read a seeded inbox, prioritize messages, extract action items, draft replies, send a summary email to themselves, and inspect an audit trail.
+Students build an executive assistant for LCDR James Maddox that can read a seeded inbox, prioritize messages, inspect attachments, extract action items, draft replies, send a summary email to themselves, and inspect an audit trail.
+
+The current repository includes a working ATaS vertical slice: the `SEC-004` security thread and the `ATaS_Congressional_Brief_v13.pptx` attachment. The full 235-message mailbox blueprint lives under `project_atas_content_generator/scenario`.
+
+## Development setup
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements.txt
+```
 
 ## Run locally
 
@@ -35,6 +44,7 @@ curl -X POST http://localhost:8000/reset
 - `GET /me`
 - `GET /emails`
 - `GET /emails/{email_id}`
+- `GET /emails/{email_id}/attachments/{attachment_id}`
 - `POST /drafts`
 - `GET /drafts`
 - `POST /send-summary`

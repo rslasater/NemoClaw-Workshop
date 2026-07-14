@@ -5,8 +5,6 @@ import os
 from dataclasses import dataclass
 from typing import Protocol
 
-import requests
-
 
 class Provider(Protocol):
     def generate(self, system_prompt: str, user_prompt: str) -> str: ...
@@ -34,6 +32,8 @@ class OpenAICompatibleProvider:
         )
 
     def generate(self, system_prompt: str, user_prompt: str) -> str:
+        import requests
+
         headers = {"Content-Type": "application/json"}
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"

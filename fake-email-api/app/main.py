@@ -7,7 +7,9 @@ from .policy import PolicyError, ensure_summary_recipient_only
 from pathlib import Path
 
 from .storage import (
+    attachment_file_path,
     create_draft as storage_create_draft,
+    get_attachment,
     get_email,
     init_db,
     list_activity,
@@ -79,6 +81,17 @@ def email(email_id: str) -> Email:
     if item is None:
         raise HTTPException(status_code=404, detail="Email not found")
     return Email(**item)
+
+
+@app.get("/emails/{email_id}/attachments/{attachment_id}", include_in_schema=True)
+def attachment(email_id: str, attachment_id: str) -> FileResponse:
+    item = get_attachment(email_id, attachment_id, STUDENT_ID)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Attachment not found")
+    path = attachment_file_path(item)
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Attachment file not found")
+    return FileResponse(path, media_type=item["mime_type"], filename=item["filename"])
 
 
 @app.post("/drafts", response_model=Draft)

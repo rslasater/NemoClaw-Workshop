@@ -36,6 +36,10 @@
     .subject { margin-top:4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .labels { margin-top:7px; display:flex; gap:5px; flex-wrap:wrap; }
     .chip { font-size:11px; background:#eef2f6; color:#46515d; padding:2px 6px; border-radius:99px; }
+    .chip.critical { background:#fff1f0; color:#b42318; }
+    .attachments { margin:18px 0; display:grid; gap:8px; max-width:520px; }
+    .attachment-link { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 12px; border:1px solid var(--border); border-radius:8px; color:var(--text); text-decoration:none; background:#fff; }
+    .attachment-link:hover { border-color:var(--accent); color:var(--accent); }
     .message { padding:22px; height:calc(100% - 55px); overflow:auto; }
     .message h2 { margin:0 0 8px; font-size:22px; }
     .meta { color:var(--muted); margin-bottom:22px; }
@@ -139,6 +143,13 @@
 
   function escapeHtml(value='') { return String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
   function fmtDate(value) { const d = new Date(value); return Number.isNaN(d.valueOf()) ? value : d.toLocaleString(); }
+  function metaChips(e) {
+    const chips = [];
+    if (e.classification) chips.push(`<span class="chip">${escapeHtml(e.classification)}</span>`);
+    if (e.importance) chips.push(`<span class="chip ${e.importance === 'critical' ? 'critical' : ''}">${escapeHtml(e.importance)}</span>`);
+    if (e.conversation_id) chips.push(`<span class="chip">${escapeHtml(e.conversation_id)}</span>`);
+    return chips.join('');
+  }
 
   async function loadMe() {
     me = await api('/me'); $('identity').textContent = `${me.student_id} • ${me.email}`;
@@ -152,7 +163,7 @@
         <button class="mail-row ${e.read ? '' : 'unread'} ${e.id === selectedEmailId ? 'selected' : ''}" data-email-id="${escapeHtml(e.id)}">
           <div class="top"><span class="sender">${escapeHtml(e.sender)}</span><time>${escapeHtml(fmtDate(e.received_at))}</time></div>
           <div class="subject">${escapeHtml(e.subject)}</div>
-          <div class="labels">${(e.labels || []).map(l => `<span class="chip">${escapeHtml(l)}</span>`).join('')}${e.has_attachments ? '<span class="chip">Attachment</span>' : ''}</div>
+          <div class="labels">${metaChips(e)}${(e.labels || []).map(l => `<span class="chip">${escapeHtml(l)}</span>`).join('')}${e.has_attachments ? `<span class="chip">${e.attachment_count} attachment(s)</span>` : ''}</div>
         </button>`).join('') : '<div class="empty">No email.</div>';
       list.querySelectorAll('[data-email-id]').forEach(row => row.addEventListener('click', () => openEmail(row.dataset.emailId)));
     } catch (err) { list.innerHTML=`<div class="empty">${escapeHtml(err.message)}</div>`; }
@@ -163,8 +174,10 @@
     try {
       const email = await api(`/emails/${encodeURIComponent(id)}`);
       $('messageState').textContent = email.attachments?.length ? `${email.attachments.length} attachment(s)` : '';
+      const ccLine = email.cc?.length ? `<br><strong>Cc:</strong> ${email.cc.map(escapeHtml).join('; ')}` : '';
+      const attachments = email.attachments?.length ? `<div class="attachments">${email.attachments.map(a => `<a class="attachment-link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener"><span>${escapeHtml(a.filename)}</span><span class="muted">${escapeHtml(a.mime_type)}</span></a>`).join('')}</div>` : '';
       $('messageDetail').className='message';
-      $('messageDetail').innerHTML = `<h2>${escapeHtml(email.subject)}</h2><div class="meta"><strong>From:</strong> ${escapeHtml(email.sender)}<br><strong>To:</strong> ${escapeHtml(email.to)}<br>${escapeHtml(fmtDate(email.received_at))}</div><div class="body">${escapeHtml(email.body)}</div><p><button id="replyButton">Draft reply</button></p>`;
+      $('messageDetail').innerHTML = `<h2>${escapeHtml(email.subject)}</h2><div class="meta"><strong>From:</strong> ${escapeHtml(email.sender)}<br><strong>To:</strong> ${escapeHtml(email.to)}${ccLine}<br>${escapeHtml(fmtDate(email.received_at))}</div>${attachments}<div class="body">${escapeHtml(email.body)}</div><p><button id="replyButton">Draft reply</button></p>`;
       $('replyButton').addEventListener('click', () => prepareReply(email));
       await loadInbox();
     } catch (err) { notify(err.message, true); }

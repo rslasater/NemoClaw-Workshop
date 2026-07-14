@@ -2,6 +2,13 @@ from pydantic import BaseModel, EmailStr, Field
 from typing import List, Optional
 
 
+class Attachment(BaseModel):
+    id: str
+    filename: str
+    mime_type: str = "application/octet-stream"
+    url: Optional[str] = None
+
+
 class EmailSummary(BaseModel):
     id: str
     sender: str
@@ -11,11 +18,17 @@ class EmailSummary(BaseModel):
     read: bool
     labels: List[str] = Field(default_factory=list)
     has_attachments: bool = False
+    attachment_count: int = 0
+    conversation_id: Optional[str] = None
+    thread_index: Optional[int] = None
+    classification: str = "UNCLASSIFIED"
+    importance: str = "normal"
 
 
 class Email(EmailSummary):
     body: str
-    attachments: List[str] = Field(default_factory=list)
+    cc: List[str] = Field(default_factory=list)
+    attachments: List[Attachment] = Field(default_factory=list)
 
 
 class DraftCreate(BaseModel):

@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-from .generator import generate_thread, merge_mailbox
+from .generator import export_api_seed, generate_thread, merge_mailbox
 from .io import read_json
 from .prompts import build_thread_prompt
 from .providers import MockProvider, OpenAICompatibleProvider
@@ -37,6 +37,11 @@ def parser() -> argparse.ArgumentParser:
     merge = sub.add_parser("merge")
     merge.add_argument("--output", type=Path, default=Path("generated/emails.json"))
     merge.add_argument("--allow-incomplete", action="store_true")
+
+    api_seed = sub.add_parser("export-api-seed")
+    api_seed.add_argument("--output", type=Path, default=Path("../fake-email-api/data/atas_seed_emails.json"))
+    api_seed.add_argument("--allow-incomplete", action="store_true")
+    api_seed.add_argument("--thread-id", action="append", help="Export only this reviewed thread; repeat as needed")
     return p
 
 
@@ -86,6 +91,11 @@ def main() -> None:
 
     if args.command == "merge":
         result = merge_mailbox(scenario, args.generated, args.output, args.allow_incomplete)
+        print(json.dumps(result, indent=2))
+        return
+
+    if args.command == "export-api-seed":
+        result = export_api_seed(scenario, args.generated, args.output, args.allow_incomplete, args.thread_id)
         print(json.dumps(result, indent=2))
         return
 
