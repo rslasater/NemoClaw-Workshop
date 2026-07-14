@@ -26,6 +26,7 @@ Write realistic professional email conversations while obeying these rules:
 def build_thread_prompt(scenario: Scenario, thread_id: str) -> str:
     thread = scenario.thread_definition(thread_id)
     messages = scenario.thread_messages(thread_id)
+    allows_spillage_marking = thread_id in {"SEC-004", "SEC-005"}
 
     participants = sorted({m["from"]["name"] for m in messages} | {
         recipient["name"] for m in messages for recipient in (m.get("to", []) + m.get("cc", []))
@@ -62,6 +63,11 @@ def build_thread_prompt(scenario: Scenario, thread_id: str) -> str:
             "Technical concerns should emerge incrementally rather than through one smoking-gun email.",
             "Do not put instructor truth IDs into email bodies.",
             "Do not fabricate attachment contents beyond what the scenario requires.",
+            (
+                "This is an approved security-spillage thread; references to the embedded slide marking may appear only as needed."
+                if allows_spillage_marking
+                else "Do not include the string SECRET//NOFORN or any classified-document marking in this thread."
+            ),
         ],
     }
     return "Author this thread using the following structured brief:\n\n" + json.dumps(payload, indent=2)
