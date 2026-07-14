@@ -1,0 +1,20 @@
+{
+  "emails": [
+    {
+      "id": "ATAS-001-001",
+      "body": "Draft body for ATAS-001-001. This placeholder confirms that thread generation, validation, review, and merge are working."
+    },
+    {
+      "id": "ATAS-001-002",
+      "body": "Draft body for ATAS-001-002. This placeholder confirms that thread generation, validation, review, and merge are working."
+    },
+    {
+      "id": "ATAS-001-003",
+      "body": "Draft body for ATAS-001-003. This placeholder confirms that thread generation, validation, review, and merge are working."
+    },
+    {
+      "id": "ATAS-001-004",
+      "body": "Draft body for ATAS-001-004. This placeholder confirms that thread generation, validation, review, and merge are working."
+    }
+  ]
+}

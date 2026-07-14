@@ -1,0 +1,2 @@
+[console_scripts]
+atas-generate = atas_generator.cli:main

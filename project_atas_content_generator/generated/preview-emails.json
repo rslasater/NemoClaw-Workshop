@@ -1,0 +1,133 @@
+[
+  {
+    "id": "ATAS-001-004",
+    "conversation_id": "ATAS-001",
+    "thread_index": 4,
+    "sent_at": "2026-10-04T07:03:00.542675-04:00",
+    "from": {
+      "name": "COL Jesse Abreu",
+      "email": "jesse.abreu@jiaitf.example"
+    },
+    "to": [
+      {
+        "name": "Dr. Josh Brunner",
+        "email": "josh.brunner@aegis-technologies.example"
+      }
+    ],
+    "cc": [
+      {
+        "name": "Rebecca Shaw",
+        "email": "rebecca.shaw@aegis-technologies.example"
+      },
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "subject": "RE: ATaS roles and deliverables",
+    "classification": "UNCLASSIFIED",
+    "importance": "medium",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": "ATAS-001-003",
+    "references": [
+      "ATAS-001-001",
+      "ATAS-001-002",
+      "ATAS-001-003"
+    ],
+    "body": "Draft body for ATAS-001-004. This placeholder confirms that thread generation, validation, review, and merge are working."
+  },
+  {
+    "id": "ATAS-001-003",
+    "conversation_id": "ATAS-001",
+    "thread_index": 3,
+    "sent_at": "2026-10-03T15:07:00.501108-04:00",
+    "from": {
+      "name": "LCDR James Maddox",
+      "email": "james.maddox@jiaitf.example"
+    },
+    "to": [
+      {
+        "name": "Dr. Josh Brunner",
+        "email": "josh.brunner@aegis-technologies.example"
+      }
+    ],
+    "cc": [],
+    "subject": "ATaS roles and deliverables",
+    "classification": "UNCLASSIFIED",
+    "importance": "medium",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": "ATAS-001-002",
+    "references": [
+      "ATAS-001-001",
+      "ATAS-001-002"
+    ],
+    "body": "Draft body for ATAS-001-003. This placeholder confirms that thread generation, validation, review, and merge are working."
+  },
+  {
+    "id": "ATAS-001-002",
+    "conversation_id": "ATAS-001",
+    "thread_index": 2,
+    "sent_at": "2026-10-01T08:07:00.617364-04:00",
+    "from": {
+      "name": "Rebecca Shaw",
+      "email": "rebecca.shaw@aegis-technologies.example"
+    },
+    "to": [
+      {
+        "name": "Dr. Josh Brunner",
+        "email": "josh.brunner@aegis-technologies.example"
+      }
+    ],
+    "cc": [],
+    "subject": "RE: Project ATaS kickoff",
+    "classification": "UNCLASSIFIED",
+    "importance": "medium",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": "ATAS-001-001",
+    "references": [
+      "ATAS-001-001"
+    ],
+    "body": "Draft body for ATAS-001-002. This placeholder confirms that thread generation, validation, review, and merge are working."
+  },
+  {
+    "id": "ATAS-001-001",
+    "conversation_id": "ATAS-001",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T07:24:00.756070-04:00",
+    "from": {
+      "name": "Dr. Josh Brunner",
+      "email": "josh.brunner@aegis-technologies.example"
+    },
+    "to": [
+      {
+        "name": "Rebecca Shaw",
+        "email": "rebecca.shaw@aegis-technologies.example"
+      }
+    ],
+    "cc": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      },
+      {
+        "name": "COL Jesse Abreu",
+        "email": "jesse.abreu@jiaitf.example"
+      }
+    ],
+    "subject": "Project ATaS kickoff",
+    "classification": "UNCLASSIFIED",
+    "importance": "medium",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "body": "Draft body for ATAS-001-001. This placeholder confirms that thread generation, validation, review, and merge are working."
+  }
+]

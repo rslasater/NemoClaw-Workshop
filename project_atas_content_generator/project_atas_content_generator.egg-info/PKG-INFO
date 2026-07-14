@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: project-atas-content-generator
+Version: 0.1.0
+Summary: Deterministic thread authoring pipeline for the Project ATaS workshop mailbox
+Requires-Python: >=3.11
+Requires-Dist: requests>=2.31

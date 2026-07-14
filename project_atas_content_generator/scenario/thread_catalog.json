@@ -1,0 +1,564 @@
+[
+  {
+    "thread_id": "ATAS-001",
+    "purpose": "Project kickoff and program framing",
+    "email_count": 4,
+    "importance": "medium",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "ATAS-002",
+    "purpose": "Weekly engineering status",
+    "email_count": 8,
+    "importance": "medium",
+    "truth_ids": [
+      "T-001"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "ATAS-003",
+    "purpose": "Validation testing",
+    "email_count": 10,
+    "importance": "critical",
+    "truth_ids": [
+      "T-003",
+      "T-005",
+      "T-011",
+      "T-012",
+      "T-013",
+      "T-014",
+      "T-015"
+    ],
+    "planned_attachments": [
+      "Urban_Test_Results.xlsx"
+    ]
+  },
+  {
+    "thread_id": "ATAS-004",
+    "purpose": "Urban test edge cases",
+    "email_count": 6,
+    "importance": "critical",
+    "truth_ids": [
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-014",
+      "T-015"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "ATAS-005",
+    "purpose": "Executive messaging alignment",
+    "email_count": 8,
+    "importance": "critical",
+    "truth_ids": [
+      "T-003",
+      "T-004"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "ATAS-006",
+    "purpose": "Validation Report v17",
+    "email_count": 3,
+    "importance": "high",
+    "truth_ids": [
+      "T-009",
+      "T-011"
+    ],
+    "planned_attachments": [
+      "ATaS_Validation_Report_v17.pdf"
+    ]
+  },
+  {
+    "thread_id": "ATAS-007",
+    "purpose": "Validation Report v18",
+    "email_count": 5,
+    "importance": "critical",
+    "truth_ids": [
+      "T-002",
+      "T-003",
+      "T-005",
+      "T-009",
+      "T-012",
+      "T-014",
+      "T-015"
+    ],
+    "planned_attachments": [
+      "ATaS_Validation_Report_v18.pdf"
+    ]
+  },
+  {
+    "thread_id": "ATAS-008",
+    "purpose": "Josh private concerns",
+    "email_count": 7,
+    "importance": "critical",
+    "truth_ids": [
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-020"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "CONG-001",
+    "purpose": "Senate briefing scheduling",
+    "email_count": 8,
+    "importance": "critical",
+    "truth_ids": [
+      "T-010"
+    ],
+    "planned_attachments": [
+      "ATaS_Briefing_Agenda.ics"
+    ]
+  },
+  {
+    "thread_id": "CONG-002",
+    "purpose": "Updated congressional priorities",
+    "email_count": 6,
+    "importance": "critical",
+    "truth_ids": [
+      "T-001",
+      "T-002",
+      "T-010"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "CONG-003",
+    "purpose": "Expected Senator questions",
+    "email_count": 5,
+    "importance": "high",
+    "truth_ids": [
+      "T-001",
+      "T-010"
+    ],
+    "planned_attachments": [
+      "Congressional_Questions.docx"
+    ]
+  },
+  {
+    "thread_id": "CONG-004",
+    "purpose": "Briefing deck revisions",
+    "email_count": 9,
+    "importance": "critical",
+    "truth_ids": [
+      "T-001",
+      "T-002",
+      "T-006",
+      "T-009"
+    ],
+    "planned_attachments": [
+      "ATaS_Congressional_Brief_v12.pptx",
+      "ATaS_Congressional_Brief_v13.pptx"
+    ]
+  },
+  {
+    "thread_id": "CONG-005",
+    "purpose": "COL Abreu talking points",
+    "email_count": 6,
+    "importance": "high",
+    "truth_ids": [
+      "T-002",
+      "T-009"
+    ],
+    "planned_attachments": [
+      "ATaS_Talking_Points.docx"
+    ]
+  },
+  {
+    "thread_id": "OPS-001",
+    "purpose": "Daily battle rhythm",
+    "email_count": 9,
+    "importance": "low",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "OPS-002",
+    "purpose": "Leadership synchronization",
+    "email_count": 8,
+    "importance": "medium",
+    "truth_ids": [
+      "T-009",
+      "T-016"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "OPS-003",
+    "purpose": "Action tracker",
+    "email_count": 7,
+    "importance": "medium",
+    "truth_ids": [
+      "T-002",
+      "T-005"
+    ],
+    "planned_attachments": [
+      "JIAITF_Action_Tracker.xlsx"
+    ]
+  },
+  {
+    "thread_id": "OPS-004",
+    "purpose": "Meeting minutes",
+    "email_count": 5,
+    "importance": "low",
+    "truth_ids": [
+      "T-005"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "OPS-005",
+    "purpose": "Travel coordination",
+    "email_count": 6,
+    "importance": "low",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SEC-001",
+    "purpose": "Hockey and family conversation",
+    "email_count": 4,
+    "importance": "noise",
+    "truth_ids": [
+      "T-017",
+      "T-019"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SEC-002",
+    "purpose": "Career discussion with Stix",
+    "email_count": 5,
+    "importance": "low",
+    "truth_ids": [
+      "T-016"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SEC-003",
+    "purpose": "Casual Project ATaS discussion",
+    "email_count": 6,
+    "importance": "high",
+    "truth_ids": [
+      "T-006"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SEC-004",
+    "purpose": "Slide sanity check and disclosure",
+    "email_count": 5,
+    "importance": "critical",
+    "truth_ids": [
+      "T-006",
+      "T-019"
+    ],
+    "planned_attachments": [
+      "ATaS_Congressional_Brief_v13.pptx"
+    ]
+  },
+  {
+    "thread_id": "SEC-005",
+    "purpose": "Message recall attempt",
+    "email_count": 3,
+    "importance": "critical",
+    "truth_ids": [
+      "T-007",
+      "T-008"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SEC-006",
+    "purpose": "Annual security reminders",
+    "email_count": 4,
+    "importance": "medium",
+    "truth_ids": [
+      "T-008",
+      "P-003"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "HOME-001",
+    "purpose": "San Diego realtor listings",
+    "email_count": 7,
+    "importance": "noise",
+    "truth_ids": [
+      "T-016",
+      "T-018"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "HOME-002",
+    "purpose": "VA loan preapproval",
+    "email_count": 6,
+    "importance": "noise",
+    "truth_ids": [
+      "T-016",
+      "T-018"
+    ],
+    "planned_attachments": [
+      "VA_Loan_Preapproval.pdf"
+    ]
+  },
+  {
+    "thread_id": "HOME-003",
+    "purpose": "Home inspection",
+    "email_count": 5,
+    "importance": "noise",
+    "truth_ids": [
+      "T-018"
+    ],
+    "planned_attachments": [
+      "Inspection_Report.pdf"
+    ]
+  },
+  {
+    "thread_id": "HOME-004",
+    "purpose": "School and commute research",
+    "email_count": 5,
+    "importance": "noise",
+    "truth_ids": [
+      "T-018"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "HOME-005",
+    "purpose": "Family house discussion",
+    "email_count": 6,
+    "importance": "noise",
+    "truth_ids": [
+      "T-016",
+      "T-018"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "CAREER-001",
+    "purpose": "Rotation orders",
+    "email_count": 5,
+    "importance": "low",
+    "truth_ids": [
+      "T-016"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "CAREER-002",
+    "purpose": "Mentor career advice",
+    "email_count": 5,
+    "importance": "low",
+    "truth_ids": [
+      "T-016",
+      "T-017"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "CAREER-003",
+    "purpose": "Fitness report coordination",
+    "email_count": 4,
+    "importance": "noise",
+    "truth_ids": [
+      "T-016"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-001",
+    "purpose": "Defense News daily digest",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-002",
+    "purpose": "Breaking Defense digest",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-003",
+    "purpose": "War on the Rocks newsletter",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-004",
+    "purpose": "Defense One newsletters",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-005",
+    "purpose": "NVIDIA Developer newsletter",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-006",
+    "purpose": "MLOps Weekly",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-007",
+    "purpose": "GitHub notifications",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-008",
+    "purpose": "AWS GovCloud updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-009",
+    "purpose": "Cisco security digest",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-010",
+    "purpose": "IEEE Spectrum alerts",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-001",
+    "purpose": "LinkedIn marketing",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-002",
+    "purpose": "Amazon order and promotion",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-003",
+    "purpose": "Marriott offers",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-004",
+    "purpose": "Hilton rewards",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-005",
+    "purpose": "Costco promotions",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-006",
+    "purpose": "Adobe renewal offers",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-007",
+    "purpose": "Home Depot promotions",
+    "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "PHISH-001",
+    "purpose": "Password expiration lure",
+    "email_count": 1,
+    "importance": "high",
+    "truth_ids": [
+      "P-001",
+      "P-002"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "PHISH-002",
+    "purpose": "CAC update lure",
+    "email_count": 1,
+    "importance": "high",
+    "truth_ids": [
+      "P-001"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "PHISH-003",
+    "purpose": "DFAS payroll lure",
+    "email_count": 1,
+    "importance": "high",
+    "truth_ids": [
+      "P-001"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "PHISH-004",
+    "purpose": "Teams login lure",
+    "email_count": 1,
+    "importance": "high",
+    "truth_ids": [
+      "P-001"
+    ],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "PHISH-005",
+    "purpose": "Adobe Sign lure",
+    "email_count": 1,
+    "importance": "high",
+    "truth_ids": [
+      "P-001"
+    ],
+    "planned_attachments": []
+  }
+]

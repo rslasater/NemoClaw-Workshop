@@ -1,0 +1,93 @@
+{
+  "LCDR James Maddox": {
+    "2026-09-29": [
+      "ATaS is expected to approach 1% error",
+      "A Senate briefing is forthcoming"
+    ],
+    "2026-10-02": [
+      "Briefing deck is being built from v17",
+      "Believes validation is on track"
+    ],
+    "2026-10-03": [
+      "Has not reviewed v18",
+      "Shares general project context with Stix"
+    ],
+    "2026-10-04": [
+      "Still believes 1% is defensible",
+      "Sends v13 deck to Stix without noticing slide 14"
+    ],
+    "2026-10-05 0730": [
+      "Inbox remains unprocessed",
+      "Does not understand full validation concern",
+      "Has not reported suspected disclosure"
+    ]
+  },
+  "Dr. Josh Brunner": {
+    "2026-09-29": [
+      "Optimistic about model improvement"
+    ],
+    "2026-10-02": [
+      "Recognizes urban performance remains weaker"
+    ],
+    "2026-10-03": [
+      "Sees aggregate performance trending near 2%"
+    ],
+    "2026-10-04": [
+      "Not comfortable representing 1% as final",
+      "Wants more validation"
+    ],
+    "2026-10-05 0730": [
+      "Prepared to answer honestly if asked"
+    ]
+  },
+  "Rebecca Shaw": {
+    "2026-09-29": [
+      "Supports 1% projected-performance narrative"
+    ],
+    "2026-10-02": [
+      "Knows validation is incomplete"
+    ],
+    "2026-10-03": [
+      "Keeps external messaging aligned to 1%"
+    ],
+    "2026-10-04": [
+      "Continues emphasizing projected performance and future validation"
+    ]
+  },
+  "COL Jesse Abreu": {
+    "2026-09-29": [
+      "Believes ATaS is a major improvement"
+    ],
+    "2026-10-02": [
+      "Believes 1% is mature enough for briefing"
+    ],
+    "2026-10-04": [
+      "Uses outdated deck and talking points"
+    ],
+    "2026-10-05 0730": [
+      "Unaware of v18 concerns",
+      "Unaware of disclosure"
+    ]
+  },
+  "LCDR Jeff \"Stix\" Martinez": {
+    "2026-10-03": [
+      "Knows James supports an AI targeting project"
+    ],
+    "2026-10-04": [
+      "Receives v13 deck",
+      "Recognizes slide marked SECRET//NOFORN",
+      "Warns James"
+    ]
+  },
+  "Capt Alicia Scott": {
+    "2026-10-01": [
+      "Knows Senator Lane supports modernization but prioritizes oversight"
+    ],
+    "2026-10-03": [
+      "Sends updated questions and priorities"
+    ],
+    "2026-10-04": [
+      "Assumes deck will be revised before briefing"
+    ]
+  }
+}

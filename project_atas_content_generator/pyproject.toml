@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-atas-content-generator"
+version = "0.1.0"
+description = "Deterministic thread authoring pipeline for the Project ATaS workshop mailbox"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31"]
+
+[project.scripts]
+atas-generate = "atas_generator.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["atas_generator*"]
