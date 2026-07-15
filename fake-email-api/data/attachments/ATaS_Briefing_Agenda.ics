@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//JIAITF//Project ATaS Workshop//EN
+BEGIN:VEVENT
+UID:atas-briefing-agenda-20261006@jiaitf.example
+DTSTAMP:20260929T120000Z
+DTSTART:20261006T130000Z
+DTEND:20261006T143000Z
+SUMMARY:Project ATaS Congressional Briefing Prep
+LOCATION:JIAITF Main Conference Room
+DESCRIPTION:Review agenda, expected questions, validation caveats, and approved speaking roles.
+END:VEVENT
+END:VCALENDAR
