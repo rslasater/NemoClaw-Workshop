@@ -1,6 +1,6 @@
 [
   {
-    "id": "SEC-004-005",
+    "id": "msg_460960d08279",
     "from": "LCDR James Maddox <james.maddox@jiaitf.example>",
     "to": "LCDR Jeff \"Stix\" Martinez <jeff.martinez@navy.example>",
     "cc": [],
@@ -11,29 +11,27 @@
     "labels": [],
     "attachments": [
       {
-        "id": "ATT-SEC-004-005-01",
+        "id": "att_02e4d1306dd8",
         "filename": "ATaS_Congressional_Brief_v13.pptx",
         "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
         "path": "attachments/ATaS_Congressional_Brief_v13.pptx"
       }
     ],
     "metadata": {
-      "conversation_id": "SEC-004",
-      "thread_index": 5,
       "classification": "UNCLASSIFIED",
       "importance": "critical",
-      "in_reply_to": "SEC-004-004",
+      "in_reply_to": "msg_1c7a4ed44a43",
       "references": [
-        "SEC-004-001",
-        "SEC-004-002",
-        "SEC-004-003",
-        "SEC-004-004"
+        "msg_b64302ec22e6",
+        "msg_656e7db31c4d",
+        "msg_c0b6a3b69a7f",
+        "msg_1c7a4ed44a43"
       ],
       "sent_at": "2026-10-05T07:25:00-04:00"
     }
   },
   {
-    "id": "SEC-004-004",
+    "id": "msg_1c7a4ed44a43",
     "from": "LCDR Jeff \"Stix\" Martinez <jeff.martinez@navy.example>",
     "to": "LCDR James Maddox <james.maddox@jiaitf.example>",
     "cc": [
@@ -46,21 +44,19 @@
     "labels": [],
     "attachments": [],
     "metadata": {
-      "conversation_id": "SEC-004",
-      "thread_index": 4,
       "classification": "UNCLASSIFIED",
       "importance": "critical",
-      "in_reply_to": "SEC-004-003",
+      "in_reply_to": "msg_c0b6a3b69a7f",
       "references": [
-        "SEC-004-001",
-        "SEC-004-002",
-        "SEC-004-003"
+        "msg_b64302ec22e6",
+        "msg_656e7db31c4d",
+        "msg_c0b6a3b69a7f"
       ],
       "sent_at": "2026-10-03T11:38:00.810563-04:00"
     }
   },
   {
-    "id": "SEC-004-003",
+    "id": "msg_c0b6a3b69a7f",
     "from": "JIAITF Security Office <security@jiaitf.example>",
     "to": "LCDR Jeff \"Stix\" Martinez <jeff.martinez@navy.example>",
     "cc": [
@@ -73,27 +69,25 @@
     "labels": [],
     "attachments": [
       {
-        "id": "ATT-SEC-004-003-01",
+        "id": "att_df0e0f2da330",
         "filename": "ATaS_Congressional_Brief_v13.pptx",
         "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
         "path": "attachments/ATaS_Congressional_Brief_v13.pptx"
       }
     ],
     "metadata": {
-      "conversation_id": "SEC-004",
-      "thread_index": 3,
       "classification": "UNCLASSIFIED",
       "importance": "critical",
-      "in_reply_to": "SEC-004-002",
+      "in_reply_to": "msg_656e7db31c4d",
       "references": [
-        "SEC-004-001",
-        "SEC-004-002"
+        "msg_b64302ec22e6",
+        "msg_656e7db31c4d"
       ],
       "sent_at": "2026-10-02T07:12:00.347127-04:00"
     }
   },
   {
-    "id": "SEC-004-002",
+    "id": "msg_656e7db31c4d",
     "from": "LCDR James Maddox <james.maddox@jiaitf.example>",
     "to": "LCDR Jeff \"Stix\" Martinez <jeff.martinez@navy.example>",
     "cc": [],
@@ -104,19 +98,17 @@
     "labels": [],
     "attachments": [],
     "metadata": {
-      "conversation_id": "SEC-004",
-      "thread_index": 2,
       "classification": "UNCLASSIFIED",
       "importance": "critical",
-      "in_reply_to": "SEC-004-001",
+      "in_reply_to": "msg_b64302ec22e6",
       "references": [
-        "SEC-004-001"
+        "msg_b64302ec22e6"
       ],
       "sent_at": "2026-10-01T21:12:00.469132-04:00"
     }
   },
   {
-    "id": "SEC-004-001",
+    "id": "msg_b64302ec22e6",
     "from": "LCDR Jeff \"Stix\" Martinez <jeff.martinez@navy.example>",
     "to": "LCDR James Maddox <james.maddox@jiaitf.example>",
     "cc": [
@@ -129,8 +121,6 @@
     "labels": [],
     "attachments": [],
     "metadata": {
-      "conversation_id": "SEC-004",
-      "thread_index": 1,
       "classification": "UNCLASSIFIED",
       "importance": "critical",
       "in_reply_to": null,

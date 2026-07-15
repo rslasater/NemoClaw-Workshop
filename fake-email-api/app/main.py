@@ -13,6 +13,7 @@ from .storage import (
     get_email,
     get_sent,
     get_sent_attachment,
+    inbox_status,
     init_db,
     list_activity,
     list_drafts,
@@ -75,6 +76,11 @@ def me() -> Me:
 @app.get("/emails", response_model=list[EmailSummary])
 def emails() -> list[EmailSummary]:
     return [EmailSummary(**item) for item in list_emails(STUDENT_ID)]
+
+
+@app.get("/emails/status")
+def emails_status() -> dict:
+    return inbox_status()
 
 
 @app.get("/emails/{email_id}", response_model=Email)

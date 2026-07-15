@@ -1,4 +1,5 @@
 import json
+import hashlib
 import os
 import re
 import sqlite3
@@ -12,6 +13,7 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DEFAULT_SEED_PATH = DATA_DIR / "atas_seed_emails.json"
 FALLBACK_SEED_PATH = DATA_DIR / "seed_emails.json"
 DEFAULT_MAILBOX_OWNER_EMAIL = "james.maddox@jiaitf.example"
+OPAQUE_ID_NAMESPACE = "project-atas-workshop-v1"
 
 
 def now_iso() -> str:
@@ -62,6 +64,42 @@ def mailbox_owner_emails(student_email: str) -> set[str]:
     return {email.strip().lower() for email in (student_email, configured) if email.strip()}
 
 
+def opaque_id(kind: str, original_id: Any, prefix: str) -> str:
+    text = str(original_id or "").strip()
+    if text.startswith(f"{prefix}_"):
+        return text
+    digest = hashlib.sha256(f"{OPAQUE_ID_NAMESPACE}:{kind}:{text}".encode("utf-8")).hexdigest()[:12]
+    return f"{prefix}_{digest}"
+
+
+def public_message_id(original_id: Any) -> str:
+    return opaque_id("message", original_id, "msg")
+
+
+def public_attachment_id(message_id: Any, attachment_id: Any) -> str:
+    text = str(attachment_id or "").strip()
+    if text.startswith("att_"):
+        return text
+    return opaque_id("attachment", f"{message_id}:{text}", "att")
+
+
+def map_message_reference(value: Any, id_map: Dict[str, str]) -> Optional[str]:
+    if value is None:
+        return None
+    text = str(value)
+    return id_map.get(text, public_message_id(text))
+
+
+def map_message_references(values: Any, id_map: Dict[str, str]) -> List[str]:
+    if not values:
+        return []
+    return [
+        mapped
+        for value in values
+        if (mapped := map_message_reference(value, id_map)) is not None
+    ]
+
+
 def people_emails(people: Any) -> set[str]:
     if not people:
         return set()
@@ -74,19 +112,20 @@ def people_emails(people: Any) -> set[str]:
     return {part.strip().lower() for part in re.split(r"[;,]", text) if part.strip()}
 
 
-def normalize_attachment(attachment: Any) -> Dict[str, str]:
+def normalize_attachment(attachment: Any, message_id: str = "") -> Dict[str, str]:
     if isinstance(attachment, str):
         filename = attachment
         return {
-            "id": filename,
+            "id": public_attachment_id(message_id, filename),
             "filename": filename,
             "mime_type": "application/octet-stream",
             "path": f"attachments/{filename}",
         }
 
     filename = str(attachment.get("filename", attachment.get("id", "attachment"))).strip()
+    source_attachment_id = str(attachment.get("id", filename))
     return {
-        "id": str(attachment.get("id", filename)),
+        "id": public_attachment_id(message_id, source_attachment_id),
         "filename": filename,
         "mime_type": str(attachment.get("mime_type", "application/octet-stream")),
         "path": str(attachment.get("path", f"attachments/{filename}")),
@@ -113,20 +152,17 @@ def sent_attachment_with_url(sent_id: str, attachment: Any) -> Dict[str, str]:
     }
 
 
-def normalize_seed_email(email: Dict[str, Any], student_email: str) -> Dict[str, Any]:
+def normalize_seed_email(email: Dict[str, Any], student_email: str, id_map: Dict[str, str]) -> Dict[str, Any]:
+    message_id = id_map[str(email["id"])]
     metadata = dict(email.get("metadata", {}))
-    if "conversation_id" in email:
-        metadata["conversation_id"] = email.get("conversation_id")
-    if "thread_index" in email:
-        metadata["thread_index"] = email.get("thread_index")
+    metadata.pop("conversation_id", None)
+    metadata.pop("thread_index", None)
     if "classification" in email:
         metadata["classification"] = email.get("classification")
     if "importance" in email:
         metadata["importance"] = email.get("importance")
-    if "in_reply_to" in email:
-        metadata["in_reply_to"] = email.get("in_reply_to")
-    if "references" in email:
-        metadata["references"] = email.get("references", [])
+    metadata["in_reply_to"] = map_message_reference(email.get("in_reply_to", metadata.get("in_reply_to")), id_map)
+    metadata["references"] = map_message_references(email.get("references", metadata.get("references", [])), id_map)
     if "sent_at" in email:
         metadata["sent_at"] = email.get("sent_at")
     cc_value = email.get("cc", metadata.get("cc", []))
@@ -138,7 +174,7 @@ def normalize_seed_email(email: Dict[str, Any], student_email: str) -> Dict[str,
         metadata["cc"] = []
 
     return {
-        "id": email["id"],
+        "id": message_id,
         "sender": format_person(email["from"]),
         "recipient": format_people(email.get("to")) or student_email,
         "subject": email["subject"],
@@ -146,7 +182,7 @@ def normalize_seed_email(email: Dict[str, Any], student_email: str) -> Dict[str,
         "received_at": email.get("received_at") or email.get("sent_at"),
         "read": int(bool(email.get("read", email.get("is_read", False)))),
         "labels": email.get("labels", []),
-        "attachments": [normalize_attachment(item) for item in email.get("attachments", [])],
+        "attachments": [normalize_attachment(item, message_id) for item in email.get("attachments", [])],
         "metadata": metadata,
     }
 
@@ -257,8 +293,9 @@ def seed_emails(student_email: str) -> None:
         if existing:
             return
         owner_emails = mailbox_owner_emails(student_email)
+        id_map = {str(email["id"]): public_message_id(email["id"]) for email in emails}
         for email in emails:
-            normalized = normalize_seed_email(email, student_email)
+            normalized = normalize_seed_email(email, student_email, id_map)
             if is_outgoing_seed_email(normalized, owner_emails):
                 conn.execute(
                     """
@@ -313,8 +350,6 @@ def row_to_email(row: sqlite3.Row, include_body: bool = False) -> Dict[str, Any]
         "labels": json.loads(row["labels"]),
         "has_attachments": len(attachments) > 0,
         "attachment_count": len(attachments),
-        "conversation_id": metadata.get("conversation_id"),
-        "thread_index": metadata.get("thread_index"),
         "classification": metadata.get("classification", "UNCLASSIFIED"),
         "importance": metadata.get("importance", "normal"),
     }
@@ -337,10 +372,22 @@ def get_email(email_id: str, actor: str) -> Optional[Dict[str, Any]]:
         row = conn.execute("SELECT * FROM emails WHERE id = ?", (email_id,)).fetchone()
         if row:
             conn.execute("UPDATE emails SET read = 1 WHERE id = ?", (email_id,))
+            row = conn.execute("SELECT * FROM emails WHERE id = ?", (email_id,)).fetchone()
     if not row:
         return None
     log_activity(actor, "read_email", email_id)
     return row_to_email(row, include_body=True)
+
+
+def inbox_status() -> Dict[str, Any]:
+    with connect() as conn:
+        rows = conn.execute("SELECT id, read FROM emails ORDER BY received_at DESC").fetchall()
+    read_by_id = {row["id"]: bool(row["read"]) for row in rows}
+    return {
+        "inbox_count": len(rows),
+        "unread_count": sum(1 for row in rows if not row["read"]),
+        "read": read_by_id,
+    }
 
 
 def get_attachment(email_id: str, attachment_id: str, actor: str) -> Optional[Dict[str, Any]]:
@@ -448,8 +495,6 @@ def row_to_sent(row: sqlite3.Row) -> Dict[str, Any]:
         "attachments": [sent_attachment_with_url(row["id"], item) for item in attachments],
         "has_attachments": len(attachments) > 0,
         "attachment_count": len(attachments),
-        "conversation_id": metadata.get("conversation_id"),
-        "thread_index": metadata.get("thread_index"),
         "classification": metadata.get("classification", "UNCLASSIFIED"),
         "importance": metadata.get("importance", "normal"),
     }

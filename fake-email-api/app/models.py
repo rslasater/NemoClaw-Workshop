@@ -19,8 +19,6 @@ class EmailSummary(BaseModel):
     labels: List[str] = Field(default_factory=list)
     has_attachments: bool = False
     attachment_count: int = 0
-    conversation_id: Optional[str] = None
-    thread_index: Optional[int] = None
     classification: str = "UNCLASSIFIED"
     importance: str = "normal"
 
@@ -64,8 +62,6 @@ class SentEmail(BaseModel):
     attachments: List[Attachment] = Field(default_factory=list)
     has_attachments: bool = False
     attachment_count: int = 0
-    conversation_id: Optional[str] = None
-    thread_index: Optional[int] = None
     classification: str = "UNCLASSIFIED"
     importance: str = "normal"
 

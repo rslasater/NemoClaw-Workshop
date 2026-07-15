@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -10,6 +11,8 @@ from .prompts import SYSTEM_PROMPT, build_thread_prompt
 from .providers import Provider
 from .scenario import Scenario
 from .validation import validate_generation
+
+OPAQUE_ID_NAMESPACE = "project-atas-workshop-v1"
 
 
 def generate_thread(scenario: Scenario, thread_id: str, provider: Provider, output_root: Path) -> Path:
@@ -108,17 +111,55 @@ def _format_people(people: Any) -> str:
     return _format_person(people)
 
 
-def _attachment_for_api(attachment: Any) -> dict[str, str]:
+def _opaque_id(kind: str, original_id: Any, prefix: str) -> str:
+    text = str(original_id or "").strip()
+    if text.startswith(f"{prefix}_"):
+        return text
+    digest = hashlib.sha256(f"{OPAQUE_ID_NAMESPACE}:{kind}:{text}".encode("utf-8")).hexdigest()[:12]
+    return f"{prefix}_{digest}"
+
+
+def _message_id_for_api(original_id: Any) -> str:
+    return _opaque_id("message", original_id, "msg")
+
+
+def _attachment_id_for_api(message_id: Any, attachment_id: Any) -> str:
+    text = str(attachment_id or "").strip()
+    if text.startswith("att_"):
+        return text
+    return _opaque_id("attachment", f"{message_id}:{text}", "att")
+
+
+def _map_message_reference(value: Any, id_map: dict[str, str]) -> str | None:
+    if value is None:
+        return None
+    text = str(value)
+    return id_map.get(text, _message_id_for_api(text))
+
+
+def _map_message_references(values: Any, id_map: dict[str, str]) -> list[str]:
+    if not values:
+        return []
+    return [
+        mapped
+        for value in values
+        if (mapped := _map_message_reference(value, id_map)) is not None
+    ]
+
+
+def _attachment_for_api(message_id: str, attachment: Any) -> dict[str, str]:
     if isinstance(attachment, str):
+        attachment_id = _attachment_id_for_api(message_id, attachment)
         return {
-            "id": attachment,
+            "id": attachment_id,
             "filename": attachment,
             "mime_type": "application/octet-stream",
             "path": f"attachments/{attachment}",
         }
     filename = str(attachment.get("filename", attachment.get("id", "attachment"))).strip()
+    source_attachment_id = str(attachment.get("id", filename))
     return {
-        "id": str(attachment.get("id", filename)),
+        "id": _attachment_id_for_api(message_id, source_attachment_id),
         "filename": filename,
         "mime_type": str(attachment.get("mime_type", "application/octet-stream")),
         "path": str(attachment.get("path", f"attachments/{filename}")),
@@ -134,10 +175,12 @@ def export_api_seed(
 ) -> dict[str, Any]:
     selected_thread_ids = set(thread_ids) if thread_ids else None
     mailbox, missing_threads = _build_mailbox(scenario, generated_root, allow_incomplete, selected_thread_ids)
+    id_map = {str(source["id"]): _message_id_for_api(source["id"]) for source in mailbox}
     api_seed = []
     for source in mailbox:
+        message_id = id_map[str(source["id"])]
         api_seed.append({
-            "id": source["id"],
+            "id": message_id,
             "from": _format_person(source.get("from")),
             "to": _format_people(source.get("to")),
             "cc": [_format_person(person) for person in source.get("cc", [])],
@@ -146,14 +189,12 @@ def export_api_seed(
             "received_at": source["sent_at"],
             "read": bool(source.get("is_read", False)),
             "labels": source.get("labels", []),
-            "attachments": [_attachment_for_api(item) for item in source.get("attachments", [])],
+            "attachments": [_attachment_for_api(message_id, item) for item in source.get("attachments", [])],
             "metadata": {
-                "conversation_id": source.get("conversation_id"),
-                "thread_index": source.get("thread_index"),
                 "classification": source.get("classification"),
                 "importance": source.get("importance"),
-                "in_reply_to": source.get("in_reply_to"),
-                "references": source.get("references", []),
+                "in_reply_to": _map_message_reference(source.get("in_reply_to"), id_map),
+                "references": _map_message_references(source.get("references", []), id_map),
                 "sent_at": source.get("sent_at"),
             },
         })
