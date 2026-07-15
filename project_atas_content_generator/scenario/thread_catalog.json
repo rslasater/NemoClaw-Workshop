@@ -455,6 +455,118 @@
     "planned_attachments": []
   },
   {
+    "thread_id": "NEWS-011",
+    "purpose": "Acquisition Today briefings",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-012",
+    "purpose": "Federal workforce and IT news",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-013",
+    "purpose": "Navy and maritime headlines",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-014",
+    "purpose": "C4ISR and electronic warfare digest",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-015",
+    "purpose": "Navy Times benefits and community updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-016",
+    "purpose": "AFCEA Signal member updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-017",
+    "purpose": "DVIDS saved-topic notifications",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-018",
+    "purpose": "Technical learning recommendations",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-019",
+    "purpose": "Engineering job search notifications",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-020",
+    "purpose": "Government Executive daily briefings",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-021",
+    "purpose": "Nextgov and FCW technology updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-022",
+    "purpose": "Google Cloud public sector updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-023",
+    "purpose": "Red Hat government open source bulletin",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "NEWS-024",
+    "purpose": "NIST publication alerts",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
     "thread_id": "SPAM-001",
     "purpose": "LinkedIn marketing",
     "email_count": 2,
@@ -506,6 +618,70 @@
     "thread_id": "SPAM-007",
     "purpose": "Home Depot promotions",
     "email_count": 3,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-008",
+    "purpose": "Delta SkyMiles member promotions",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-009",
+    "purpose": "United MileagePlus offers",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-010",
+    "purpose": "Target Circle retail promotions",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-011",
+    "purpose": "Best Buy electronics promotions",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-012",
+    "purpose": "Lowe's for Pros promotions",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-013",
+    "purpose": "Mortgage marketing updates",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-014",
+    "purpose": "Coursera course recommendations",
+    "email_count": 2,
+    "importance": "noise",
+    "truth_ids": [],
+    "planned_attachments": []
+  },
+  {
+    "thread_id": "SPAM-015",
+    "purpose": "Grammarly account promotions",
+    "email_count": 2,
     "importance": "noise",
     "truth_ids": [],
     "planned_attachments": []

@@ -122,6 +122,8 @@ atas-generate export-api-seed --thread-id SEC-004 --output ../fake-email-api/dat
 
 `export-api-seed` keeps the reviewed source files stable for validation, but the API seed uses opaque `msg_...` message IDs and `att_...` attachment IDs. It also strips thread scaffolding such as `conversation_id` and `thread_index` so students and agents cannot shortcut the investigation by reading scenario labels.
 
+The scenario blueprint is intentionally larger than the mailbox because some source messages are not addressed to LCDR Maddox. The current blueprint produces about 200 visible Maddox mailbox messages after inbox/sent filtering, with extra noise concentrated in newsletter, promotion, vendor update, and routine notification traffic.
+
 ## Safety and scenario constraints
 
 - The mailbox contains only `UNCLASSIFIED` and limited `CUI` messages.

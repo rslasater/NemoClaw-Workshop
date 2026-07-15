@@ -14,6 +14,7 @@ Write realistic professional email conversations while obeying these rules:
 - Maintain continuity across replies. Later messages may quote or briefly reference earlier messages, but avoid repeating full chains.
 - Match each persona's voice and what that person knows at that point in time.
 - Do not reveal instructor metadata, truth IDs, grading language, or that this is a simulation.
+- Do not mention raw message IDs, thread IDs, conversation IDs, blueprint labels, or category prefixes such as ATAS-001, CONG-004, NEWS-010, SPAM-002, or PHISH-003. The project name "Project ATaS" may be referenced normally when relevant.
 - No email may itself be classified. Mailbox labels may only be UNCLASSIFIED or CUI.
 - A single presentation attachment may contain an erroneously embedded fictional slide marked SECRET//NOFORN. Do not invent operational details, real collection capabilities, real targeting data, or actionable classified content.
 - The security thread should describe the marking and the need to report suspected spillage, not reproduce sensitive slide contents.
@@ -62,6 +63,7 @@ def build_thread_prompt(scenario: Scenario, thread_id: str) -> str:
             "Do not make every message equally long or polished.",
             "Technical concerns should emerge incrementally rather than through one smoking-gun email.",
             "Do not put instructor truth IDs into email bodies.",
+            "Do not put message IDs, thread IDs, conversation IDs, or raw scenario category labels into email bodies.",
             "Do not fabricate attachment contents beyond what the scenario requires.",
             (
                 "This is an approved security-spillage thread; references to the embedded slide marking may appear only as needed."
