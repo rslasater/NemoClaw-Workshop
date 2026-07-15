@@ -2,7 +2,7 @@
 
 A reproducible authoring pipeline for the Project ATaS workshop mailbox.
 
-The generator uses the approved mailbox blueprint to author complete email threads, validate them, preserve stable message IDs, and merge reviewed threads into the `emails.json` seed consumed by the fake email API.
+The generator uses the approved mailbox blueprint to author complete email threads, validate them, preserve stable authoring message IDs, and export a student-facing seed consumed by the fake email API.
 
 ## What it does
 
@@ -12,7 +12,7 @@ The generator uses the approved mailbox blueprint to author complete email threa
 4. Requires strict JSON containing only message IDs and email bodies.
 5. Validates continuity-sensitive invariants and classification rules.
 6. Stores each thread separately for human review and Git versioning.
-7. Merges approved threads into a student-safe mailbox seed with instructor metadata removed.
+7. Exports approved threads into a student-safe mailbox seed with instructor metadata removed and scenario IDs replaced by opaque IDs.
 
 ## Layout
 
@@ -120,10 +120,14 @@ For a reviewed slice or API-ready seed file:
 atas-generate export-api-seed --thread-id SEC-004 --output ../fake-email-api/data/atas_seed_emails.json
 ```
 
+`export-api-seed` keeps the reviewed source files stable for validation, but the API seed uses opaque `msg_...` message IDs and `att_...` attachment IDs. It also strips thread scaffolding such as `conversation_id` and `thread_index` so students and agents cannot shortcut the investigation by reading scenario labels.
+
+The scenario blueprint is intentionally larger than the mailbox because some source messages are not addressed to LCDR Maddox. The current blueprint produces about 200 visible Maddox mailbox messages after inbox/sent filtering, with extra noise concentrated in newsletter, promotion, vendor update, and routine notification traffic.
+
 ## Safety and scenario constraints
 
 - The mailbox contains only `UNCLASSIFIED` and limited `CUI` messages.
 - No standalone classified email is generated.
 - One unclassified email thread may reference a presentation containing an erroneously embedded fictional slide marked `SECRET//NOFORN`.
 - The prompt forbids real operational details, collection capabilities, target information, and instructor metadata.
-- The merge step strips `authoring_metadata` and truth mappings before producing the student mailbox.
+- The export step strips `authoring_metadata`, truth mappings, and scenario thread labels before producing the student mailbox.

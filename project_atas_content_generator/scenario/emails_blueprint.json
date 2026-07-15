@@ -80,6 +80,38 @@
     }
   },
   {
+    "id": "NEWS-011-001",
+    "conversation_id": "NEWS-011",
+    "thread_index": 1,
+    "sent_at": "2026-09-29T08:12:00-04:00",
+    "from": {
+      "name": "Acquisition Today",
+      "email": "briefing@acquisitiontoday.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Morning memo: rapid acquisition and test range modernization",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Acquisition Today briefings",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "OPS-001-001",
     "conversation_id": "OPS-001",
     "thread_index": 1,
@@ -251,6 +283,38 @@
     }
   },
   {
+    "id": "NEWS-012-001",
+    "conversation_id": "NEWS-012",
+    "thread_index": 1,
+    "sent_at": "2026-09-29T09:04:00-04:00",
+    "from": {
+      "name": "Federal News Network",
+      "email": "updates@federalnewsnetwork.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Workforce update: PCS policy, hiring timelines, and telework notes",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Federal workforce and IT news",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "CONG-003-001",
     "conversation_id": "CONG-003",
     "thread_index": 1,
@@ -346,8 +410,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-29T09:38:00-04:00",
     "from": {
-      "name": "NEWS-010 Editorial",
-      "email": "news-010@newsletters.example"
+      "name": "IEEE Spectrum Alerts",
+      "email": "alerts@spectrum.ieee.example"
     },
     "to": [
       {
@@ -356,7 +420,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "IEEE Spectrum: robotics, chips, and autonomous systems headlines",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -582,6 +646,38 @@
     }
   },
   {
+    "id": "SPAM-008-001",
+    "conversation_id": "SPAM-008",
+    "thread_index": 1,
+    "sent_at": "2026-09-29T12:22:00-04:00",
+    "from": {
+      "name": "Delta SkyMiles",
+      "email": "skymiles@delta.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Your July miles statement is ready",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Delta SkyMiles member promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "HOME-001-001",
     "conversation_id": "HOME-001",
     "thread_index": 1,
@@ -631,8 +727,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-29T17:38:00-04:00",
     "from": {
-      "name": "SPAM-007 Marketing",
-      "email": "spam-007@offers.example"
+      "name": "The Home Depot Pro Xtra",
+      "email": "proxtra@homedepot.example"
     },
     "to": [
       {
@@ -641,7 +737,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Pro Xtra savings on garage storage and tools",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -822,6 +918,38 @@
     }
   },
   {
+    "id": "NEWS-013-001",
+    "conversation_id": "NEWS-013",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T06:55:00-04:00",
+    "from": {
+      "name": "USNI News Daily",
+      "email": "daily@usni.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Fleet brief: maintenance delays and deployment schedule changes",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Navy and maritime headlines",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "PHISH-002-001",
     "conversation_id": "PHISH-002",
     "thread_index": 1,
@@ -988,8 +1116,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-30T08:18:00-04:00",
     "from": {
-      "name": "NEWS-007 Editorial",
-      "email": "news-007@newsletters.example"
+      "name": "GitHub Notifications",
+      "email": "notifications@github.example"
     },
     "to": [
       {
@@ -998,7 +1126,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "[jiaitf/action-tracker] workflow run failed on main",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -1059,6 +1187,38 @@
     }
   },
   {
+    "id": "NEWS-014-001",
+    "conversation_id": "NEWS-014",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T08:27:00-04:00",
+    "from": {
+      "name": "C4ISRNET Today",
+      "email": "today@c4isrnet.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "ISR and networks brief: tactical cloud pilots",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "C4ISR and electronic warfare digest",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "CONG-002-001",
     "conversation_id": "CONG-002",
     "thread_index": 1,
@@ -1099,6 +1259,38 @@
         "T-002",
         "T-010"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-015-001",
+    "conversation_id": "NEWS-015",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T09:12:00-04:00",
+    "from": {
+      "name": "Navy Times Daily Headlines",
+      "email": "headlines@navytimes.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Daily headlines: housing, orders, and retention changes",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Navy Times benefits and community updates",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -1266,6 +1458,38 @@
     }
   },
   {
+    "id": "NEWS-016-001",
+    "conversation_id": "NEWS-016",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T10:24:00-04:00",
+    "from": {
+      "name": "AFCEA SIGNAL Update",
+      "email": "signal@afcea.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "SIGNAL update: cyber workforce and data fabric lessons",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "AFCEA Signal member updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "SEC-003-002",
     "conversation_id": "SEC-003",
     "thread_index": 2,
@@ -1347,8 +1571,8 @@
     "thread_index": 2,
     "sent_at": "2026-09-30T11:31:00-04:00",
     "from": {
-      "name": "NEWS-007 Editorial",
-      "email": "news-007@newsletters.example"
+      "name": "GitHub Notifications",
+      "email": "notifications@github.example"
     },
     "to": [
       {
@@ -1357,7 +1581,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "[jiaitf/briefing-tools] dependabot opened 3 pull requests",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -1370,6 +1594,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "GitHub notifications",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-009-001",
+    "conversation_id": "SPAM-009",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T12:05:00-04:00",
+    "from": {
+      "name": "United MileagePlus",
+      "email": "mileageplus@united.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Weekend fares from San Diego",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "United MileagePlus offers",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -1404,6 +1660,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "Daily battle rhythm",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-010-001",
+    "conversation_id": "SPAM-010",
+    "thread_index": 1,
+    "sent_at": "2026-09-30T13:13:00-04:00",
+    "from": {
+      "name": "Target Circle",
+      "email": "circle@target.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Deals picked for home office upgrades",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Target Circle retail promotions",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -1496,8 +1784,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-30T14:07:00-04:00",
     "from": {
-      "name": "NEWS-006 Editorial",
-      "email": "news-006@newsletters.example"
+      "name": "MLOps Weekly",
+      "email": "newsletter@mlopsweekly.example"
     },
     "to": [
       {
@@ -1506,7 +1794,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "MLOps Weekly: evaluation harnesses, drift checks, and observability",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -2058,8 +2346,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-30T21:51:00-04:00",
     "from": {
-      "name": "NEWS-001 Editorial",
-      "email": "news-001@newsletters.example"
+      "name": "Defense News Daily Brief",
+      "email": "daily-brief@defensenews.example"
     },
     "to": [
       {
@@ -2068,7 +2356,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "Daily Briefing: NDAA markup, shipbuilding, and unmanned systems",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -2126,8 +2414,8 @@
     "thread_index": 1,
     "sent_at": "2026-09-30T22:07:00-04:00",
     "from": {
-      "name": "NEWS-002 Editorial",
-      "email": "news-002@newsletters.example"
+      "name": "Breaking Defense Alerts",
+      "email": "alerts@breakingdefense.example"
     },
     "to": [
       {
@@ -2136,7 +2424,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "Breaking Defense: autonomy funding and test range updates",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -2260,6 +2548,38 @@
         "T-016",
         "T-018"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-017-001",
+    "conversation_id": "NEWS-017",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T07:33:00-04:00",
+    "from": {
+      "name": "DVIDS Subscriptions",
+      "email": "subscriptions@dvids.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "New media matching your saved topics",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "DVIDS saved-topic notifications",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -2566,6 +2886,38 @@
     }
   },
   {
+    "id": "NEWS-018-001",
+    "conversation_id": "NEWS-018",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T08:58:00-04:00",
+    "from": {
+      "name": "O'Reilly Learning",
+      "email": "learning@oreilly.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Recommended: secure Python APIs and LLM evaluation",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Technical learning recommendations",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "CONG-003-003",
     "conversation_id": "CONG-003",
     "thread_index": 3,
@@ -2643,6 +2995,38 @@
         "T-017",
         "T-019"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-019-001",
+    "conversation_id": "NEWS-019",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T10:11:00-04:00",
+    "from": {
+      "name": "Stack Overflow Talent",
+      "email": "saved-searches@stackoverflow.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Saved search: AI platform and systems roles",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Engineering job search notifications",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -2726,13 +3110,13 @@
     }
   },
   {
-    "id": "SPAM-005-001",
-    "conversation_id": "SPAM-005",
+    "id": "NEWS-020-001",
+    "conversation_id": "NEWS-020",
     "thread_index": 1,
-    "sent_at": "2026-10-01T11:38:00-04:00",
+    "sent_at": "2026-10-01T11:26:00-04:00",
     "from": {
-      "name": "SPAM-005 Marketing",
-      "email": "spam-005@offers.example"
+      "name": "GovExec Daily Briefing",
+      "email": "daily@govexec.example"
     },
     "to": [
       {
@@ -2741,7 +3125,39 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Daily briefing: appropriations calendar and agency oversight",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Government Executive daily briefings",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-005-001",
+    "conversation_id": "SPAM-005",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T11:38:00-04:00",
+    "from": {
+      "name": "Costco Business Center",
+      "email": "warehouse-savings@costco.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Warehouse savings: coffee, batteries, and office basics",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -2752,6 +3168,38 @@
     "references": [],
     "authoring_metadata": {
       "thread_purpose": "Costco promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-011-001",
+    "conversation_id": "SPAM-011",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T12:39:00-04:00",
+    "from": {
+      "name": "Best Buy",
+      "email": "deals@bestbuy.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Price drops on monitors and storage",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Best Buy electronics promotions",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -2980,8 +3428,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-01T13:31:00-04:00",
     "from": {
-      "name": "NEWS-009 Editorial",
-      "email": "news-009@newsletters.example"
+      "name": "Cisco Talos Intelligence",
+      "email": "talos-digest@cisco.example"
     },
     "to": [
       {
@@ -2990,7 +3438,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "Talos digest: identity attacks, endpoint telemetry, and patch notes",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3001,6 +3449,38 @@
     "references": [],
     "authoring_metadata": {
       "thread_purpose": "Cisco security digest",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-012-001",
+    "conversation_id": "SPAM-012",
+    "thread_index": 1,
+    "sent_at": "2026-10-01T13:52:00-04:00",
+    "from": {
+      "name": "Lowe's for Pros",
+      "email": "pros@lowes.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Pro savings on garage storage and tools",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Lowes for Pros promotions",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -3104,8 +3584,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-01T14:03:00-04:00",
     "from": {
-      "name": "SPAM-002 Marketing",
-      "email": "spam-002@offers.example"
+      "name": "Amazon Business",
+      "email": "store-news@amazon.example"
     },
     "to": [
       {
@@ -3114,7 +3594,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Order update: office supplies and adapter recommendations",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3136,8 +3616,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-01T14:03:00-04:00",
     "from": {
-      "name": "SPAM-005 Marketing",
-      "email": "spam-005@offers.example"
+      "name": "Costco Business Center",
+      "email": "warehouse-savings@costco.example"
     },
     "to": [
       {
@@ -3146,7 +3626,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Member-only tech and appliance offers this week",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3554,8 +4034,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-01T20:12:00-04:00",
     "from": {
-      "name": "NEWS-008 Editorial",
-      "email": "news-008@newsletters.example"
+      "name": "AWS Public Sector Updates",
+      "email": "public-sector@aws.example"
     },
     "to": [
       {
@@ -3564,7 +4044,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "GovCloud update: compliance notes and upcoming maintenance",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3796,8 +4276,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-01T21:56:00-04:00",
     "from": {
-      "name": "NEWS-010 Editorial",
-      "email": "news-010@newsletters.example"
+      "name": "IEEE Spectrum Alerts",
+      "email": "alerts@spectrum.ieee.example"
     },
     "to": [
       {
@@ -3806,7 +4286,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Editor picks: AI hardware, sensors, and aviation research",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3830,8 +4310,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-01T22:51:00-04:00",
     "from": {
-      "name": "NEWS-004 Editorial",
-      "email": "news-004@newsletters.example"
+      "name": "Defense One Today",
+      "email": "today@defenseone.example"
     },
     "to": [
       {
@@ -3840,7 +4320,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "Today in Defense: workforce, cyber, and strategy",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3912,8 +4392,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-02T07:38:00-04:00",
     "from": {
-      "name": "SPAM-007 Marketing",
-      "email": "spam-007@offers.example"
+      "name": "The Home Depot Pro Xtra",
+      "email": "proxtra@homedepot.example"
     },
     "to": [
       {
@@ -3922,7 +4402,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Weekend project deals near San Diego",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -3983,8 +4463,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-02T07:51:00-04:00",
     "from": {
-      "name": "NEWS-001 Editorial",
-      "email": "news-001@newsletters.example"
+      "name": "Defense News Daily Brief",
+      "email": "daily-brief@defensenews.example"
     },
     "to": [
       {
@@ -3993,7 +4473,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Early Bird: budget signals and acquisition moves",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4006,6 +4486,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "Defense News daily digest",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-021-001",
+    "conversation_id": "NEWS-021",
+    "thread_index": 1,
+    "sent_at": "2026-10-02T08:06:00-04:00",
+    "from": {
+      "name": "Nextgov/FCW Tech Update",
+      "email": "techupdate@nextgov.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Cyber brief: identity pilots and software supply chain",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Nextgov and FCW technology updates",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -4126,8 +4638,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-02T08:44:00-04:00",
     "from": {
-      "name": "NEWS-002 Editorial",
-      "email": "news-002@newsletters.example"
+      "name": "Breaking Defense Alerts",
+      "email": "alerts@breakingdefense.example"
     },
     "to": [
       {
@@ -4136,7 +4648,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Budget watch: Hill staff questions and acquisition timelines",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4160,8 +4672,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-02T08:44:00-04:00",
     "from": {
-      "name": "NEWS-004 Editorial",
-      "email": "news-004@newsletters.example"
+      "name": "Defense One Today",
+      "email": "today@defenseone.example"
     },
     "to": [
       {
@@ -4170,7 +4682,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Daily Read: AI policy, readiness metrics, and budget pressure",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4460,8 +4972,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-02T09:24:00-04:00",
     "from": {
-      "name": "SPAM-004 Marketing",
-      "email": "spam-004@offers.example"
+      "name": "Hilton Honors",
+      "email": "honors@hilton.example"
     },
     "to": [
       {
@@ -4470,7 +4982,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Points promotion: earn double nights this month",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4481,6 +4993,38 @@
     "references": [],
     "authoring_metadata": {
       "thread_purpose": "Hilton rewards",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-022-001",
+    "conversation_id": "NEWS-022",
+    "thread_index": 1,
+    "sent_at": "2026-10-02T09:51:00-04:00",
+    "from": {
+      "name": "Google Cloud Public Sector",
+      "email": "public-sector@googlecloud.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Public sector update: AI agents and security controls",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Google Cloud public sector updates",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -4578,8 +5122,8 @@
     "thread_index": 3,
     "sent_at": "2026-10-02T10:18:00-04:00",
     "from": {
-      "name": "NEWS-004 Editorial",
-      "email": "news-004@newsletters.example"
+      "name": "Defense One Today",
+      "email": "today@defenseone.example"
     },
     "to": [
       {
@@ -4588,7 +5132,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #3",
+    "subject": "Evening Brief: Pentagon tech pilots and oversight hearings",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4602,6 +5146,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "Defense One newsletters",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-023-001",
+    "conversation_id": "NEWS-023",
+    "thread_index": 1,
+    "sent_at": "2026-10-02T10:34:00-04:00",
+    "from": {
+      "name": "Red Hat Government",
+      "email": "government@redhat.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Open source briefing: edge compute and automation",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Red Hat government open source bulletin",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -4698,8 +5274,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-02T11:44:00-04:00",
     "from": {
-      "name": "NEWS-003 Editorial",
-      "email": "news-003@newsletters.example"
+      "name": "War on the Rocks",
+      "email": "newsletter@warontherocks.example"
     },
     "to": [
       {
@@ -4708,7 +5284,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "What we are reading: deterrence, autonomy, and coalition planning",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -4770,6 +5346,38 @@
     }
   },
   {
+    "id": "SPAM-013-001",
+    "conversation_id": "SPAM-013",
+    "thread_index": 1,
+    "sent_at": "2026-10-02T12:44:00-04:00",
+    "from": {
+      "name": "Rocket Mortgage",
+      "email": "updates@rocketmortgage.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "See today's refinance and VA loan rates",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Mortgage marketing updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "CAREER-003-003",
     "conversation_id": "CAREER-003",
     "thread_index": 3,
@@ -4802,6 +5410,38 @@
       "truth_ids": [
         "T-016"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-014-001",
+    "conversation_id": "SPAM-014",
+    "thread_index": 1,
+    "sent_at": "2026-10-02T13:23:00-04:00",
+    "from": {
+      "name": "Coursera",
+      "email": "recommendations@coursera.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Recommended courses in AI governance",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Coursera course recommendations",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -4930,8 +5570,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-02T14:38:00-04:00",
     "from": {
-      "name": "NEWS-009 Editorial",
-      "email": "news-009@newsletters.example"
+      "name": "Cisco Talos Intelligence",
+      "email": "talos-digest@cisco.example"
     },
     "to": [
       {
@@ -4940,7 +5580,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Weekly threat roundup: phishing kits and edge-device advisories",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -5055,13 +5695,13 @@
     }
   },
   {
-    "id": "SPAM-007-003",
-    "conversation_id": "SPAM-007",
-    "thread_index": 3,
-    "sent_at": "2026-10-02T16:03:00-04:00",
+    "id": "NEWS-011-002",
+    "conversation_id": "NEWS-011",
+    "thread_index": 2,
+    "sent_at": "2026-10-02T14:47:00-04:00",
     "from": {
-      "name": "SPAM-007 Marketing",
-      "email": "spam-007@offers.example"
+      "name": "Acquisition Today",
+      "email": "briefing@acquisitiontoday.example"
     },
     "to": [
       {
@@ -5070,7 +5710,39 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #3",
+    "subject": "Afternoon update: OTA activity and budget marks",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Acquisition Today briefings",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-007-003",
+    "conversation_id": "SPAM-007",
+    "thread_index": 3,
+    "sent_at": "2026-10-02T16:03:00-04:00",
+    "from": {
+      "name": "The Home Depot Pro Xtra",
+      "email": "proxtra@homedepot.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Receipt available for your recent hardware purchase",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -5183,8 +5855,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-02T17:18:00-04:00",
     "from": {
-      "name": "NEWS-005 Editorial",
-      "email": "news-005@newsletters.example"
+      "name": "NVIDIA Developer Update",
+      "email": "developer-updates@nvidia.example"
     },
     "to": [
       {
@@ -5193,7 +5865,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #1",
+    "subject": "Developer Update: CUDA, inference, and edge AI resources",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -5341,8 +6013,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-02T20:51:00-04:00",
     "from": {
-      "name": "SPAM-003 Marketing",
-      "email": "spam-003@offers.example"
+      "name": "Marriott Bonvoy",
+      "email": "offers@marriott.example"
     },
     "to": [
       {
@@ -5351,7 +6023,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Your Bonvoy member offers for July travel",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -5990,8 +6662,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-03T08:44:00-04:00",
     "from": {
-      "name": "SPAM-006 Marketing",
-      "email": "spam-006@offers.example"
+      "name": "Adobe Account Services",
+      "email": "account@adobe.example"
     },
     "to": [
       {
@@ -6000,7 +6672,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "Your Acrobat plan renewal options",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -6017,13 +6689,13 @@
     }
   },
   {
-    "id": "NEWS-008-002",
-    "conversation_id": "NEWS-008",
-    "thread_index": 2,
-    "sent_at": "2026-10-03T09:07:00-04:00",
+    "id": "NEWS-024-001",
+    "conversation_id": "NEWS-024",
+    "thread_index": 1,
+    "sent_at": "2026-10-03T08:49:00-04:00",
     "from": {
-      "name": "NEWS-008 Editorial",
-      "email": "news-008@newsletters.example"
+      "name": "NIST Updates",
+      "email": "updates@nist.example"
     },
     "to": [
       {
@@ -6032,7 +6704,39 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "New publication alerts for AI risk and cybersecurity",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "NIST publication alerts",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-008-002",
+    "conversation_id": "NEWS-008",
+    "thread_index": 2,
+    "sent_at": "2026-10-03T09:07:00-04:00",
+    "from": {
+      "name": "AWS Public Sector Updates",
+      "email": "public-sector@aws.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Webinar invite: secure analytics for mission teams",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -6219,8 +6923,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-03T10:18:00-04:00",
     "from": {
-      "name": "NEWS-006 Editorial",
-      "email": "news-006@newsletters.example"
+      "name": "MLOps Weekly",
+      "email": "newsletter@mlopsweekly.example"
     },
     "to": [
       {
@@ -6229,7 +6933,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "This week in model operations: agents, GPUs, and deployment patterns",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -6242,6 +6946,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "MLOps Weekly",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-012-002",
+    "conversation_id": "NEWS-012",
+    "thread_index": 2,
+    "sent_at": "2026-10-03T10:39:00-04:00",
+    "from": {
+      "name": "Federal News Network",
+      "email": "updates@federalnewsnetwork.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Agency IT update: zero trust reporting and cloud spending",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Federal workforce and IT news",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -6503,6 +7239,38 @@
     }
   },
   {
+    "id": "SPAM-015-001",
+    "conversation_id": "SPAM-015",
+    "thread_index": 1,
+    "sent_at": "2026-10-03T12:14:00-04:00",
+    "from": {
+      "name": "Grammarly",
+      "email": "insights@grammarly.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Your weekly writing stats are ready",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Grammarly account promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "HOME-002-005",
     "conversation_id": "HOME-002",
     "thread_index": 5,
@@ -6538,6 +7306,38 @@
         "T-016",
         "T-018"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-014-002",
+    "conversation_id": "NEWS-014",
+    "thread_index": 2,
+    "sent_at": "2026-10-03T13:16:00-04:00",
+    "from": {
+      "name": "C4ISRNET Today",
+      "email": "today@c4isrnet.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Electronic warfare roundup: spectrum policy and sensors",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "C4ISR and electronic warfare digest",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -6582,8 +7382,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-03T13:38:00-04:00",
     "from": {
-      "name": "SPAM-003 Marketing",
-      "email": "spam-003@offers.example"
+      "name": "Marriott Bonvoy",
+      "email": "offers@marriott.example"
     },
     "to": [
       {
@@ -6592,7 +7392,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Weekend rates near San Diego and Norfolk",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -6832,13 +7632,13 @@
     }
   },
   {
-    "id": "NEWS-002-003",
-    "conversation_id": "NEWS-002",
-    "thread_index": 3,
-    "sent_at": "2026-10-03T15:51:00-04:00",
+    "id": "NEWS-016-002",
+    "conversation_id": "NEWS-016",
+    "thread_index": 2,
+    "sent_at": "2026-10-03T15:44:00-04:00",
     "from": {
-      "name": "NEWS-002 Editorial",
-      "email": "news-002@newsletters.example"
+      "name": "AFCEA SIGNAL Update",
+      "email": "signal@afcea.example"
     },
     "to": [
       {
@@ -6847,7 +7647,39 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #3",
+    "subject": "Member bulletin: chapter events and webinar reminders",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "AFCEA Signal member updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-002-003",
+    "conversation_id": "NEWS-002",
+    "thread_index": 3,
+    "sent_at": "2026-10-03T15:51:00-04:00",
+    "from": {
+      "name": "Breaking Defense Alerts",
+      "email": "alerts@breakingdefense.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Industry update: sensors, sustainment, and contested logistics",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -6990,6 +7822,38 @@
         "T-002",
         "T-005"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-008-002",
+    "conversation_id": "SPAM-008",
+    "thread_index": 2,
+    "sent_at": "2026-10-03T17:18:00-04:00",
+    "from": {
+      "name": "Delta SkyMiles",
+      "email": "skymiles@delta.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Last chance: bonus miles on hotel bookings",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Delta SkyMiles member promotions",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -7312,8 +8176,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-03T21:51:00-04:00",
     "from": {
-      "name": "NEWS-005 Editorial",
-      "email": "news-005@newsletters.example"
+      "name": "NVIDIA Developer Update",
+      "email": "developer-updates@nvidia.example"
     },
     "to": [
       {
@@ -7322,7 +8186,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Webinar reminder: optimizing local inference workflows",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -7425,8 +8289,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-03T22:51:00-04:00",
     "from": {
-      "name": "NEWS-003 Editorial",
-      "email": "news-003@newsletters.example"
+      "name": "War on the Rocks",
+      "email": "newsletter@warontherocks.example"
     },
     "to": [
       {
@@ -7435,7 +8299,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #2",
+    "subject": "Weekly essay roundup: civil-military process and strategy notes",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -7583,6 +8447,38 @@
       ],
       "student_visible": true,
       "requires_attachment_review": true
+    }
+  },
+  {
+    "id": "NEWS-013-002",
+    "conversation_id": "NEWS-013",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T07:42:00-04:00",
+    "from": {
+      "name": "USNI News Daily",
+      "email": "daily@usni.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Daily news: unmanned systems and maritime readiness",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Navy and maritime headlines",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
     }
   },
   {
@@ -7869,8 +8765,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-04T08:56:00-04:00",
     "from": {
-      "name": "SPAM-006 Marketing",
-      "email": "spam-006@offers.example"
+      "name": "Adobe Account Services",
+      "email": "account@adobe.example"
     },
     "to": [
       {
@@ -7879,7 +8775,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Creative Cloud storage reminder and account tips",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -8027,6 +8923,38 @@
     }
   },
   {
+    "id": "NEWS-015-002",
+    "conversation_id": "NEWS-015",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T11:08:00-04:00",
+    "from": {
+      "name": "Navy Times Daily Headlines",
+      "email": "headlines@navytimes.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Benefits update: pay tables and family programs",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Navy Times benefits and community updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "OPS-005-006",
     "conversation_id": "OPS-005",
     "thread_index": 6,
@@ -8065,13 +8993,13 @@
     }
   },
   {
-    "id": "NEWS-001-003",
-    "conversation_id": "NEWS-001",
-    "thread_index": 3,
-    "sent_at": "2026-10-04T13:18:00-04:00",
+    "id": "NEWS-023-002",
+    "conversation_id": "NEWS-023",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T12:19:00-04:00",
     "from": {
-      "name": "NEWS-001 Editorial",
-      "email": "news-001@newsletters.example"
+      "name": "Red Hat Government",
+      "email": "government@redhat.example"
     },
     "to": [
       {
@@ -8080,7 +9008,39 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #3",
+    "subject": "Event reminder: Ansible for regulated environments",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Red Hat government open source bulletin",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-001-003",
+    "conversation_id": "NEWS-001",
+    "thread_index": 3,
+    "sent_at": "2026-10-04T13:18:00-04:00",
+    "from": {
+      "name": "Defense News Daily Brief",
+      "email": "daily-brief@defensenews.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Daily Briefing: readiness, industry notes, and Indo-Pacific updates",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -8094,6 +9054,38 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "Defense News daily digest",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-017-002",
+    "conversation_id": "NEWS-017",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T13:28:00-04:00",
+    "from": {
+      "name": "DVIDS Subscriptions",
+      "email": "subscriptions@dvids.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Photos and releases from joint task force subscriptions",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "DVIDS saved-topic notifications",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
@@ -8146,8 +9138,8 @@
     "thread_index": 3,
     "sent_at": "2026-10-04T15:07:00-04:00",
     "from": {
-      "name": "NEWS-007 Editorial",
-      "email": "news-007@newsletters.example"
+      "name": "GitHub Notifications",
+      "email": "notifications@github.example"
     },
     "to": [
       {
@@ -8156,7 +9148,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #3",
+    "subject": "[jiaitf/atas-dashboard] issue mentioned you: export formatting",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -8271,13 +9263,13 @@
     }
   },
   {
-    "id": "SPAM-004-002",
-    "conversation_id": "SPAM-004",
+    "id": "NEWS-020-002",
+    "conversation_id": "NEWS-020",
     "thread_index": 2,
-    "sent_at": "2026-10-04T16:18:00-04:00",
+    "sent_at": "2026-10-04T16:12:00-04:00",
     "from": {
-      "name": "SPAM-004 Marketing",
-      "email": "spam-004@offers.example"
+      "name": "GovExec Daily Briefing",
+      "email": "daily@govexec.example"
     },
     "to": [
       {
@@ -8286,7 +9278,39 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Policy notes: acquisition reform and AI guidance",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Government Executive daily briefings",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-004-002",
+    "conversation_id": "SPAM-004",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T16:18:00-04:00",
+    "from": {
+      "name": "Hilton Honors",
+      "email": "honors@hilton.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Your July Hilton Honors statement is ready",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -8355,8 +9379,8 @@
     "thread_index": 3,
     "sent_at": "2026-10-04T17:24:00-04:00",
     "from": {
-      "name": "NEWS-005 Editorial",
-      "email": "news-005@newsletters.example"
+      "name": "NVIDIA Developer Update",
+      "email": "developer-updates@nvidia.example"
     },
     "to": [
       {
@@ -8365,7 +9389,7 @@
       }
     ],
     "cc": [],
-    "subject": "Daily digest #3",
+    "subject": "New release notes for accelerated data science tooling",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -8477,6 +9501,38 @@
     }
   },
   {
+    "id": "SPAM-012-002",
+    "conversation_id": "SPAM-012",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T17:54:00-04:00",
+    "from": {
+      "name": "Lowe's for Pros",
+      "email": "pros@lowes.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Weekend project deals near San Diego",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Lowes for Pros promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "OPS-002-008",
     "conversation_id": "OPS-002",
     "thread_index": 8,
@@ -8515,6 +9571,70 @@
         "T-009",
         "T-016"
       ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-009-002",
+    "conversation_id": "SPAM-009",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T18:31:00-04:00",
+    "from": {
+      "name": "United MileagePlus",
+      "email": "mileageplus@united.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "MileagePlus Dining: extra points this week",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "United MileagePlus offers",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-014-002",
+    "conversation_id": "SPAM-014",
+    "thread_index": 2,
+    "sent_at": "2026-10-04T19:04:00-04:00",
+    "from": {
+      "name": "Coursera",
+      "email": "recommendations@coursera.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Reminder: finish your saved machine learning module",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Coursera course recommendations",
+      "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false
     }
@@ -8753,8 +9873,8 @@
     "thread_index": 1,
     "sent_at": "2026-10-04T21:56:00-04:00",
     "from": {
-      "name": "SPAM-001 Marketing",
-      "email": "spam-001@offers.example"
+      "name": "LinkedIn",
+      "email": "messages-noreply@linkedin.example"
     },
     "to": [
       {
@@ -8763,7 +9883,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #1",
+    "subject": "People are viewing your profile this week",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -9124,6 +10244,46 @@
     }
   },
   {
+    "id": "CAREER-002-005",
+    "conversation_id": "CAREER-002",
+    "thread_index": 5,
+    "sent_at": "2026-10-05T07:25:00-04:00",
+    "from": {
+      "name": "LCDR Jeff \"Stix\" Martinez",
+      "email": "jeff.martinez@navy.example"
+    },
+    "to": [
+      {
+        "name": "CAPT Laura Kim",
+        "email": "laura.kim@navy.example"
+      }
+    ],
+    "cc": [],
+    "subject": "RE: Family considerations",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "low",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": "CAREER-002-004",
+    "references": [
+      "CAREER-002-001",
+      "CAREER-002-002",
+      "CAREER-002-003",
+      "CAREER-002-004"
+    ],
+    "authoring_metadata": {
+      "thread_purpose": "Mentor career advice",
+      "truth_ids": [
+        "T-016",
+        "T-017"
+      ],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
     "id": "CONG-001-008",
     "conversation_id": "CONG-001",
     "thread_index": 8,
@@ -9167,6 +10327,52 @@
       "thread_purpose": "Senate briefing scheduling",
       "truth_ids": [
         "T-010"
+      ],
+      "student_visible": true,
+      "requires_attachment_review": true
+    }
+  },
+  {
+    "id": "HOME-003-005",
+    "conversation_id": "HOME-003",
+    "thread_index": 5,
+    "sent_at": "2026-10-05T07:25:00-04:00",
+    "from": {
+      "name": "Emily Maddox",
+      "email": "emily.maddox@example.com"
+    },
+    "to": [
+      {
+        "name": "Megan Ortiz",
+        "email": "megan@coastalkeyrealty.example"
+      }
+    ],
+    "cc": [],
+    "subject": "RE: Foundation note",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [
+      {
+        "id": "ATT-HOME-003-005-01",
+        "filename": "Inspection_Report.pdf",
+        "mime_type": "application/pdf",
+        "path": "attachments/Inspection_Report.pdf"
+      }
+    ],
+    "in_reply_to": "HOME-003-004",
+    "references": [
+      "HOME-003-001",
+      "HOME-003-002",
+      "HOME-003-003",
+      "HOME-003-004"
+    ],
+    "authoring_metadata": {
+      "thread_purpose": "Home inspection",
+      "truth_ids": [
+        "T-018"
       ],
       "student_visible": true,
       "requires_attachment_review": true
@@ -9399,99 +10605,13 @@
     }
   },
   {
-    "id": "HOME-003-005",
-    "conversation_id": "HOME-003",
-    "thread_index": 5,
-    "sent_at": "2026-10-05T07:25:00-04:00",
-    "from": {
-      "name": "Emily Maddox",
-      "email": "emily.maddox@example.com"
-    },
-    "to": [
-      {
-        "name": "Megan Ortiz",
-        "email": "megan@coastalkeyrealty.example"
-      }
-    ],
-    "cc": [],
-    "subject": "RE: Foundation note",
-    "body_status": "pending_generation",
-    "classification": "UNCLASSIFIED",
-    "importance": "noise",
-    "is_read": false,
-    "labels": [],
-    "attachments": [
-      {
-        "id": "ATT-HOME-003-005-01",
-        "filename": "Inspection_Report.pdf",
-        "mime_type": "application/pdf",
-        "path": "attachments/Inspection_Report.pdf"
-      }
-    ],
-    "in_reply_to": "HOME-003-004",
-    "references": [
-      "HOME-003-001",
-      "HOME-003-002",
-      "HOME-003-003",
-      "HOME-003-004"
-    ],
-    "authoring_metadata": {
-      "thread_purpose": "Home inspection",
-      "truth_ids": [
-        "T-018"
-      ],
-      "student_visible": true,
-      "requires_attachment_review": true
-    }
-  },
-  {
-    "id": "CAREER-002-005",
-    "conversation_id": "CAREER-002",
-    "thread_index": 5,
-    "sent_at": "2026-10-05T07:25:00-04:00",
-    "from": {
-      "name": "LCDR Jeff \"Stix\" Martinez",
-      "email": "jeff.martinez@navy.example"
-    },
-    "to": [
-      {
-        "name": "CAPT Laura Kim",
-        "email": "laura.kim@navy.example"
-      }
-    ],
-    "cc": [],
-    "subject": "RE: Family considerations",
-    "body_status": "pending_generation",
-    "classification": "UNCLASSIFIED",
-    "importance": "low",
-    "is_read": false,
-    "labels": [],
-    "attachments": [],
-    "in_reply_to": "CAREER-002-004",
-    "references": [
-      "CAREER-002-001",
-      "CAREER-002-002",
-      "CAREER-002-003",
-      "CAREER-002-004"
-    ],
-    "authoring_metadata": {
-      "thread_purpose": "Mentor career advice",
-      "truth_ids": [
-        "T-016",
-        "T-017"
-      ],
-      "student_visible": true,
-      "requires_attachment_review": false
-    }
-  },
-  {
     "id": "SPAM-001-002",
     "conversation_id": "SPAM-001",
     "thread_index": 2,
     "sent_at": "2026-10-05T07:25:00-04:00",
     "from": {
-      "name": "SPAM-001 Marketing",
-      "email": "spam-001@offers.example"
+      "name": "LinkedIn",
+      "email": "messages-noreply@linkedin.example"
     },
     "to": [
       {
@@ -9500,7 +10620,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Recommended posts from your defense technology network",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -9524,8 +10644,8 @@
     "thread_index": 2,
     "sent_at": "2026-10-05T07:25:00-04:00",
     "from": {
-      "name": "SPAM-002 Marketing",
-      "email": "spam-002@offers.example"
+      "name": "Amazon Business",
+      "email": "store-news@amazon.example"
     },
     "to": [
       {
@@ -9534,7 +10654,7 @@
       }
     ],
     "cc": [],
-    "subject": "Special offer #2",
+    "subject": "Business deals ending soon: chargers, monitors, and storage",
     "body_status": "pending_generation",
     "classification": "UNCLASSIFIED",
     "importance": "noise",
@@ -9547,6 +10667,294 @@
     ],
     "authoring_metadata": {
       "thread_purpose": "Amazon order and promotion",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-018-002",
+    "conversation_id": "NEWS-018",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T09:37:00-04:00",
+    "from": {
+      "name": "O'Reilly Learning",
+      "email": "learning@oreilly.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Your learning playlist: Kubernetes, FastAPI, and data tooling",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Technical learning recommendations",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-024-002",
+    "conversation_id": "NEWS-024",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T10:23:00-04:00",
+    "from": {
+      "name": "NIST Updates",
+      "email": "updates@nist.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Comment period reminder: draft guidance updates",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "NIST publication alerts",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-021-002",
+    "conversation_id": "NEWS-021",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T12:48:00-04:00",
+    "from": {
+      "name": "Nextgov/FCW Tech Update",
+      "email": "techupdate@nextgov.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Tech update: data centers, cloud, and model governance",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Nextgov and FCW technology updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-013-002",
+    "conversation_id": "SPAM-013",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T13:36:00-04:00",
+    "from": {
+      "name": "Rocket Mortgage",
+      "email": "updates@rocketmortgage.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Your homebuying checklist for July",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Mortgage marketing updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-019-002",
+    "conversation_id": "NEWS-019",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T14:05:00-04:00",
+    "from": {
+      "name": "Stack Overflow Talent",
+      "email": "saved-searches@stackoverflow.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "New matches for Python backend and ML infrastructure",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Engineering job search notifications",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "NEWS-022-002",
+    "conversation_id": "NEWS-022",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T15:29:00-04:00",
+    "from": {
+      "name": "Google Cloud Public Sector",
+      "email": "public-sector@googlecloud.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Webinar reminder: secure analytics for mission teams",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Google Cloud public sector updates",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-010-002",
+    "conversation_id": "SPAM-010",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T16:51:00-04:00",
+    "from": {
+      "name": "Target Circle",
+      "email": "circle@target.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Circle bonus: household essentials and tech accessories",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Target Circle retail promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-011-002",
+    "conversation_id": "SPAM-011",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T17:07:00-04:00",
+    "from": {
+      "name": "Best Buy",
+      "email": "deals@bestbuy.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Deal of the day: laptops, routers, and batteries",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Best Buy electronics promotions",
+      "truth_ids": [],
+      "student_visible": true,
+      "requires_attachment_review": false
+    }
+  },
+  {
+    "id": "SPAM-015-002",
+    "conversation_id": "SPAM-015",
+    "thread_index": 2,
+    "sent_at": "2026-10-05T18:25:00-04:00",
+    "from": {
+      "name": "Grammarly",
+      "email": "insights@grammarly.example"
+    },
+    "to": [
+      {
+        "name": "LCDR James Maddox",
+        "email": "james.maddox@jiaitf.example"
+      }
+    ],
+    "cc": [],
+    "subject": "Save on Grammarly Business for teams",
+    "body_status": "pending_generation",
+    "classification": "UNCLASSIFIED",
+    "importance": "noise",
+    "is_read": false,
+    "labels": [],
+    "attachments": [],
+    "in_reply_to": null,
+    "references": [],
+    "authoring_metadata": {
+      "thread_purpose": "Grammarly account promotions",
       "truth_ids": [],
       "student_visible": true,
       "requires_attachment_review": false

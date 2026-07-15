@@ -19,6 +19,9 @@
     nav { display:flex; gap:8px; flex-wrap:wrap; }
     nav button { background:#1f2937; color:#e5e7eb; border-color:#374151; }
     nav button.active { background:#fff; color:#111827; }
+    .count-badge { display:inline-flex; min-width:22px; height:20px; align-items:center; justify-content:center; margin-left:6px; padding:0 7px; border-radius:999px; background:#e8eef7; color:#243447; font-size:12px; font-weight:700; }
+    nav .count-badge { background:#374151; color:#f9fafb; }
+    nav button.active .count-badge { background:#2f6fed; color:#fff; }
     main { height:calc(100vh - 64px); padding:16px; }
     .view { display:none; height:100%; }
     .view.active { display:block; }
@@ -73,9 +76,9 @@
 </head>
 <body>
 <header>
-  <div><h1>NemoClaw Workshop Mail</h1><div class="identity" id="identity">Connecting…</div></div>
+  <div><h1>NemoClaw Workshop Mail</h1><div class="identity" id="identity">Connecting...</div></div>
   <nav>
-    <button data-view="inbox" class="active">Inbox</button>
+    <button data-view="inbox" class="active">Inbox <span id="navUnreadCount" class="count-badge">0</span></button>
     <button data-view="compose">Compose</button>
     <button data-view="drafts">Drafts</button>
     <button data-view="sent">Sent</button>
@@ -87,8 +90,8 @@
   <section id="inbox" class="view active">
     <div class="mail-layout">
       <div class="panel">
-        <div class="panel-head"><h2>Inbox</h2><button id="refreshInbox">Refresh</button></div>
-        <div id="emailList" class="list"><div class="empty">Loading inbox…</div></div>
+        <div class="panel-head"><h2>Inbox <span id="unreadCount" class="count-badge">0 unread</span></h2><button id="refreshInbox">Refresh</button></div>
+        <div id="emailList" class="list"><div class="empty">Loading inbox...</div></div>
       </div>
       <div class="panel">
         <div class="panel-head"><h2>Message</h2><span id="messageState" class="muted"></span></div>
@@ -103,7 +106,7 @@
         <h2>Create a reply draft</h2>
         <div class="field"><label for="draftTo">To</label><input id="draftTo" placeholder="person@example.com"></div>
         <div class="field"><label for="draftSubject">Subject</label><input id="draftSubject" placeholder="Re: Subject"></div>
-        <div class="field"><label for="draftBody">Body</label><textarea id="draftBody" placeholder="Draft response…"></textarea></div>
+        <div class="field"><label for="draftBody">Body</label><textarea id="draftBody" placeholder="Draft response..."></textarea></div>
         <input id="draftReplyTo" type="hidden">
         <button id="createDraft" class="primary">Save draft</button>
       </div>
@@ -111,7 +114,7 @@
         <h2>Send summary to self</h2>
         <p class="muted">This is the only automatic send action allowed by policy.</p>
         <div class="field"><label for="summarySubject">Subject</label><input id="summarySubject" value="Morning Inbox Briefing"></div>
-        <div class="field"><label for="summaryBody">Body</label><textarea id="summaryBody" placeholder="Your executive summary…"></textarea></div>
+        <div class="field"><label for="summaryBody">Body</label><textarea id="summaryBody" placeholder="Your executive summary..."></textarea></div>
         <button id="sendSummary" class="primary">Send summary</button>
       </div>
     </div>
@@ -122,7 +125,7 @@
     <div class="mail-layout">
       <div class="panel">
         <div class="panel-head"><h2>Sent</h2><button data-refresh="sent">Refresh</button></div>
-        <div id="sentList" class="list"><div class="empty">Loading sent mail…</div></div>
+        <div id="sentList" class="list"><div class="empty">Loading sent mail...</div></div>
       </div>
       <div class="panel">
         <div class="panel-head"><h2>Message</h2><span id="sentMessageState" class="muted"></span></div>
@@ -159,7 +162,6 @@
     const chips = [];
     if (e.classification) chips.push(`<span class="chip">${escapeHtml(e.classification)}</span>`);
     if (e.importance) chips.push(`<span class="chip ${e.importance === 'critical' ? 'critical' : ''}">${escapeHtml(e.importance)}</span>`);
-    if (e.conversation_id) chips.push(`<span class="chip">${escapeHtml(e.conversation_id)}</span>`);
     return chips.join('');
   }
 
@@ -168,13 +170,34 @@
   }
 
   async function loadMe() {
-    me = await api('/me'); $('identity').textContent = `${me.student_id} • ${me.email}`;
+    me = await api('/me'); $('identity').textContent = `${me.student_id} - ${me.email}`;
+  }
+
+  function updateUnreadCount(count=0) {
+    $('navUnreadCount').textContent = String(count);
+    $('unreadCount').textContent = `${count} unread`;
+  }
+
+  function updateUnreadCountFromEmails(emails=[]) {
+    updateUnreadCount(emails.filter(e => !e.read).length);
+  }
+
+  async function refreshInboxStatus() {
+    try {
+      const status = await api('/emails/status');
+      updateUnreadCount(status.unread_count || 0);
+      document.querySelectorAll('[data-email-id]').forEach(row => {
+        const isRead = Boolean(status.read?.[row.dataset.emailId]);
+        row.classList.toggle('unread', !isRead);
+      });
+    } catch {}
   }
 
   async function loadInbox() {
-    const list = $('emailList'); list.innerHTML='<div class="empty">Loading inbox…</div>';
+    const list = $('emailList'); list.innerHTML='<div class="empty">Loading inbox...</div>';
     try {
       const emails = await api('/emails');
+      updateUnreadCountFromEmails(emails);
       list.innerHTML = emails.length ? emails.map(e => `
         <button class="mail-row ${e.read ? '' : 'unread'} ${e.id === selectedEmailId ? 'selected' : ''}" data-email-id="${escapeHtml(e.id)}">
           <div class="top"><span class="sender">${escapeHtml(e.sender)}</span><time>${escapeHtml(fmtDate(e.received_at))}</time></div>
@@ -186,7 +209,7 @@
   }
 
   async function openEmail(id) {
-    selectedEmailId = id; $('messageDetail').className='empty'; $('messageDetail').textContent='Loading message…';
+    selectedEmailId = id; $('messageDetail').className='empty'; $('messageDetail').textContent='Loading message...';
     try {
       const email = await api(`/emails/${encodeURIComponent(id)}`);
       $('messageState').textContent = email.attachments?.length ? `${email.attachments.length} attachment(s)` : '';
@@ -207,13 +230,13 @@
   function renderMessages(items, target, emptyText, dateKey) {
     $(target).innerHTML = items.length ? items.map(x => {
       const attachments = x.attachments?.length ? `<div class="attachments">${x.attachments.map(a => `<a class="attachment-link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener"><span>${escapeHtml(a.filename)}</span><span class="muted">${escapeHtml(a.mime_type)}</span></a>`).join('')}</div>` : '';
-      return `<div class="item"><div class="item-title">${escapeHtml(x.subject)}</div><div class="item-meta">To: ${escapeHtml(x.to)} • ${escapeHtml(fmtDate(x[dateKey]))}</div>${attachments}<div class="item-body">${escapeHtml(x.body)}</div></div>`;
+      return `<div class="item"><div class="item-title">${escapeHtml(x.subject)}</div><div class="item-meta">To: ${escapeHtml(x.to)} - ${escapeHtml(fmtDate(x[dateKey]))}</div>${attachments}<div class="item-body">${escapeHtml(x.body)}</div></div>`;
     }).join('') : `<div class="empty">${emptyText}</div>`;
   }
 
   async function loadDrafts() { try { renderMessages(await api('/drafts'),'draftList','No drafts yet.','created_at'); } catch(e){ notify(e.message,true); } }
   async function loadSent() {
-    const list = $('sentList'); list.innerHTML='<div class="empty">Loading sent mail…</div>';
+    const list = $('sentList'); list.innerHTML='<div class="empty">Loading sent mail...</div>';
     try {
       const sent = await api('/sent');
       list.innerHTML = sent.length ? sent.map(e => `
@@ -227,7 +250,7 @@
   }
 
   async function openSent(id) {
-    selectedSentId = id; $('sentMessageDetail').className='empty'; $('sentMessageDetail').textContent='Loading message…';
+    selectedSentId = id; $('sentMessageDetail').className='empty'; $('sentMessageDetail').textContent='Loading message...';
     try {
       const email = await api(`/sent/${encodeURIComponent(id)}`);
       $('sentMessageState').textContent = email.attachments?.length ? `${email.attachments.length} attachment(s)` : '';
@@ -264,6 +287,10 @@
     if(!confirm('Reset the inbox, drafts, sent messages, and activity log?')) return;
     try { await api('/reset',{method:'POST'}); selectedEmailId=null; selectedSentId=null; $('messageDetail').className='empty'; $('messageDetail').textContent='Select a message to read it.'; $('sentMessageDetail').className='empty'; $('sentMessageDetail').textContent='Select a sent message to read it.'; notify('Lab reset.'); await loadInbox(); if(document.getElementById('sent').classList.contains('active')) await loadSent(); } catch(e){ notify(e.message,true); }
   });
+
+  setInterval(() => {
+    if (document.visibilityState === 'visible') refreshInboxStatus();
+  }, 5000);
 
   Promise.all([loadMe(),loadInbox()]).catch(e => notify(e.message,true));
 </script>
