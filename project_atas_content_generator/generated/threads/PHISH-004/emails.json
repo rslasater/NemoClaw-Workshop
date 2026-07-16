@@ -1,0 +1,8 @@
+{
+  "emails": [
+    {
+      "id": "PHISH-004-001",
+      "body": "Microsoft Teams Security Alert\n\nDear LCDR Maddox,\n\nOur security systems detected an unusual sign-in attempt on your Microsoft Teams account from an unrecognized device/location.\n\nSign-in details:\n• Time: 2026-10-02 10:45 AM EDT\n• Location: Unverified IP range\n• Device: Unknown mobile device\n\nIf this was you, no further action is needed. If you do not recognize this activity, please secure your account immediately by verifying your identity:\n\n[Verify My Account]\n\nThis link will expire in 4 hours for your protection.\n\nFor assistance, contact the IT Service Desk at ext. 4-HELP.\n\n— Account Security Team\nMicrosoft Identity Protection\n\n---\nThis is an automated message. Please do not reply directly to this email."
+    }
+  ]
+}

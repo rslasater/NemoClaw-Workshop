@@ -1,0 +1,3 @@
+[2026-07-15T19:59:10+00:00] Running: python3 -m atas_generator.cli generate NEWS-011 --provider openai-compatible
+
+generated/threads/NEWS-011

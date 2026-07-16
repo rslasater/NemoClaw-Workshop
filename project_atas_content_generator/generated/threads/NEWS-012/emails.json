@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-012-001",
+      "body": "Federal News Network Daily Briefing\nSeptember 29, 2026\n\nWORKFORCE\n---\n• New PCS policy guidance issued: DoD updates permanent change of station timelines for 2027 cycle. Effective 1 Oct. Details at defense.gov/pcs-2027.\n\n• Hiring timeline tracker: OPM reports average time-to-hire across federal agencies dropped to 86 days in Q3, down from 98 days same period last year. Cyber and IT roles still averaging 112+ days.\n\n• Telework posture: OMB memo M-26-18 reinforces agency discretion on remote work eligibility. No government-wide mandate changes. See fact sheet attached.\n\nIT & CYBER\n---\n• CISA releases updated zero trust maturity model v2.1. Public comment period open through 15 Nov.\n\n• FedRAMP authorization backlog: 47 systems awaiting review as of 26 Sept. New PMO director sworn in Monday.\n\n• Cloud spending: Federal cloud obligations hit $14.2B in FY26 through August, up 18% YoY. Top three providers unchanged.\n\n---\nYou're receiving this because you subscribed to Federal Workforce & IT Daily. Update preferences or unsubscribe at federalnewsnetwork.example/prefs."
+    },
+    {
+      "id": "NEWS-012-002",
+      "body": "Federal News Network Daily Briefing\nOctober 3, 2026\n\nIT & CYBER\n---\n• Zero trust reporting: OMB issues first annual agency zero trust implementation scorecards. 14 of 24 CFO Act agencies met minimum target metrics. DoD scored \"approaching\" on device and network pillars. Full dashboard at cio.gov/zt-report-2026.\n\n• Cloud spending update: Q4 obligations tracking 12% above FY25 pace. Multi-cloud strategies now cited in 78% of agency IT strategic plans, per GAO-26-106789.\n\n• FedRAMP continuous monitoring: New automated evidence collection pilot launches with three CSPs next month. Expected to reduce annual assessment burden by ~30%.\n\n• Software supply chain: NIST SSDF v1.2 draft out for review. Comments due 31 Oct. Key changes around SBOM generation and vulnerability disclosure timelines.\n\nWORKFORCE\n---\n• Cyber talent surge: DoD Cyber Workforce Framework v3.0 published. Adds 12 new work roles, maps to NICE framework updates. Implementation guidance by 1 Jan 2027.\n\n• Return-to-office metrics: September badge data shows 61% average on-site rate across Cabinet agencies. Intelligence community agencies not reporting.\n\n---\nYou're receiving this because you subscribed to Federal Workforce & IT Daily. Update preferences or unsubscribe at federalnewsnetwork.example/prefs."
+    }
+  ]
+}

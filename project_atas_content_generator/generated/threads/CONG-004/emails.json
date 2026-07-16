@@ -1,0 +1,40 @@
+{
+  "emails": [
+    {
+      "id": "CONG-004-001",
+      "body": "Team,\n\nAttached is the current ATaS congressional brief (v12) for the upcoming Senate Armed Services Committee session. Senator Lane's office has emphasized modernization priorities but also wants clear oversight metrics. Please review and flag any slides that need updating before we finalize.\n\nLCDR Maddox — can you verify the error-rate figures on slides 7-9? COL Abreu — please confirm the talking points on transition timeline align with your latest guidance.\n\nWe need consolidated feedback by COB Thursday.\n\nV/r,\nCapt Alicia Scott\nCongressional Liaison Office"
+    },
+    {
+      "id": "CONG-004-002",
+      "body": "Capt Scott,\n\nThanks for sending v12. The Senator's staff has reviewed the deck and has two initial requests:\n1. Add a dedicated slide on civilian safeguards and privacy protections — this is a priority for the Ranking Member.\n2. Update the cost-per-mission metric on slide 11 to reflect the latest FY26 reprogramming numbers.\n\nWe'd like to see a revised version by early next week. Please let us know if you need any clarification.\n\nRespectfully,\nSenator Lane Staff\nSASC Majority Staff"
+    },
+    {
+      "id": "CONG-004-003",
+      "body": "Capt Scott,\n\nReceived the staff feedback. On the civilian safeguards slide — we have draft language from the legal review last month; I'll pull that and insert as new slide 14. For the cost metric, the FY26 reprogramming data is still being validated by comptroller; I'll update once they confirm (should be Wednesday).\n\nAlso requesting a minor edit: slide 5's threat-assessment summary should reference the updated INDOPACOM AOR analysis (dated 15 Sep). I'll send the revised deck once both items are locked.\n\nLCDR James Maddox\nJIAITF Analysis Cell"
+    },
+    {
+      "id": "CONG-004-004",
+      "body": "Capt Scott,\n\nI've incorporated the safeguards language and updated the cost metric with the comptroller's preliminary numbers. This is v13 — attached for your review before we send to the Hill.\n\nKey changes:\n- New slide 14: Civilian Safeguards & Privacy Framework\n- Slide 11: Cost-per-mission updated to $1.24M (FY26 reprogramming)\n- Slide 5: INDOPACOM AOR reference added\n- Talking points on transition timeline (slides 18-20) aligned with current EXORD\n\nPlease review the safeguards slide wording carefully; legal had some concerns about export-control phrasing that we've adjusted. I'm comfortable with the 1% error-rate projection for briefing purposes.\n\nCOL Jesse Abreu\nJIAITF Deputy Commander"
+    },
+    {
+      "id": "CONG-004-005",
+      "body": "Senator Lane Staff,\n\nPer your request, attached is the v12 deck for reference while we finalize v13. The updated version with the civilian safeguards slide and revised cost metric is undergoing final legal review and will be delivered by COB tomorrow.\n\nWe appreciate the specific feedback — the safeguards addition directly addresses the oversight focus you highlighted.\n\nV/r,\nCapt Alicia Scott\nCongressional Liaison Office"
+    },
+    {
+      "id": "CONG-004-006",
+      "body": "Capt Scott,\n\nWe've compared v12 against the briefing outline provided last month. The civilian safeguards slide (referenced in the outline as slide 14) is not present in v12. Please confirm this will be included in the version the Senator receives. This is a non-negotiable item for the Ranking Member's staff.\n\nAlso, please ensure the cost metric on slide 11 matches the FY26 PB submission — the reprogramming figure may differ.\n\nSenator Lane Staff\nSASC Majority Staff"
+    },
+    {
+      "id": "CONG-004-007",
+      "body": "Capt Scott,\n\nQuick version check: COL Abreu sent v13 yesterday with the safeguards slide added as slide 14. I have not yet reviewed that version in detail — been focused on the validation dataset for the error-rate brief. Can you confirm which version (v12 or v13) is being prepped for Monday's session?\n\nAlso, the INDOPACOM AOR reference on slide 5 should cite the 15 Sep analysis, not the August draft. I'll verify the validation numbers tonight and send any corrections.\n\nLCDR James Maddox\nJIAITF Analysis Cell"
+    },
+    {
+      "id": "CONG-004-008",
+      "body": "Capt Scott,\n\nFinal deck for Monday's briefing is v13 (sent 1 Oct). Talking points are attached separately. The 1% error-rate projection holds based on current validation runs. Safeguards slide has been cleared by legal.\n\nPlease ensure the Senator's staff receives this version by 0800 Monday. I'll be available for pre-brief at 0700 if needed.\n\nCOL Jesse Abreu\nJIAITF Deputy Commander"
+    },
+    {
+      "id": "CONG-004-009",
+      "body": "Senator Lane Staff,\n\nAs discussed, attached are both versions for your records:\n- ATaS_Congressional_Brief_v12.pptx (baseline)\n- ATaS_Congressional_Brief_v13.pptx (final for Monday's briefing, includes civilian safeguards slide and updated cost metric)\n\nCOL Abreu has confirmed v13 as the briefing version. LCDR Maddox is finalizing validation data tonight; any last-minute corrections will be communicated before 0700 Monday.\n\nPlease let us know if you need anything else prior to the session.\n\nV/r,\nCapt Alicia Scott\nCongressional Liaison Office"
+    }
+  ]
+}

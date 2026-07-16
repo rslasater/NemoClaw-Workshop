@@ -1,0 +1,8 @@
+{
+  "emails": [
+    {
+      "id": "PHISH-005-001",
+      "body": "Good afternoon LCDR Maddox,\n\nAdobe Sign has a document awaiting your review and signature. Please click the link below to access the secure signing portal:\n\nhttps://adobesign.example.com/review/123456\n\nIf you did not expect this request, please contact your IT security team immediately.\n\nThank you,\nAccount Security\nsupport-phish-005@secure-mail.example"
+    }
+  ]
+}

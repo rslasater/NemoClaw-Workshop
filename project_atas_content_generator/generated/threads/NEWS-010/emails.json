@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-010-001",
+      "body": "IEEE Spectrum Daily Digest — 29 September 2026\n\nTop stories today:\n\n• Quantum Computing: IBM unveils 1,121-qubit Condor processor, claims path to error-corrected systems by 2029\n• Power Grid: DOE awards $3.4B for grid resilience projects across 44 states\n• AI Hardware: Cerebras files for IPO, reveals WSE-3 cluster training 70B-parameter models in days\n• Robotics: Boston Dynamics' Atlas demonstrates full autonomous construction-site tasks\n• Spectrum: FCC opens 6 GHz band for very low power devices, enabling AR/VR headsets\n\nRead more: spectrum.ieee.org/daily\n\n---\nIEEE Spectrum | 445 Hoes Lane, Piscataway, NJ 08854\nUnsubscribe: newsletters.ieee.org/preferences"
+    },
+    {
+      "id": "NEWS-010-002",
+      "body": "IEEE Spectrum Daily Digest — 1 October 2026\n\nTop stories today:\n\n• Semiconductors: TSMC Arizona fab begins 4nm trial production, yield rates \"encouraging\"\n• Battery Tech: Solid-state cells from QuantumScape pass 1,000-cycle automotive qualification\n• Space: Starship IFT-5 sticks tower catch; FAA closes mishap investigation\n• Cybersecurity: NIST finalizes post-quantum crypto standards (ML-KEM, ML-DSA, SLH-DSA)\n• Biomedical: Neuralink reports first human BCI cursor control at 8 bits/sec\n\nRead more: spectrum.ieee.org/daily\n\n---\nIEEE Spectrum | 445 Hoes Lane, Piscataway, NJ 08854\nUnsubscribe: newsletters.ieee.org/preferences"
+    }
+  ]
+}

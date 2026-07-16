@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "SPAM-002-001",
+      "body": "Hi there,\n\nYour recent Amazon order #D-4729103 has been delivered! We hope you're enjoying your new items.\n\nAs a valued customer, we'd like to offer you 20% off your next purchase when you spend $50 or more. Use code THANKYOU20 at checkout.\n\nThis offer expires October 15, 2026.\n\nHappy shopping,\nThe Amazon Team\n\n---\nYou're receiving this because you opted in to promotional emails. Unsubscribe here: amazon.example/unsubscribe"
+    },
+    {
+      "id": "SPAM-002-002",
+      "body": "Re: Special offer #1\n\nDon't miss out! Your 20% off code THANKYOU20 expires soon.\n\nWe noticed you haven't used your discount yet. There's still time to save on thousands of items — electronics, home goods, books, and more.\n\nShop now: amazon.example/offers\n\nOffer ends October 15, 2026 at 11:59 PM PT.\n\nThanks for being a loyal customer,\nAmazon Promotions\n\n---\nManage preferences: amazon.example/email-preferences"
+    }
+  ]
+}

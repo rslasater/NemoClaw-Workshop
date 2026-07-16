@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-009-001",
+      "body": "Cisco Security Digest – 1 Oct 2026\n\n1. **CVE‑2026‑3421** – Critical remote code execution in IOS XE 17.9.x. Patch released in 17.9.4; apply within 72 hrs.\n2. **CVE‑2026‑3510** – High‑severity denial‑of‑service in Meraki MX firmware 18.2.1. Work‑around: disable IPv6 tunneling until 18.2.3.\n3. **Advisory CSA‑2026‑018** – Updated guidance on Secure Boot configuration for Catalyst 9000 series.\n4. **Threat Intel** – Observed exploitation of CVE‑2026‑3421 by APT‑29 in the wild; IOC list attached in the portal.\n5. **Action Items** – Verify patch compliance on all edge routers by 5 Oct; update inventory with new firmware versions.\n\n---\nNEWS‑009 Editorial Team\nnews-009@newsletters.example"
+    },
+    {
+      "id": "NEWS-009-002",
+      "body": "Cisco Security Digest – 2 Oct 2026\n\n1. **CVE‑2026‑3675** – Medium severity information disclosure in Webex Meetings Server 41.5. Fixed in 41.5.2.\n2. **CVE‑2026‑3712** – Critical privilege escalation in ASA 9.16(2). Emergency patch 9.16(2)‑1 released; prioritize deployment.\n3. **Advisory CSA‑2026‑019** – Revised hardening checklist for DNA Center 2.3.x.\n4. **Threat Intel** – New campaign leveraging CVE‑2026‑3712 targeting VPN concentrators; indicators posted to the shared drive.\n5. **Reminder** – Quarterly compliance report due 15 Oct; include patch status for all Cisco assets.\n\n---\nNEWS‑009 Editorial Team\nnews-009@newsletters.example"
+    }
+  ]
+}

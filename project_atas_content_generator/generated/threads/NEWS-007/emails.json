@@ -1,0 +1,16 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-007-001",
+      "body": "GitHub Daily Digest\n\nRepositories you're watching:\n\n• atas-validation/engine — 3 new issues, 1 PR merged\n  - Issue #247: \"Intermittent timeout on batch validation\" (labeled bug, needs-triage)\n  - Issue #248: \"Document v17 schema changes\" (labeled documentation)\n  - Issue #249: \"Memory spike during regression suite\" (labeled performance)\n  - PR #250: \"Fix null-pointer in metric collector\" merged by @ci-bot\n\n• atas-docs/briefings — 2 new commits\n  - @maddoxj updated slides 3-7 with latest error-bound language\n  - @stix added reviewer notes on slide 12\n\n• atas-infra/pipeline — 1 workflow failure\n  - Nightly validation run failed at stage 4 (schema check)\n  - See run #1847 for logs\n\n---\nYou're receiving this because you watch these repositories. Manage notifications at github.example/settings/notifications"
+    },
+    {
+      "id": "NEWS-007-002",
+      "body": "GitHub Daily Digest\n\nRepositories you're watching:\n\n• atas-validation/engine — 2 comments, 1 new issue\n  - @stix commented on Issue #247: \"Reproduced locally. Looks like connection pool exhaustion when batch > 500.\n  - @maddoxj commented on PR #250: \"LGTM, but add regression test for the null case.\n  - Issue #251: \"Export validation metrics to Prometheus\" (labeled enhancement, help-wanted)\n\n• atas-docs/briefings — 1 PR opened\n  - PR #42: \"Update Senate briefing deck to v13\" by @maddoxj\n  - 14 files changed, 234 insertions(+), 89 deletions(-)\n  - Reviewers requested: @stix, @pm-office\n\n• atas-infra/pipeline — All workflows passing\n  - Nightly run #1848 completed successfully\n  - Weekly regression scheduled for 02:00 UTC\n\n---\nYou're receiving this because you watch these repositories. Manage notifications at github.example/settings/notifications"
+    },
+    {
+      "id": "NEWS-007-003",
+      "body": "GitHub Daily Digest\n\nRepositories you're watching:\n\n• atas-validation/engine — 4 new comments, 1 PR closed\n  - @stix on Issue #247: \"Fix deployed to staging. Monitoring for 24h.\n  - @ci-bot on PR #250: \"All checks passed. Merged to main.\n  - @maddoxj on Issue #251: \"Assigning to @perf-team. Need this for Oct dashboard.\n  - @perf-lead on Issue #251: \"Scoping this week. Will update by Friday.\n  - PR #252: \"Refactor error-bound calculator\" closed (superseded by #253)\n\n• atas-docs/briefings — 3 comments on PR #42\n  - @stix: \"Slide 14 — the classification marking looks wrong. This should be CUI, not UNCLASS.\n  - @maddoxj: \"Good catch. Fixing locally, will force-push.\n  - @pm-office: \"Approved pending Stix's classification fix. Targeting Thursday release.\n\n• atas-infra/pipeline — 1 scheduled workflow\n  - Pre-briefing validation run queued for 2026-10-05 06:00 EDT\n  - Will execute full regression suite against v18 candidate\n\n---\nYou're receiving this because you watch these repositories. Manage notifications at github.example/settings/notifications"
+    }
+  ]
+}

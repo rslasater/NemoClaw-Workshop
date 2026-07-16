@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-022-001",
+      "body": "Google Cloud Public Sector Update — October 2026\n\nNew AI agent capabilities for government workloads\n--------------------------------------------------\nVertex AI Agent Builder now supports FedRAMP High authorization paths, enabling agencies to deploy conversational agents with controlled data boundaries. Early adopters report 40% reduction in help-desk ticket volume for routine inquiries.\n\nSecurity controls enhancements\n------------------------------\n• Assured Workloads: New CJIS and IL5 templates automate compliance posture for law enforcement and DoD tenants.\n• Key Access Justifications: Now generally available for Cloud KMS and Cloud HSM, providing approver-based key access with full audit trails.\n• VPC Service Controls: Expanded support for Vertex AI, BigQuery Omni, and Apigee to reduce data exfiltration risk.\n\nCustomer spotlight\n------------------\nA state-level health agency migrated 12 legacy databases to AlloyDB for PostgreSQL, cutting query latency by 60% while maintaining HIPAA alignment through Assured Workloads.\n\nUpcoming events\n---------------\n• GovCloud Summit (virtual) — Oct 15–16\n• Secure AI/ML Workshop Series — weekly starting Oct 22\n\nManage preferences or unsubscribe: https://cloud.google.com/public-sector/preferences\n\n— The Google Cloud Public Sector Team"
+    },
+    {
+      "id": "NEWS-022-002",
+      "body": "Reminder: Secure Analytics for Mission Teams Webinar\n\nDate: October 10, 2026 | 1300–1400 ET\n\nJoin Google Cloud engineers and public sector customers for a live demonstration of:\n\n• BigQuery data clean rooms for multi-agency analysis without raw data sharing\n• Confidential Computing on C3 instances for encrypted-in-use analytics\n• Looker governance dashboards mapped to NIST 800-53 Rev. 5 controls\n\nSpeakers:\n- Maria Chen, Principal Solutions Architect, Federal Civilian\n- Capt. Robert Hall (ret.), Former J6, now Strategic Accounts Lead\n\nRegister here: https://events.googlecloud.example/secure-analytics-oct2026\n\nCan't attend? A recording will be available on demand within 48 hours.\n\nQuestions? Reply to this email or contact federal-support@googlecloud.example\n\n— Google Cloud Public Sector Events Team"
+    }
+  ]
+}

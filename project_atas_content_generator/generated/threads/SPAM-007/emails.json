@@ -1,0 +1,16 @@
+{
+  "emails": [
+    {
+      "id": "SPAM-007-001",
+      "body": "Save big on your next project! \n\nHome Depot is offering 20% off select power tools this week only. Drills, saws, sanders — everything you need to get the job done.\n\nShop now: https://offers.example/homedepot/powertools-20off\n\nUse code POWER20 at checkout. Offer ends Sunday.\n\n---\nYou're receiving this because you subscribed to Home Depot promotions. Unsubscribe: https://offers.example/unsubscribe?e=james.maddox@jiaitf.example"
+    },
+    {
+      "id": "SPAM-007-002",
+      "body": "Still need that tool upgrade?\n\nOur 20% off power tools event ends in 2 days. Don't miss out on deals like:\n• M18 FUEL Drill/Driver Kit — $179 (reg $229)\n• 7-1/4\" Circular Saw — $99 (reg $129)\n• Random Orbit Sander — $49 (reg $69)\n\nFinal hours to save: https://offers.example/homedepot/powertools-20off\n\nCode POWER20 still works through Sunday.\n\n---\nManage preferences: https://offers.example/preferences?e=james.maddox@jiaitf.example"
+    },
+    {
+      "id": "SPAM-007-003",
+      "body": "Last chance — 20% off ends tonight!\n\nThis is your final reminder. The power tool sale closes at midnight.\n\nTop sellers going fast:\n✓ Impact Driver Kit — $149\n✓ Reciprocating Saw — $89\n✓ Multi-Tool Kit — $119\n\nGrab yours before they're gone: https://offers.example/homedepot/powertools-20off\n\nThanks for being a Home Depot subscriber.\n\n---\nUnsubscribe: https://offers.example/unsubscribe?e=james.maddox@jiaitf.example"
+    }
+  ]
+}

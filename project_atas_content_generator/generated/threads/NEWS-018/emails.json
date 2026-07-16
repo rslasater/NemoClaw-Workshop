@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-018-001",
+      "body": "Hi James,\n\nBased on your recent activity, we think you'll find these resources useful:\n\n**Securing Python APIs** — A practical guide to authentication, rate limiting, and input validation for production APIs. Covers OAuth2, JWT, and API gateway patterns.\n\n**Evaluating Large Language Models** — New benchmark methodologies for accuracy, latency, and safety. Includes code notebooks for running evals against your own test sets.\n\n**FastAPI in Production** — Deployment patterns, async database access, and observability tooling.\n\nYou can access all three in your O'Reilly learning account. Let us know if you'd like recommendations tailored to a specific project.\n\n— The O'Reilly Learning Team\n\n---\nYou're receiving this because you subscribed to personalized recommendations. Update preferences or unsubscribe at any time."
+    },
+    {
+      "id": "NEWS-018-002",
+      "body": "Hi James,\n\nYour latest learning playlist is ready:\n\n📦 **Kubernetes Operators Deep Dive** — Building custom controllers with Kubebuilder and Operator SDK. 4-hour video course.\n\n⚡ **FastAPI Advanced Patterns** — Dependency injection, background tasks, WebSocket handling, and testing strategies.\n\n🔧 **Modern Data Tooling** — Comparison of Polars, DuckDB, and Arrow for analytical workloads. Includes performance benchmarks.\n\n📊 **MLOps Fundamentals** — CI/CD for ML models, feature stores, and model monitoring in production.\n\nAll content is available now in your O'Reilly account. Progress syncs across devices.\n\nHappy learning,\nThe O'Reilly Team\n\n---\nManage email preferences | View in browser"
+    }
+  ]
+}

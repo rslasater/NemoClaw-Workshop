@@ -1,0 +1,16 @@
+{
+  "emails": [
+    {
+      "id": "SEC-005-001",
+      "body": "James,\n\nI’ve uploaded the latest draft of the ATaS Senate briefing deck (v13) to the shared drive. Could you please sanity-check the slides for accuracy and alignment with the 1% error target? The briefing is slated for next month and I want to ensure we’re solid before the final review.\n\nI’ve copied the Security Office for visibility since this deck will be used in a formal setting.\n\nThanks,\nStix"
+    },
+    {
+      "id": "SEC-005-002",
+      "body": "Stix,\n\nThanks for the heads-up. I’m currently building the briefing from v17, so I haven’t seen v13 yet. Validation is tracking well and the 1% figure remains defensible. I’ll pull v13 from the share and run through it this afternoon.\n\nLet me know if there’s a specific section you’re concerned about.\n\nV/r,\nJames"
+    },
+    {
+      "id": "SEC-005-003",
+      "body": "LCDR Martinez,\n\nRegarding your request to recall the message sent 29 Sep 2026 (subject: “Recall: Can you sanity check this deck?”), the recall function will not remove the message from recipients’ mailboxes once it has been delivered. The message was delivered to LCDR Maddox and this office.\n\nAdditionally, we understand you have identified a slide in the v13 deck bearing a SECRET//NOFORN marking. Please treat this as a potential spillage and initiate the standard reporting procedures immediately. Do not forward the deck further until cleared.\n\nIf you have any questions, contact the Security Office.\n\nRespectfully,\nJIAITF Security Office"
+    }
+  ]
+}

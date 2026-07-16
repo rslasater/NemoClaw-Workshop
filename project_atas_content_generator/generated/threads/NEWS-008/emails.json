@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-008-001",
+      "body": "AWS GovCloud Daily Digest - October 1, 2026\n\n**Service Announcements**\n- GovCloud (US-East) now supports AWS Deadline Cloud for scalable render farm management\n- AWS Config advanced queries now available in both GovCloud partitions\n- Amazon GuardDuty EKS Runtime Monitoring adds support for Bottlerocket AMIs\n\n**Compliance & Certifications**\n- FedRAMP High authorization updated for AWS Wickr (GovCloud)\n- DoD SRG IL5 provisional authorization extended for 12 additional services\n- CJIS compliance workbook refreshed for FY26 Q4\n\n**Upcoming Events**\n- AWS Public Sector Summit Online: Oct 15-16 (registration open)\n- GovCloud Office Hours: Every Tuesday 1400 ET\n- FedRAMP Continuous Monitoring webinar: Oct 22\n\n**Security Bulletins**\n- ALAS-2026-001: Kernel vulnerability patched across all GovCloud AMIs\n- Updated IAM condition keys for S3 Object Lambda in GovCloud\n\n---\nThis automated digest is compiled from AWS GovCloud RSS feeds and public announcements. No action required.\n\nAWS GovCloud Team | aws-govcloud-announcements@amazon.com"
+    },
+    {
+      "id": "NEWS-008-002",
+      "body": "AWS GovCloud Daily Digest - October 3, 2026\n\n**Service Announcements**\n- AWS PrivateLink support for Amazon Bedrock now generally available in GovCloud (US-West)\n- AWS DataSync adds FIPS 140-2 validated endpoints for GovCloud transfers\n- Amazon CloudWatch RUM extends to GovCloud (US-East) for frontend monitoring\n\n**Compliance & Certifications**\n- StateRAMP High authorization granted for AWS App Runner (GovCloud)\n- IRS 1075 control mappings updated for 8 services\n- NIST 800-171 Rev 3 mapping workbook published\n\n**Technical Updates**\n- GovCloud CloudFormation drift detection now supports StackSets\n- AWS Config conformance packs: 3 new DoD-aligned packs released\n- Systems Manager Session Manager logging enhancements for STIG compliance\n\n**Training & Resources**\n- New GovCloud migration workshop: \"Lift & Shift for IL5 Workloads\" (self-paced)\n- Architecture patterns for CJIS-compliant analytics pipelines published\n- Well-Architected Framework GovCloud lens updated v2.1\n\n**Reminder**\nQuarterly GovCloud pricing review completes Oct 15. No changes anticipated.\n\n---\nThis automated digest is compiled from AWS GovCloud RSS feeds and public announcements. No action required.\n\nAWS GovCloud Team | aws-govcloud-announcements@amazon.com"
+    }
+  ]
+}

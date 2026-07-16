@@ -1,0 +1,24 @@
+{
+  "emails": [
+    {
+      "id": "HOME-003-001",
+      "body": "Megan,\n\nWe’ve locked in the home inspection for 10 Oct at 0900. The address is 1245 Harbor View Dr, Unit 3B. Please let me know if that works for you and the inspector. I’ve copied Daniel (lender) and James (my husband) so they’re aware of the timing.\n\nThanks,\nEmily"
+    },
+    {
+      "id": "HOME-003-002",
+      "body": "Emily,\n\nInspection is complete. The report is ready and I’ll email it over shortly. Let me know if you need any clarification on the findings.\n\nBest,\nMegan"
+    },
+    {
+      "id": "HOME-003-003",
+      "body": "Emily,\n\nThe roof inspection turned up a few items: missing shingles on the north slope, minor flashing deterioration, and a small area of ponding water near the chimney. I’ve attached the full inspection report for your review. Please advise on how you’d like to proceed with repairs or credits.\n\nRegards,\nDaniel"
+    },
+    {
+      "id": "HOME-003-004",
+      "body": "Emily,\n\nWhile reviewing the report I noticed a hairline crack in the foundation wall near the southeast corner. It doesn’t appear structural at this stage, but I recommend a follow‑up with a structural engineer before closing. I’ve copied Megan and Daniel so they’re in the loop.\n\nRespectfully,\nJames"
+    },
+    {
+      "id": "HOME-003-005",
+      "body": "Megan,\n\nThanks for the update, James. I’ve re‑attached the inspection report for easy reference. Could you let me know the next steps for the foundation evaluation and any timeline impact on closing?\n\nAppreciate it,\nEmily"
+    }
+  ]
+}

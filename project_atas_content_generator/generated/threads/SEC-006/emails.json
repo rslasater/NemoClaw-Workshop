@@ -1,0 +1,20 @@
+{
+  "emails": [
+    {
+      "id": "SEC-006-001",
+      "body": "Team,\n\nJust a reminder that the annual security refresher is due. Please review the guidance posted on the JIAITF security portal and complete the required training by 15 October. If you have any questions or run into issues accessing the material, let me know.\n\nThanks,\nJeff \"Stix\" Martinez\nLCDR, USN"
+    },
+    {
+      "id": "SEC-006-002",
+      "body": "Stix,\n\nThanks for the reminder. I’ve completed the refresher and will make sure my team does the same before the deadline.\n\nOn the topic of handling classified material, I want to confirm that our current marking and storage procedures are still aligned with the latest instruction. Please advise if there have been any recent updates.\n\nV/r,\nJames Maddox\nLCDR, USN"
+    },
+    {
+      "id": "SEC-006-003",
+      "body": "LCDR Martinez,\n\nFollowing up on the refresher: any external transmission of Controlled Unclassified Information (CUI) must be encrypted and approved by the Security Office prior to release. Please ensure your staff are briefed on this requirement and that the proper approval workflow is used.\n\nRespectfully,\nJIAITF Security Office"
+    },
+    {
+      "id": "SEC-006-004",
+      "body": "James,\n\nI noticed a slide in the v13 deck you sent over that carries a classification marking above UNCLASSIFIED. Please treat this as a potential spillage and report it to the Security Office immediately. Do not forward the deck further until it has been cleared.\n\nThanks,\nJeff \"Stix\" Martinez\nLCDR, USN"
+    }
+  ]
+}

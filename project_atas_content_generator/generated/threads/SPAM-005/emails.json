@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "SPAM-005-001",
+      "body": "Dear Valued Member,\n\nCostco Wholesale has exclusive savings waiting for you this week! From fresh produce to electronics, enjoy member-only pricing on thousands of items.\n\nHighlights:\n• Organic produce starting at $1.99/lb\n• 65\" 4K Smart TV — $200 off\n• Kirkland Signature™ paper goods — buy 2, save $5\n• Rotisserie chicken still just $4.99\n\nShop in-warehouse or online at Costco.com. Offers valid through October 7.\n\nThank you for your membership,\nCostco Marketing Team\n\n---\nYou're receiving this because you subscribed to Costco promotions. Unsubscribe: costco.example/unsub"
+    },
+    {
+      "id": "SPAM-005-002",
+      "body": "Follow-up: Your savings don't stop there!\n\nWe noticed you didn't open our last note — here's a quick reminder of this week's top deals before they're gone:\n\n✓ Gasoline: Member price at all Costco fuel stations\n✓ Tires: Michelin & Bridgestone — $70 off set of 4 + free installation\n✓ Pharmacy: Generic prescriptions from $4.99 (no insurance needed)\n✓ Travel: Costco Travel packages up to 30% off hotels & rental cars\n\nLog in at Costco.com to clip digital coupons instantly. No clipping required at checkout.\n\nSee you at the warehouse,\nCostco Member Services\n\n---\nManage preferences: costco.example/prefs"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "emails": [
+    {
+      "id": "PHISH-003-001",
+      "body": "From: Defense Finance and Accounting Service - Account Security\nTo: LCDR James Maddox\nDate: October 1, 2026 11:18 AM EDT\n\nACTION REQUIRED: Payroll Account Verification\n\nThis automated notice is sent because your myPay profile requires immediate identity verification to prevent payroll disruption.\n\nOur system detected an anomaly in your direct deposit routing during the September 30 processing cycle. To ensure your October 15 mid-month pay posts correctly, you must confirm your account details within 24 hours.\n\nClick the secure link below to verify:\nhttps://dfas-mil-verify.example/secure/portal?ref=PHISH-003&uid=maddox.j\n\nIf you do not complete verification by October 2, 2026 at 11:59 PM EDT, your next payroll deposit will be held and a paper check will be mailed to your address of record, resulting in a 7-10 business day delay.\n\nFor assistance, contact the DFAS Centralized Customer Support Unit at 1-888-332-7411 (option 3) or reply to this message.\n\n---\nDFAS Account Security Operations\nDefense Finance and Accounting Service\nThis is an official U.S. Government communication. Do not forward to personal email addresses."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "emails": [
+    {
+      "id": "CONG-005-001",
+      "body": "Senator Lane Staff,\n\nPlease find attached the initial draft of talking points for COL Abreu’s upcoming briefing to the Senate Armed Services Committee. The draft highlights ATaS’s progress toward a sub‑1% error rate, the program’s modernization milestones, and the oversight framework we have in place. LCDR Maddox and COL Abreu are copied for visibility.\n\nWe would appreciate any early feedback you can provide by COB tomorrow so we can incorporate it before the next revision.\n\nRespectfully,\nCapt Alicia Scott\nCongressional Liaison Office"
+    },
+    {
+      "id": "CONG-005-002",
+      "body": "Capt Scott,\n\nThank you for the draft. The overall structure is solid. A few items for the next iteration:\n\n1. Please strengthen the language on congressional oversight – the Senator wants to see explicit references to the reporting cadence and the independent validation board.\n2. Include a brief note on the data sources feeding the 1% error‑rate claim (test events, simulation runs, etc.).\n3. Confirm the briefing date and time so we can lock in the final version.\n\nWe’ll need the revised document by 1500 on 2 Oct.\n\nV/r,\nSenator Lane Staff"
+    },
+    {
+      "id": "CONG-005-003",
+      "body": "Capt Scott,\n\nBelow are the performance talking points I prepared for COL Abreu’s deck (currently built from v17). Validation is on track and the latest test series supports the projected 1% error threshold.\n\n- Current aggregate error: 1.2% (down from 2.4% in FY25)\n- Last V&V cycle (v17) completed 28 Sep with no critical findings\n- Independent Validation Board review scheduled 5 Oct\n- Risk mitigation: additional Monte‑Carlo runs planned for next two weeks\n\nThese points are ready for integration into the talking‑points document. Let me know if you need any adjustments.\n\nRespectfully,\nLCDR James Maddox\nJIAITF"
+    },
+    {
+      "id": "CONG-005-004",
+      "body": "Capt Scott,\n\nI’ve added the oversight language requested by the Senator’s staff and attached the updated ATaS_Talking_Points.docx (v17 baseline). The deck reflects the 1% error‑rate maturity assessment I briefed last week, and I believe it’s ready for the committee.\n\nPlease review the oversight paragraph on page 3 and confirm any final edits before we send the final package to the Hill.\n\nThanks,\nCOL Jesse Abreu\nJIAITF"
+    },
+    {
+      "id": "CONG-005-005",
+      "body": "Senator Lane Staff,\n\nAttached is version 3 of the talking points, incorporating the oversight language COL Abreu added and the data‑source clarification you requested. The document reflects the latest validation status (v17) and the projected 1% error rate.\n\nWe are on track to deliver the final briefing package by 0900 on 5 Oct. Please let me know if any further changes are needed.\n\nRespectfully,\nCapt Alicia Scott\nCongressional Liaison Office"
+    },
+    {
+      "id": "CONG-005-006",
+      "body": "Capt Scott,\n\nFinal notes for COL Abreu’s briefing:\n\n- Confirm briefing time: 1000, 6 Oct, Room 212, Hart Senate Office Building.\n- Ensure the attached ATaS_Talking_Points.docx (final version) is the only document COL Abreu references.\n- Emphasize the independent validation board’s upcoming review and the reporting schedule to the Committee.\n- Prepare a one‑page Q&A sheet for potential follow‑up questions on error‑rate methodology.\n\nPlease acknowledge receipt and confirm COL Abreu’s readiness by 1200 tomorrow.\n\nV/r,\nSenator Lane Staff"
+    }
+  ]
+}

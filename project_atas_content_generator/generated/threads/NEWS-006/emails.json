@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-006-001",
+      "body": "MLOps Weekly Digest #1\n\nTop stories this week:\n\n• Model drift detection in production: new open-source tools from the LF AI & Data Foundation\n• Kubernetes 1.30 adds native support for GPU resource slicing — relevant for inference workloads\n• DVC 3.4 release: improved pipeline caching for large dataset versioning\n• Paper highlight: \"Continuous Evaluation of ML Models in DoD Environments\" (arXiv:2609.04211)\n\nUpcoming events:\n- MLOps Community Meetup (virtual) — Oct 2\n- KubeCon + CloudNativeCon NA — Nov 12-15, Salt Lake City\n\nQuick tip: Use `dvc exp run --queue` to parallelize hyperparameter sweeps across your compute pool.\n\n---\nMLOps Weekly | Curated by NEWS-006 Editorial\nUnsubscribe: newsletters.example/unsubscribe/NEWS-006"
+    },
+    {
+      "id": "NEWS-006-002",
+      "body": "MLOps Weekly Digest #2\n\nTop stories this week:\n\n• MLflow 2.16 introduces model registry webhooks for automated staging promotion\n• New NIST AI RMF playbook for government ML system authorizations (Draft SP 800-218A)\n• Hugging Face TGI 2.3: speculative decoding support cuts LLM latency ~30%\n• Case study: USAF Kessel Run's feature store migration — lessons learned\n\nTooling updates:\n- Evidently AI 0.6: new data quality test suites for tabular + text\n- BentoML 1.3: multi-model service composition patterns\n- Weights & Biases: artifact lineage graph now in public beta\n\nJob board: 3 new MLOps engineer roles at DIU, CDAO, and AFRL.\n\n---\nMLOps Weekly | Curated by NEWS-006 Editorial\nUnsubscribe: newsletters.example/unsubscribe/NEWS-006"
+    }
+  ]
+}
