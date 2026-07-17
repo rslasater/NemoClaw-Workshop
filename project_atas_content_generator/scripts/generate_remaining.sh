@@ -7,7 +7,7 @@ PROJECT_DIR="$(cd -- "${SCRIPT_DIR}/.." >/dev/null 2>&1 && pwd)"
 
 cd "${PROJECT_DIR}" || exit 1
 
-PYTHON_BIN="${PYTHON_BIN:-python}"
+PYTHON_BIN="${PYTHON_BIN:-python3}"
 PROVIDER="${ATAS_PROVIDER:-openai-compatible}"
 SLEEP_SECONDS="${ATAS_GENERATE_SLEEP_SECONDS:-2}"
 RETRIES="${ATAS_GENERATE_RETRIES:-0}"

@@ -1,0 +1,36 @@
+{
+  "emails": [
+    {
+      "id": "ATAS-005-001",
+      "body": "Rebecca,\n\nAs we prepare for the upcoming Senate briefing, I want to make sure our external messaging on ATaS performance is consistent across the team. The latest model runs are showing promising improvement, and the projected error rate is approaching the 1% threshold we discussed last quarter. I’d like to align on language that emphasizes this as a projected outcome pending final validation, rather than a guaranteed figure.\n\nCould you draft a short message map that we can circulate to the JIATF leads? I’ll review and add any technical nuances before we finalize.\n\nThanks,\nJosh"
+    },
+    {
+      "id": "ATAS-005-002",
+      "body": "Josh,\n\nAgreed. I’ll put together a message map that frames the 1% figure as a projected performance target, with a clear note that final validation is still underway. I’ll keep the language consistent with the narrative we’ve used in previous congressional engagements.\n\nI’ll send a draft by end of day tomorrow.\n\nBest,\nRebecca"
+    },
+    {
+      "id": "ATAS-005-003",
+      "body": "Josh,\n\nThanks for the update. With the Senate briefing on the horizon, I want to ensure the performance language we use externally matches what we’re briefing internally. The current expectation is that ATaS will approach a 1% error rate, but I’d like to confirm that any public statements reflect the \"projected\" nature of that number until validation closes.\n\nLet me know if you need any input from the JIATF side on the talking points.\n\nRespectfully,\nJames"
+    },
+    {
+      "id": "ATAS-005-004",
+      "body": "Josh,\n\nRebecca, James,\n\nI’ve reviewed the latest deck (v17) and, in my assessment, the 1% error projection is mature enough to support the briefing next week’s briefing narrative. The capability represents a major improvement over the legacy system, and I’m comfortable presenting it as the expected performance baseline.\n\nPlease incorporate this stance into the final message map so we have a unified position for Monday.\n\nV/R,\nJesse"
+    },
+    {
+      "id": "ATAS-005-005",
+      "body": "Rebecca,\n\nI appreciate the push for a clean message, but the latest validation runs show urban‑scenario error rates still trending around 2% in aggregate. While the overall model is improving, I’m not comfortable representing 1% as a final, validated figure at this stage. We need a few more test cycles before we can stand behind that number publicly.\n\nCan we adjust the message map to stress \"projected\" performance and note that additional validation is planned?\n\nJosh"
+    },
+    {
+      "id": "ATAS-005-006",
+      "body": "Josh,\n\nUpdated message map attached (conceptually – no file in this thread). The language now reads: \"ATaS is projected to achieve a 1% error rate pending completion of the final validation phase, scheduled for Q4 FY26.\" This keeps the 1% figure front‑and‑center for the briefing while making the provisional status explicit.\n\nLet me know if you need any tweaks before we circulate to the wider team.\n\nRebecca"
+    },
+    {
+      "id": "ATAS-005-007",
+      "body": "Josh,\n\nRebecca, Jesse,\n\nI’ve forwarded the v13 briefing deck to the Government Affairs office for their pre‑brief review. The deck reflects the current projected‑performance language we’ve aligned on. I haven’t had a chance to review the newer v18 revisions yet, but the core slides (including the performance summary) remain unchanged from v13.\n\nPlease let me know if any adjustments are needed before the Monday session.\n\nRespectfully,\nJames"
+    },
+    {
+      "id": "ATAS-005-008",
+      "body": "Josh,\n\nWith the briefing on Monday, I need the final talking points and any last‑minute updates to the message map by COB today. The deck we’re using is the v13 version James sent over; I’m not aware of any newer revisions or issues.\n\nPlease confirm the final language so I can brief the staff.\n\nThanks,\nJesse"
+    }
+  ]
+}

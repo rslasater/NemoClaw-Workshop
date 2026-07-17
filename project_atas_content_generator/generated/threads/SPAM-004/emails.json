@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "SPAM-004-001",
+      "body": "Dear Valued Guest,\n\nEarn double points on your next stay at any Hilton property worldwide. Book by October 31st and receive 2,000 bonus points after your first eligible night.\n\nUse promo code: HILTON2X\n\nTerms apply. Visit hiltonhonors.example/offers for details.\n\n---\nHilton Honors Marketing Team\nunsubscribe@offers.example"
+    },
+    {
+      "id": "SPAM-004-002",
+      "body": "Last chance to claim your double points offer!\n\nYour promo code HILTON2X expires in 48 hours. Book now at over 7,000 properties globally.\n\nNot interested? Update preferences at hiltonhonors.example/preferences\n\nHilton Honors"
+    }
+  ]
+}

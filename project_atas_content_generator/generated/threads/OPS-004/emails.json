@@ -1,0 +1,24 @@
+{
+  "emails": [
+    {
+      "id": "OPS-004-001",
+      "body": "Team,\n\nPlease find below the minutes from the ATaS Working Group meeting held on 28 September 2026.\n\nAttendees: LCDR Maddox, COL Abreu, Mr. Ortiz (JIAITF Ops), Ms. Lee (Analysis), Mr. Patel (Engineering).\n\nAgenda:\n1. Project status update – current error rate tracking at 1.2%, trending toward 1% target.\n2. Validation plan – test matrix v17 approved; next validation window 2–6 Oct.\n3. Upcoming Senate briefing – scheduled for 15 Oct; deck version v17 to be used as baseline.\n4. Action items:\n   - LCDR Maddox to finalize briefing deck (v17) by 30 Sep.\n   - COL Abreu to provide talking points by 1 Oct.\n   - Ops to coordinate range time for validation runs.\n\nNext meeting: 5 Oct 2026, 0900 ET.\n\nRespectfully,\nJIAITF Operations"
+    },
+    {
+      "id": "OPS-004-002",
+      "body": "Ops,\n\nThanks for the minutes. I’ve incorporated the validation window into the deck timeline and will have v17 ready for review by COB 30 Sep. The Senate briefing deck is on track; I’ll circulate a draft to the team early next week.\n\nV/r,\nLCDR Maddox"
+    },
+    {
+      "id": "OPS-004-003",
+      "body": "Ops,\n\nMinutes look good. I agree the 1% error target is mature enough for the Senate briefing. I’ll send my talking points by 1 Oct as noted. Please keep me copied on any deck revisions.\n\nRespectfully,\nCOL Abreu"
+    },
+    {
+      "id": "OPS-004-004",
+      "body": "Team,\n\nWeekend coordination notes (2–3 Oct):\n\n- Validation test runs executed on 2 Oct; preliminary data shows error rate at 1.03% – within margin.\n- Deck version v18 drafted incorporating latest test results; pending final review by LCDR Maddox.\n- Range time confirmed for 4–5 Oct for additional runs.\n- Action items for Monday:\n   * LCDR Maddox to review v18 and provide feedback by 0900 4 Oct.\n   * COL Abreu to finalize talking points aligned with v18.\n   * Ops to distribute updated schedule.\n\nPlease acknowledge receipt.\n\nJIAITF Operations"
+    },
+    {
+      "id": "OPS-004-005",
+      "body": "Ops,\n\nSunday closeout (4 Oct) – summary of weekend activities:\n\n- Reviewed validation data; error rate holding at 1.03%, supporting the 1% target.\n- Completed review of deck v18; minor formatting edits applied. Sent v13 deck to Stix for pre‑brief coordination (note: slide 14 not reviewed).\n- Talking points from COL Abreu received and integrated.\n- Next steps:\n   * Finalize v18 by COB 5 Oct for Senate briefing.\n   * Conduct final validation run 5 Oct.\n   * Distribute final briefing package to all stakeholders by 7 Oct.\n\nWill keep you posted on any changes.\n\nV/r,\nLCDR Maddox"
+    }
+  ]
+}

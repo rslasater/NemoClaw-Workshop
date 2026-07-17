@@ -1,0 +1,3 @@
+[2026-07-14T22:55:46+00:00] Running: python3 -m atas_generator.cli generate PHISH-001 --provider openai-compatible
+
+generated/threads/PHISH-001

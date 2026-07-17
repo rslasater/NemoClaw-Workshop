@@ -1,0 +1,3 @@
+[2026-07-15T20:07:52+00:00] Running: python3 -m atas_generator.cli validate CAREER-001
+
+CAREER-001: valid

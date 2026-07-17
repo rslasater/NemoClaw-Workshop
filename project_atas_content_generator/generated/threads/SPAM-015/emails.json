@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "SPAM-015-001",
+      "body": "Hi James,\n\nYour weekly writing stats are ready! Here's how you did this week:\n\n● 12,847 words written\n● 94% correctness score\n● 3.2 hours saved with Grammarly\n● Top tone: Professional\n\nYou wrote 18% more than last week. Keep up the great work!\n\n[View detailed insights]\n\n---\nGrammarly Insights Team\ninsights@grammarly.example\n\nUnsubscribe | Privacy Policy"
+    },
+    {
+      "id": "SPAM-015-002",
+      "body": "Hi James,\n\nYour team could write faster, clearer, and more consistently with Grammarly Business.\n\nFor a limited time, get 20% off your first year when you upgrade to a team plan.\n\nWhat you’ll get:\n• Centralized billing & admin controls\n• Shared style guides & snippets\n• Analytics dashboard for team writing trends\n• Priority support\n\n[Claim your discount] → Expires October 12\n\nQuestions? Reply to this email or visit our help center.\n\n---\nThe Grammarly Team\ninsights@grammarly.example\n\nUnsubscribe | Privacy Policy"
+    }
+  ]
+}

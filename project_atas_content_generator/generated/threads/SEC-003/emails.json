@@ -1,0 +1,28 @@
+{
+  "emails": [
+    {
+      "id": "SEC-003-001",
+      "body": "Hey James,\n\nHeard you're neck-deep in the AI assignment. How's Project ATaS coming along? Let me know if you need any extra eyes.\n\nStix"
+    },
+    {
+      "id": "SEC-003-002",
+      "body": "Stix,\n\nGood to hear from you. ATaS is tracking well—we're hovering around 1% error on the validation set. Senate briefing is coming up next month, so we're polishing the deck. I'll keep you posted.\n\nJames"
+    },
+    {
+      "id": "SEC-003-003",
+      "body": "LCDR Martinez,\n\nWe noticed you were copied on a note referencing \"Project ATaS.\" Could you provide a brief description of the effort so we can ensure proper handling?\n\nThanks,\nJIAITF Security Office"
+    },
+    {
+      "id": "SEC-003-004",
+      "body": "James,\n\nThe security shop is asking for a high-level overview of ATaS. Figured I'd give them the unclassified rundown: it's a training simulation for AI-assisted targeting decision support, currently in validation. No operational data involved. Let me know if you want to add anything.\n\nStix"
+    },
+    {
+      "id": "SEC-003-005",
+      "body": "Stix,\n\nHeads up—the congressional brief is Monday. Deck is being built from v17 and validation looks on track. I'll send you a copy once it's finalized in case you want to review before I walk the hill.\n\nJames"
+    },
+    {
+      "id": "SEC-003-006",
+      "body": "LCDR Martinez,\n\nRegarding the congressional brief mentioned below, please ensure any materials shared outside the team have been cleared through the standard review process. If there are any slides or data points you're unsure about, route them to this office before Monday.\n\nThanks,\nJIAITF Security Office"
+    }
+  ]
+}

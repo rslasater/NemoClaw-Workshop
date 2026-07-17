@@ -1,0 +1,28 @@
+{
+  "emails": [
+    {
+      "id": "HOME-002-001",
+      "body": "Megan,\n\nWe’re ready to move forward on the VA loan preapproval for the house on 1240 Seabreeze Dr. Could you get the process started and let us know what you need from us? I’ve copied Daniel (lender) and James (my husband) so everyone’s on the same page.\n\nThanks,\nEmily"
+    },
+    {
+      "id": "HOME-002-002",
+      "body": "Emily,\n\nGot it. I’ll pull the certificate of eligibility and start the preapproval worksheet. Could you send me a copy of James’s most recent LES and the last two years of tax returns? That’ll let us verify income and get the debt‑to‑income ratio calculated.\n\nMegan"
+    },
+    {
+      "id": "HOME-002-003",
+      "body": "Emily,\n\nTo complete the file I’ll need the following documents:\n\n1. James’s current Leave and Earnings Statement (LES)\n2. Federal tax returns for 2024 and 2025 (including W‑2s)\n3. Two most recent bank statements for all accounts\n4. Proof of any additional income (BAH, special pays, etc.)\n\nPlease upload them to the secure portal or email them to me directly. Let me know if you have any questions.\n\nDaniel"
+    },
+    {
+      "id": "HOME-002-004",
+      "body": "Emily,\n\nI’ve run a few rate‑lock scenarios based on the preapproval numbers. The 30‑year fixed at 6.125% is available for a 45‑day lock; a 15‑year at 5.375% can be locked for 30 days. I’ve attached the updated preapproval letter (VA_Loan_Preapproval.pdf) with the details.\n\nLet me know which option you’d like to pursue and I’ll get the lock submitted.\n\nJames"
+    },
+    {
+      "id": "HOME-002-005",
+      "body": "Megan,\n\nThanks for the updated letter. I noticed the debt‑to‑income ratio is shown at 41%. Could you confirm whether the BAH and special duty pay were included in the income calculation? We want to make sure the ratio is accurate before we lock the rate.\n\nEmily"
+    },
+    {
+      "id": "HOME-002-006",
+      "body": "Emily,\n\nGood catch. I’ve revised the calculation to include the BAH and special duty pay, which brings the DTI down to 38%. The updated preapproval letter is attached (VA_Loan_Preapproval.pdf). Let me know if everything looks good and we can move forward with the rate lock.\n\nMegan"
+    }
+  ]
+}

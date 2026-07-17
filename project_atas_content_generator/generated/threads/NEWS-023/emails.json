@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-023-001",
+      "body": "LCDR Maddox,\n\nRed Hat Government is hosting a virtual briefing on October 15 covering open source strategies for edge compute and automation in contested environments. Sessions include:\n\n- OpenShift at the tactical edge: disconnected operations and intermittent connectivity patterns\n- Ansible Automation Platform for rapid baseline enforcement across heterogeneous fleets\n- Case study: USMC logistics node modernization using RHEL for Edge\n- Supply chain security: SBOM generation and SLSA compliance in air-gapped networks\n\nThe briefing runs 1000-1200 ET. Registration link below. CLE credit available for acquisition professionals.\n\nhttps://events.redhat.example/gov-edge-2026\n\nRespectfully,\nRed Hat Government Team\ngovernment@redhat.example"
+    },
+    {
+      "id": "NEWS-023-002",
+      "body": "LCDR Maddox,\n\nReminder: our \"Ansible for Regulated Environments\" workshop is this Thursday, October 10, 1300-1600 ET. This hands-on lab walks through:\n\n- STIG baseline automation with Ansible Lockdown\n- Evidence generation for RMF/ATO packages\n- GitOps workflows for continuous compliance monitoring\n- Integration with ACAS and SCAP tooling\n\nSeats are limited to 30 participants. If you registered previously, your spot is confirmed. If not, register here:\n\nhttps://events.redhat.example/ansible-regulated-2026\n\nQuestions? Reply to this email or contact our federal solutions architects at fed-architects@redhat.example.\n\nRed Hat Government Team\ngovernment@redhat.example"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "emails": [
+    {
+      "id": "CONG-003-001",
+      "body": "Good morning,\n\nAs we prepare for the upcoming Senate Armed Services Committee briefing, the staff has compiled an initial list of topics the Senator is likely to raise. Based on prior hearings and the Senator’s public statements, the focus areas include:\n\n1. Overall system accuracy and error‑rate claims (particularly the 1 % figure).\n2. Validation methodology and independent test results.\n3. Operational suitability in dense urban environments.\n4. Cost‑growth trajectory and schedule risk.\n5. Data‑handling and privacy safeguards for collected sensor data.\n\nPlease review and let us know if any additional items should be added before we finalize the question set. I’ve copied LCDR Maddox and COL Abreu so they can provide technical input directly.\n\nRespectfully,\nCapt Alicia Scott\nCongressional Liaison Office"
+    },
+    {
+      "id": "CONG-003-002",
+      "body": "Thank you, Capt Scott. The list captures the Senator’s primary concerns. A few additions:\n\n- The Senator wants a clear explanation of how the 1 % error rate was derived and what confidence intervals apply.\n- There is interest in any known failure modes during the recent field demonstration at Fort Bragg.\n- Oversight of data‑sharing agreements with allied partners should be addressed.\n\nPlease incorporate these points and circulate a revised draft by COB Friday.\n\nBest,\nSenator Lane Staff\nSenate Armed Services Committee"
+    },
+    {
+      "id": "CONG-003-003",
+      "body": "Capt Scott,\n\nPer your request, I’ve drafted follow‑up questions that reflect the technical details the staff asked for. The attached document (Congressional_Questions.docx) includes:\n\n- A breakdown of the validation test matrix used to reach the 1 % error estimate (based on the v17 test deck).\n- Specific failure‑mode observations from the Fort Bragg demonstration.\n- A summary of data‑sharing clauses in the current MOU with partner nations.\n\nValidation is on track and the v17 deck supports the current error claim. Let me know if you need any further clarification before the briefing package is locked.\n\nV/R,\nLCDR James Maddox\nJIAITF"
+    },
+    {
+      "id": "CONG-003-004",
+      "body": "Capt Scott,\n\nRegarding the dense‑urban use case, the Senator’s staff asked for a concise assessment of system performance in high‑clutter environments. Based on the current test data (v17), the 1 % error rate remains defensible for urban scenarios, and the algorithm’s clutter‑rejection logic has shown consistent improvement over the last two iterations.\n\nI’m comfortable briefing this point as‑is, but happy to incorporate any additional analysis the team prefers.\n\nRespectfully,\nCOL Jesse Abreu\nJIAITF"
+    },
+    {
+      "id": "CONG-003-005",
+      "body": "Senator Lane Staff,\n\nAttached is the final consolidated question set for the upcoming briefing (Congressional_Questions.docx). It incorporates the technical follow‑ups from LCDR Maddox, the dense‑urban assessment from COL Abreu, and the oversight items you highlighted.\n\nThe deck will be revised one final time before the briefing to reflect any last‑minute updates, but the question list is now stable.\n\nPlease confirm receipt and let me know if any further adjustments are needed.\n\nRespectfully,\nCapt Alicia Scott\nCongressional Liaison Office"
+    }
+  ]
+}

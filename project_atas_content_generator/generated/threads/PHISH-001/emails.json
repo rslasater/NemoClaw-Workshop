@@ -1,0 +1,8 @@
+{
+  "emails": [
+    {
+      "id": "PHISH-001-001",
+      "body": "From: Account Security <support-phish-001@secure-mail.example>\nTo: LCDR James Maddox <james.maddox@jiaitf.example>\nDate: Wed, 30 Sep 2026 22:44:00 -0400\nSubject: Action required #1\n\nYour network password is scheduled to expire in 24 hours.\n\nTo maintain uninterrupted access to JIAITF systems, you must update your credentials immediately. Click the link below to reset your password:\n\nhttps://secure-mail.example/password-reset?token=PHISH-001-001\n\nIf you do not reset your password before the expiration deadline, your account will be locked and you will need to contact the help desk for manual unlock.\n\nThis is an automated message from the Account Security team. Do not reply to this email.\n\n--\nAccount Security Operations\nJoint Interagency Task Force Support"
+    }
+  ]
+}

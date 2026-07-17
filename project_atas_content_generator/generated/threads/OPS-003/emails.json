@@ -1,0 +1,32 @@
+{
+  "emails": [
+    {
+      "id": "OPS-003-001",
+      "body": "Team,\n\nAttached is the current ATaS action tracker. Please review your assigned items and provide updates by COB Friday. Key focus areas:\n\n1. Validation test completion (Maddox)\n2. Senate briefing deck coordination (Abreu)\n3. Security review of presentation materials (both)\n\nThe tracker reflects actions from last week's sync. Let me know if any ownership needs adjustment.\n\nV/R\nJIAITF Operations"
+    },
+    {
+      "id": "OPS-003-002",
+      "body": "Operations,\n\nReceived. I've reviewed the tracker and my action items are current. Validation testing is progressing -- we're trending toward the 1% error threshold as expected. The Senate briefing is still on the calendar for mid-October, so deck prep will need to accelerate next week.\n\nI'll update the validation completion date once the final test block wraps.\n\n//James\nLCDR James Maddox"
+    },
+    {
+      "id": "OPS-003-003",
+      "body": "Operations,\n\nSeveral actions on the tracker are showing overdue. Specifically:\n- Action 3: Briefing deck v17 review (was due 28 Sep)\n- Action 7: Security classification review of slides (was due 30 Sep)\n\nMy staff is using v17 talking points for the upcoming engagements. Need to confirm whether v18 changes affect our messaging. Please advise on revised due dates or if these should be closed.\n\nCOL Jesse Abreu"
+    },
+    {
+      "id": "OPS-003-004",
+      "body": "Sir, Colonel,\n\nUpdated action tracker attached. Changes since last version:\n\n- Action 3 (Deck review): Reassigned to LCDR Maddox, new due date 4 Oct\n- Action 7 (Security review): New action added for COL Abreu, due 5 Oct\n- Added Action 12: Slide 14 content verification (Maddox, due 4 Oct)\n\nThe slide update action stems from the v18 validation changes. Please see the \"Notes\" column in the tracker for details.\n\nV/R\nJIAITF Operations"
+    },
+    {
+      "id": "OPS-003-005",
+      "body": "Operations,\n\nTracker received. I've pulled v18 and started the validation review against the slide deck. The 1% figure still looks defensible based on the test data I've seen so far, but I want to cross-check the confidence intervals before signing off on Action 12.\n\nI'll have the slide 14 verification complete by the 4th. One note -- I haven't had a chance to fully review v18 changes yet, just the top-level deltas. If there are specific slides the validation team flagged, please point me to them.\n\n//James\nLCDR James Maddox"
+    },
+    {
+      "id": "OPS-003-006",
+      "body": "Operations,\n\nSecurity review action acknowledged. I'll run the classification check on the briefing deck this week. My team is still working from the v17 materials for current engagements, so I'll need to reconcile any v18 changes against the existing classification guide.\n\nIf there are specific slides or data points that changed classification posture in v18, flag them in the tracker and I'll prioritize those.\n\nCOL Jesse Abreu"
+    },
+    {
+      "id": "OPS-003-007",
+      "body": "Team,\n\nWeekend update to the action tracker attached. Current status:\n\n- Action 3 (Deck review): Complete -- v18 deck validated and cleared for briefing prep\n- Action 7 (Security review): In progress -- COL Abreu reviewing classification changes\n- Action 12 (Slide 14 verification): Complete -- content verified against v18 test data\n- Action 15 (NEW): Suspected marking discrepancy on slide 14 -- referred to security office for spillage review\n\nThe security office has been notified regarding a potential marking issue identified during the slide 14 verification. Per protocol, do not forward or distribute the current deck version until clearance is received. LCDR Maddox, please confirm you have not shared the v18 deck externally.\n\nUpdated tracker reflects all actions as of 0700 today.\n\nV/R\nJIAITF Operations"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "emails": [
+    {
+      "id": "NEWS-024-001",
+      "body": "NIST Publication Alert Service\n\nNew publications available as of 2026-10-03:\n\n1. NIST AI 100-2: Artificial Intelligence Risk Management Framework: Generative AI Profile (Final)\n   DOI: 10.6028/NIST.AI.100-2\n   Published: 2026-09-30\n   https://doi.org/10.6028/NIST.AI.100-2\n\n2. NIST SP 800-53B Rev. 1: Control Baselines for Information Systems and Organizations (Final)\n   DOI: 10.6028/NIST.SP.800-53Br1\n   Published: 2026-10-01\n   https://doi.org/10.6028/NIST.SP.800-53Br1\n\n3. NIST IR 8478: Cybersecurity Framework Profile for Ransomware Risk Management (Updated)\n   DOI: 10.6028/NIST.IR.8478\n   Published: 2026-10-02\n   https://doi.org/10.6028/NIST.IR.8478\n\n---\nYou are receiving this message because you subscribed to NIST publication alerts for topics: AI Risk Management, Cybersecurity Framework, Security Controls.\n\nManage subscriptions: https://www.nist.example/alerts/manage\nContact: updates@nist.example"
+    },
+    {
+      "id": "NEWS-024-002",
+      "body": "NIST Publication Alert Service\n\nComment Period Reminders:\n\nThe following draft publications have open comment periods closing soon:\n\n1. NIST SP 800-218A (Draft): Secure Software Development Framework (SSDF) Version 1.1 - Implementation Guidance\n   Comment deadline: 2026-10-17\n   Submit comments: https://www.nist.example/ssdf/comments\n\n2. NIST AI 100-4 (Draft): AI RMF Crosswalk to ISO/IEC 42001\n   Comment deadline: 2026-10-24\n   Submit comments: https://www.nist.example/ai-rmf/comments\n\n3. NIST SP 1800-35C (Draft): Validating PQC Migration in Enterprise Environments\n   Comment deadline: 2026-11-07\n   Submit comments: https://www.nist.example/pqc-migration/comments\n\n---\nThis is an automated reminder. You will not receive additional reminders for these drafts.\n\nManage subscriptions: https://www.nist.example/alerts/manage\nContact: updates@nist.example"
+    }
+  ]
+}
