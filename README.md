@@ -1,99 +1,143 @@
 # Project ATaS Email Executive Assistant Lab
 
-A local fake email provider for the Project ATaS Agentic AI workshop with NemoClaw.
+Welcome to the Project ATaS workshop lab. In this exercise, you will use
+NemoClaw/OpenClaw to build an executive assistant for LCDR James Maddox as he
+prepares COL Jesse Abreu for a 0900 Senate Armed Services Committee briefing on
+Project ATaS.
 
-Students build an executive assistant for LCDR James Maddox that can read a seeded inbox, prioritize messages, inspect attachments, extract action items, draft replies, send a summary email to themselves, and inspect an audit trail.
+Your assistant will inspect a realistic seeded mailbox, identify the threads
+that matter, review attachments when needed, and produce a concise congressional
+briefing. The lab is designed around controlled tool access: the assistant can
+read the workshop email API and use policy-safe actions, but it must not send
+external email.
 
-The current repository includes a working ATaS vertical slice: the `SEC-004` security thread and the `ATaS_Congressional_Brief_v13.pptx` attachment. The full 235-message mailbox blueprint lives under `project_atas_content_generator/scenario`.
+## What You Will Run
 
-## Development setup
+- A fake email API and webmail UI hosted on your Brev instance.
+- A NemoClaw OpenClaw sandbox configured by you.
+- A narrow network policy that allows your claw to reach only the workshop email
+  API on port `8000`.
+- A local port forward so you can inspect the webmail UI from your laptop.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python -m pip install -r requirements.txt
-```
+## What You Will Practice
 
-## Brev workshop setup
+- Starting and connecting to an NVIDIA Brev instance.
+- Running the workshop email service with Docker Compose.
+- Configuring NemoClaw with the assigned model and policy tier.
+- Granting an agent scoped access to a local HTTP service.
+- Using OpenShell to inspect or approve blocked sandbox requests.
+- Producing a briefing with a BLUF, key findings, risks, actions, open
+  questions, and source citations.
 
-For the student-facing Brev path, start with:
+## Start Here
+
+The student workflow is in the Brev guide:
 
 - [Brev Student Guide](docs/BREV_STUDENT_GUIDE.md)
+
+At a high level, you will:
+
+1. Start your assigned Brev instance.
+2. Clone this repo on the Brev instance.
+3. Run the setup helper:
+
+   ```bash
+   ./scripts/setup-brev-instance.sh
+   ```
+
+4. Copy the printed API base URL, which will look like `http://10.x.x.x:8000`.
+5. Forward the webmail UI to your laptop with `brev port-forward`.
+6. Install and configure NemoClaw/OpenClaw.
+7. Add the generated email API policy:
+
+   ```bash
+   nemoclaw <claw-name> policy-add --from-file ./atas-email-api.yaml --yes
+   ```
+
+8. Ask your claw to verify `GET /health`, `GET /me`, and `GET /emails`.
+9. Paste in the mission prompt and complete the briefing.
+
+Do not use `localhost` as the API base URL inside the NemoClaw sandbox. Use the
+`http://10.x.x.x:8000` URL printed by the setup script.
+
+## The Mission
+
+After your claw can read the API, give it the mission prompt from:
+
+- [student-lab/mission-prompt.md](student-lab/mission-prompt.md)
+
+Your final briefing should include:
+
+- BLUF
+- Key findings
+- Risks or contradictions
+- Recommended immediate actions before the briefing
+- Open questions
+- Source list with email IDs and attachment names
+
+## Webmail And API
+
+With the service running and port forwarding enabled, open the webmail UI from
+your laptop:
+
+```text
+http://localhost:8000
+```
+
+If local port `8000` is already busy, forward `8001:8000` and open:
+
+```text
+http://localhost:8001
+```
+
+The API documentation is available at:
+
+```text
+http://localhost:8000/docs
+```
+
+## Safety Model
+
+Allowed actions:
+
+- Read seeded emails.
+- Inspect attachments.
+- Create draft replies.
+- Send a summary email to the authenticated student through the policy-safe
+  endpoint.
+- View the activity audit log.
+- Reset the lab inbox state.
+
+Blocked by policy:
+
+- Automatically sending email to external recipients.
+
+## Troubleshooting
+
+Run the lab check script on the Brev instance:
+
+```bash
+./scripts/check-brev-lab.sh
+```
+
+For common setup, port-forwarding, Docker, and policy issues, see the
+[Brev Student Guide](docs/BREV_STUDENT_GUIDE.md#troubleshooting).
+
+## Instructor And Development Notes
+
+Instructor setup and classroom operations are covered in:
+
 - [Brev Instructor Runbook](docs/BREV_INSTRUCTOR_RUNBOOK.md)
 
-On the Brev instance, the shortest setup path is:
-
-```bash
-git clone https://github.com/rslasater/NemoClaw-Workshop.git
-cd NemoClaw-Workshop
-./scripts/setup-brev-instance.sh
-```
-
-That script starts the fake email API, verifies the important dependencies, and generates `atas-email-api.yaml` for the current Brev instance. Students still configure NemoClaw manually and then apply the generated policy:
-
-```bash
-nemoclaw <claw-name> policy-add --from-file ./atas-email-api.yaml --yes
-```
-
-## Run locally
+For local development outside Brev:
 
 ```bash
 cp .env.example .env
 docker compose up --build
 ```
 
-Open the API docs:
+Then open:
 
 ```text
-http://localhost:8000/docs
+http://localhost:8000/
 ```
-
-Health check:
-
-```bash
-curl http://localhost:8000/health
-```
-
-Reset the seeded inbox:
-
-```bash
-curl -X POST http://localhost:8000/reset
-```
-
-## Key endpoints
-
-- `GET /health`
-- `GET /me`
-- `GET /emails`
-- `GET /emails/{email_id}`
-- `GET /emails/{email_id}/attachments/{attachment_id}`
-- `POST /drafts`
-- `GET /drafts`
-- `POST /send-summary`
-- `POST /send` intentionally demonstrates policy enforcement
-- `GET /sent`
-- `GET /sent/{sent_id}/attachments/{attachment_id}`
-- `GET /activity`
-- `POST /reset`
-
-## Safety model
-
-Allowed:
-
-- Read seeded emails
-- Create draft replies
-- Send a summary email to the authenticated student
-- View audit logs
-- Reset inbox state
-
-Blocked by policy:
-
-- Automatically sending email to external recipients
-
-## Webmail interface
-
-After starting the service, open:
-
-- Webmail UI: http://localhost:8000/
-- Interactive API documentation: http://localhost:8000/docs
-
-The UI provides an inbox and message reader, reply-draft creation, policy-safe summary sending, sent and draft views, the activity audit log, and a full lab reset button.
