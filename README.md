@@ -13,6 +13,27 @@ python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 ```
 
+## Brev workshop setup
+
+For the student-facing Brev path, start with:
+
+- [Brev Student Guide](docs/BREV_STUDENT_GUIDE.md)
+- [Brev Instructor Runbook](docs/BREV_INSTRUCTOR_RUNBOOK.md)
+
+On the Brev instance, the shortest setup path is:
+
+```bash
+git clone https://github.com/rslasater/NemoClaw-Workshop.git
+cd NemoClaw-Workshop
+./scripts/setup-brev-instance.sh
+```
+
+That script starts the fake email API, verifies the important dependencies, and generates `atas-email-api.yaml` for the current Brev instance. Students still configure NemoClaw manually and then apply the generated policy:
+
+```bash
+nemoclaw <claw-name> policy-add --from-file ./atas-email-api.yaml --yes
+```
+
 ## Run locally
 
 ```bash

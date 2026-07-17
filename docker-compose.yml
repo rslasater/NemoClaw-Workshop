@@ -2,10 +2,12 @@ services:
   email-api:
     build: ./fake-email-api
     ports:
-      - "8000:8000"
+      - "${EMAIL_API_PORT:-8000}:8000"
     environment:
       STUDENT_ID: ${STUDENT_ID:-student-01}
       STUDENT_EMAIL: ${STUDENT_EMAIL:-student-01@workshop.example}
+      EMAIL_API_HOST: 0.0.0.0
+      EMAIL_API_PORT: 8000
       EMAIL_API_DB: /app/state/email_lab.sqlite
       EMAIL_API_SEED_PATH: /app/data/atas_seed_emails.json
     volumes:
