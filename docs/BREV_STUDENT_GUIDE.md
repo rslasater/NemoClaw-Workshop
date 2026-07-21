@@ -38,9 +38,24 @@ Open a shell to the instance:
 brev shell <instance-name>
 ```
 
+### If brev is not already installed
+
+From Linux: bash -c "$(curl -fsSL https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh)"
+
+From Mac OSX:  brew install brevdev/homebrew-brev/brev
+
+### Get brev login token
+
+Go to account in top right corner and click on Account Settings
+Select CLI and then copy brev login --token****
+
+Paste into terminal when logging in to brev.
+
 You should land on the Brev instance, usually under `/home/ubuntu/workspace`.
 
 ## 2. Get The Workshop Repo
+
+The Repo should already be present on the instance. In the event that it is not then follow the steps below. 
 
 Run this on the Brev instance:
 
@@ -61,7 +76,7 @@ git pull
 Run the setup helper from the repo root:
 
 ```bash
-./scripts/setup-brev-instance.sh
+./NemoClaw-Workshop/scripts/setup-brev-instance.sh
 ```
 
 The script:
